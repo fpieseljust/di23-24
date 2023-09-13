@@ -1,0 +1,117 @@
+site_name: Desenvolupament d'interfícies 22-23
+site_url: https://fpieseljust.github.io/di22-23/
+docs_dir: 'md'
+site_dir: 'docs'
+nav:
+    - Home: index.md
+
+    - Unitat 1 - Programació amb Python:
+      - Teoria:
+        - Introducció: unitats/1-python/teoria/1 - Introducció.md
+        - Control de fluxe: unitats/1-python/teoria/2 - Control de fluxe.md
+        - Funcions: unitats/1-python/teoria/3 - Funcions.md
+        - Tractament de fitxers: unitats/1-python/teoria/4 - Fitxers.md
+        - Errors i excepcions: unitats/1-python/teoria/5 - Excepcions.md
+        - Programació oorientada a objectes: unitats/1-python/teoria/6 - POO.md
+      - Pràctica 1 - PyGame: 
+          - Introducció:  unitats/1-python/pràctiques/1 - PyGame.md
+          - Disseny del joc:  unitats/1-python/pràctiques/2 - Disseny.md
+          - Sprites:  unitats/1-python/pràctiques/3 - Sprites.md
+          - Imatges:  unitats/1-python/pràctiques/4 - Imatges.md
+          - Sons:  unitats/1-python/pràctiques/5 - So.md
+          - Conclusió:  unitats/1-python/pràctiques/6 - Conclusió.md
+          - Tasques:
+            - Part obligatòria (30%): unitats/1-python/pràctiques/tasques/1 - Obligatori.md
+            - Part d'ampliació - projecte (70%): unitats/1-python/pràctiques/tasques/2 - Projecte.md
+            - Qualificació: unitats/1-python/pràctiques/tasques/3 - Qualificació.md
+
+    - Unitat 2 - Introducció a les interfícies d'usuari:
+      - Teoria:
+        - 1 - Introducció a les interfícies d'usuari: unitats/2-intro-interficies/teoria/1 - Introduccio.md
+        - 2 - Usabilitat: unitats/2-intro-interficies/teoria/2 - Usabilitat.md
+        - 3 - Pautes de disseny: unitats/2-intro-interficies/teoria/3 - Pautes de Disseny.md
+      - Tasques:
+        - Activitats: unitats/2-intro-interficies/tasques/1 - Activitats.md
+        - Pràctiques: unitats/2-intro-interficies/tasques/2 - Pràctiques.md
+      - Enllaços: unitats/2-intro-interficies/enllaços/enllaços.md
+    
+    - Unitat 3 - Introducció a les interfícies d'usuari amb PySide:
+      - Teoria:
+        - 1 - Tecnologies: unitats/3-GUI-PySide6/teoria/1 - Introducció.md
+        - 2 - Controls d'ús comú: unitats/3-GUI-PySide6/teoria/2 - Controls ús comú.md
+        - 3 - Contenidors de components. Disseny: unitats/3-GUI-PySide6/teoria/3 - Layouts.md
+        - 4 - Menús, barres de ferramentes i estat, i components flotants: unitats/3-GUI-PySide6/teoria/4 - Menus.md
+        - 5 - Diàlegs i altres finestres: unitats/3-GUI-PySide6/teoria/5 - Dialegs.md
+      - Tasques: 
+        - Activitats: unitats/3-GUI-PySide6/tasques/1 - Activitats.md
+        - Pràctiques: unitats/3-GUI-PySide6/tasques/2 - Pràctiques.md
+
+    - Unitat 4 - Arquitectura Model-Vista de Qt:
+      - Teoria:
+        - 1 - Introducció: unitats/4-ModelView/teoria/1-Introduccio.md
+        - 2 - Connexió a base de dades: unitats/4-ModelView/teoria/2-Connexio a base de dades.md
+        - 3 - Execució de consultes: unitats/4-ModelView/teoria/3-Execucio de consultes.md
+        - 4 - Visualització i edició de dades: unitats/4-ModelView/teoria/4-Visualitzacio i edicio de dades.md
+      - Tasques: 
+        - Pràctiques: unitats/4-ModelView/tasques/1 - Pràctiques.md
+      - Enllaços: unitats/4-ModelView/enllaços/enllaços.md
+
+    - Unitat 5 - Generació d'interfícies a partir de llenguatges de marques:
+      - Teoria:
+        - 1 - Llenguatges de marques per a la generació d'interfícies.md: unitats/5-Interficies-LM/teoria/1-Llenguatges de marques per a la generació d'interfícies.md
+        - 2 - Ferramentes de disseny basades en llenguatges de marques: unitats/5-Interficies-LM/teoria/2-Ferramentes de disseny basades en llenguatges de marques.md
+        - 3 - Ús de la interfície en una aplicació: unitats/5-Interficies-LM/teoria/3-Ús de la interfície en una aplicació.md
+        - 4 - Funcions avançades de la ferramenta de disseny: unitats/5-Interficies-LM/teoria/4-Funcions avançades de la ferramenta de disseny.md
+        
+      - Tasques: 
+        - Activitats: unitats/5-Interficies-LM/tasques/1 - Activitats.md
+        - Pràctiques: unitats/5-Interficies-LM/tasques/2 - Pràctiques.md
+      - Enllaços: unitats/5-Interficies-LM/enllaços/enllaços.md
+
+    - Unitat 6 - Distribució d'aplicacions:
+      - Tasques: 
+        - Practica 1: unitats/6-Distribucio/tasques/Practica1.md
+
+    # - Unitat 6 - Components d'usuari:
+    #   - Teoria:
+    #     - 1 - Alternatives en la creació de components: unitats/6-Components-Designer/teoria/1-Alternatives en la creació de components.md
+    #     - 2 - Creació de nous components per codi: unitats/6-Components-Designer/teoria/2-Nous components.md
+    #     - 3 - Utilització de nous components en aplicacions: unitats/6-Components-Designer/teoria/3-Utilització dels components.md
+    #     - 4 - Integració de nous components en ferramentes de disseny: unitats/6-Components-Designer/teoria/4-Integració en dissenyador.md
+    #   - Tasques: 
+    #     - Activitats: unitats/6-Components-Designer/tasques/1 - Activitats.md
+    #     - Pràctiques: unitats/6-Components-Designer/tasques/2 - Pràctiques.md
+    #   - Enllaços: unitats/6-Components-Designer/enllaços/enllaços.md
+
+    - Qualificació:
+      - Criteris: 
+        - Rúbriques:  qualificacio/rubrica.md
+    - About: about.md
+theme:
+  name: material
+  features:
+    - content.code.annotate
+    - search.suggest
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+- https://polyfill.io/v3/polyfill.min.js?features=es6
+- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
