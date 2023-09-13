@@ -1,4 +1,4 @@
-## Part d'ampliació. Projecte. (70%)
+## Part II - Ampliació/Projecte. (70%)
 
 En esta segona part pots escollir entre dues opcions:
 
