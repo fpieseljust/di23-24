@@ -1,4 +1,4 @@
-# Errors i excepcions
+## 1. Tipus d'errors
 
 Podem cometre errors mentre programem. Estos errors es poden classificar bàsicament en dos tipus:
 
@@ -7,7 +7,7 @@ Podem cometre errors mentre programem. Estos errors es poden classificar bàsica
 
 Els erros de sintaxi es produixen abans de l'execució, mentre que els erros lògics es produixen en temps d'execució.
 
-## Excepcions
+## 2. Excepcions
 
 Algun exemple d'excepció són els següents:
 
@@ -17,7 +17,7 @@ Algun exemple d'excepció són els següents:
 
 Sempre que es produeixen aquests tipus d’errors d’execució, Python crea un objecte d’excepció. Si no el tractem, interrumpeix l'execució i imprimeix una traça de l'error juntament amb alguns detalls sobre per què ha produït aquest error.
 
-### Excepcions definides en Python
+### 2.1. Excepcions definides en Python
 
 Per a consultar totes les excepcions definides podem utilitzar:
 
@@ -77,7 +77,7 @@ Per a consultar totes les excepcions definides podem utilitzar:
 - UnicodeTranslateError
 - ValueError
 
-### Com funcionen les excepcions
+### 2.2. Com funcionen les excepcions
 
 Python llança una d'aquestes excepcions en executar una instrucció que provoca un error. 
 
@@ -87,7 +87,7 @@ Per exemple, considerem un programa en què tenim una funció A que crida a la f
 
 Si no es gestiona mai, es mostrarà un missatge d'error i el nostre programa s'aturarà de sobte.
 
-## Capturant excepcions en Python
+## 3. Capturant excepcions en Python
 
 A Python, les excepcions es poden gestionar mitjançant una sentència try.
 
@@ -162,7 +162,7 @@ except:
    pass
 ~~~
 
-### Try ... except ... finally
+### 3.1. Try ... except ... finally
 
 
 La sentència try de Python pot tindre una clàusula final opcional. Aquesta clàusula s’executa independentment de si es produix una excepció o no i s’utilitza generalment per alliberar recursos.
@@ -179,7 +179,7 @@ finally:
    f.close()
 ~~~
 
-## Llançant excepcions en Python
+## 4. Llançant excepcions en Python
 
 Les excepcions es generen normalment quan es produeixen errors en temps d'execució, però també podem generar/llançar excepcions manualment mitjançant la paraula reservada **raise**. Opcionalment, podem passar arguments a l’excepció per aclarir per què s’ha generat aquesta excepció.
 
@@ -197,7 +197,7 @@ except:
     raise
 ~~~
 
-### Assert
+### 4.1. Assert
 
 Amb la paraula reservada **assert** llancem una excepció sempre i quan l'expressió que la segueix s'avalua a *Fals*. Si s'avalua a *True*, es continua l'execució del programa de forma seqüencial.
 
@@ -213,7 +213,7 @@ else:
     print("És positiu")
 ~~~
 
-## Excepcions definides per l'usuari
+## 5. Excepcions definides per l'usuari
 
 De vegades necessitem definir excepcions que no estan disponibles a Python quan es dóna alguna condició. En este cas, hem de crear les nostres propies excepcions. Per a fer-ho, hem de definir noves classes que **hereden de *Exception***, ja siga directa o indirectament. Esta nova excepció que hem creat també podrà ser llançada amb *raise*. 
 
@@ -234,7 +234,7 @@ __main__.CustomError: S'ha produït un error
 
 Quan estem desenvolupant un programa gran, és una bona pràctica col·locar totes les excepcions definides per l'usuari que el nostre programa definix en un fitxer separat *exceptions.py* o *errors.py*.
 
-#### Activitat 12
+#### 5.0.1. Activitat 12
 
 Anem a implementar un xicotet joc per consola. El programa generarà un número aleatori entre 0 i 100 (utilitzeu randint() del mòdul random) i demanarà a l'usuari que introduïsca un número.
 
@@ -244,6 +244,6 @@ Si s'introdueix un valor no numèric, es llançarà una excepció de tipus Error
 
 El joc acabarà quan s'introduïsca l'enter buscat, felicitant a l'usuari.
 
-#### Activitat 13 
+#### 5.0.2. Activitat 13 
 
 Modifica el codi de l'activitat 11 per a que no es produïsquen errors en l'execució, ja siga per introdïur valor no definits per a les funcions, valors que no són numèrics o operacions desconegudes. Controla també que no es produïsquen errors en la lectura/escriptura dels arxius.

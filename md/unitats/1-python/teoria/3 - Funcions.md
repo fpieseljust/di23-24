@@ -1,6 +1,4 @@
-# Funcions
-
-## Definició de funcions
+## 1. Definició de funcions
 
 ~~~py
 def nom_funcio(paràmetres):
@@ -10,9 +8,9 @@ def nom_funcio(paràmetres):
 
 Nota: Recordeu làmbit de les variables, ja que hi haurà variables locals a la funció.
 
-## Arguments
+## 2. Arguments
 
-### Valors per defecte
+### 2.1. Valors per defecte
 
 Els arguments de les funcions poden tindre un valor per defecte. En cas de no assignar-li un valor per defecte, necessitem fer la crida passant-li el valor de l'argument. 
 
@@ -42,7 +40,7 @@ saluda(msg="", nom="Artur")
 saluda(msg="","Artur")
 ~~~
 
-### Nombre arbitrari d'arguments
+### 2.2. Nombre arbitrari d'arguments
 
 Si no sabem a priori quants arguments rebrà la funció, podem utilitzar el caràcter "*" en la definició de la funció.
 
@@ -62,7 +60,7 @@ def saluda(*noms):
 saluda("Alex","Guillem","Javier")
 ~~~
 
-## Funcions recursives
+## 3. Funcions recursives
 
 La recursió és el procés de definir alguna cosa en termes d'eixa mateixa cosa. Aleshores, una funció recursiva és aquella que es crida a sí mateix.
 S'ha d'anar molt en compte en crear correctament la condició d'eixida de la funció, ja que d'altra forma entrariem en bucle infinit.
@@ -88,7 +86,7 @@ num = int(input("Número: "))
 print(num, "! =", factorial(num))
 ~~~
 
-## Funcions anònimes
+## 4. Funcions anònimes
 
 Les **funcions anònimes o funcions lambda**, són funcions sense nom. Poden tindre un nombre indeterminat d'arguments, però sols una expressió, que serà avaluada i retornat el seu resultat.
 
@@ -117,11 +115,11 @@ Eixida:
 """
 ~~~
 
-### Activitat 10
+### 4.1. Activitat 10
 
 Definix una llista i utilitzant filter, que la separe en dues llistes, una amb els elements parells i l'altra amb els senars.
 
-## Packages
+## 5. Packages
 
 Igual que la informació al disc dur està organitzada en carpetes i subcarpetes, un programa en Python es pot organitzar en paquets, sub paquets i mòduls. Açò fa un programa més fàcil de gestionar i conceptualment més clar.
 Una carpeta ha de contindre un arxiu anomenat \_\_init\_\_.py. Este arxiu pot estar buit o no, però normalment conté codi d'inicialització.
@@ -134,3 +132,6 @@ Per a importar un mòdul d'un paquet utilitzariem **import** o **from ... import
 import Game.Level.start
 from Game.Level import start
 ~~~
+
+!!! warning "Construcció de paquets propis"
+    Parlarem de com construir paquets propis més endavant al llarg d'este curs.

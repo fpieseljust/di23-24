@@ -1,17 +1,17 @@
-# Introducció
+## 1. Introducció
 
 PyGame és una llibreria de Python3 pensada per a desenvolupar de forma senzilla jocs amb Python. Anem a utilitzar-la per a desenvolupar un xicotet joc. Serà la primera activitat avaluable del curs.
 
-# Instal·lació i configuració
+## 2. Instal·lació i configuració
 
-El primer que farem és activar el nostre entorn virtual de desenvolupament i instal·lar la llibreria pygame. Per a això recordeu que utilitzarem venv tal com ve explicat a la teoria. Dins l'entorn virtual instal·lem pygame.
+El primer que farem és activar el nostre entorn virtual de desenvolupament i instal·lar la llibreria pygame. Per a això recordeu que utilitzarem conda tal com ve explicat a la teoria. Dins l'entorn virtual instal·lem pygame.
 
 ```bash
-$ source .venv/bin/activate
-(.venv) $ pip install pygame
+$ conda activate ENTORN
+(ENTORN) $ conda install -c conda-forge pygame
 ```
 
-# *Hola món!* del pygame 
+## 3. *Hola món!* del pygame 
 
 Aquest programa crea una finestra, omple el fons de blanc i dibuixa un cercle blau al mig:
 

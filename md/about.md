@@ -8,6 +8,6 @@
 
 ### [IES Jaume II "El Just" - Tavernes de la Valldigna](https://mestreacasa.gva.es/web/iesjaumeeljust)
 
-#### Curs 2021-2022
+#### Curs 2022-2023
 
 Professor: [Ferran Cunyat](mailto: f.cunatpellicer@edu.gva.es)

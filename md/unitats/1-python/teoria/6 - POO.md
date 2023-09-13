@@ -1,4 +1,4 @@
-# Programació orientada a objectes amb Python
+## 1. POO amb Python
 
 És un dels paradigmes més populars per resoldre problemes a través de la programació. 
 
@@ -16,7 +16,7 @@ Una persona pot ser un objecte, ja que té les propietats següents:
   
 El concepte de POO a Python se centra en la reutilització de codi. Aquest concepte també es coneix com DRY (Don't Repeat Yourself).
 
-## Classes
+## 2. Classes
 
 Una classe és una definició d'un objecte abstracte, que representa algun ent de la realitat al nostre programa. Conté tots els detalls comuns sobre tots els objectes del mateix tipus. 
 
@@ -30,14 +30,14 @@ class Parrot():
 
 Ací fem servir la paraula clau class per definir una classe Loro buida. 
 
-## Objectes
+## 3. Objectes
 
 Quan es defineix la classe, només es defineix la descripció de l'objecte. Per tant, no s’assignen recursos per a la seua execució, ni s'assignen valors als seus atributs. Quan este fet es produeix, aleshores tenim un objecte en memòria sobre el que podem actuar.
 
 L'exemple d'objecte de classe lloro pot ser:
 
 ```py
-obj = Loro ()
+obj = Parrot()
 ```
 
 Aquí, obj és un objecte de la classe Loro.
@@ -83,7 +83,7 @@ Després, creem instàncies de la classe Parrot. *blu i woo* són referències (
 
 Podem accedir als atributs de classe mitjançant `__class__.species`. Els atributs de classe són els mateixos per a totes les instàncies d’una classe. De la mateixa manera, accedim als atributs de la instància mitjançant `objecte.nom_atribut`. Els atributs d’instància (valors) són diferents per a cada instància d’una classe.
 
-## Mètodes
+## 4. Mètodes
 
 Són funcions definides dins el cos d'una classe. S'utilitzen per a definir el comportament de l'objecte.
 
@@ -115,7 +115,7 @@ Blu is now dancing
 
 Hem definit dos mètodes sing() i dance(), que són mètodes d'instància, ja que es criden sobre un objecte.
 
-## Herència
+## 5. Herència
 
 L'herència és una forma de reutilitzar codi sense tindre-lo que reescriure. Açò facilita el manteniment de les aplicacions. 
 
@@ -164,7 +164,7 @@ En l'anterior programa, la classe Penguin hereda de la classe Bird. La classe de
 
 Utilitzem `super().__init__()` dins de l'`__init()__` per a inicialitzar la classe pare. 
 
-## Encapsulament
+## 6. Encapsulament
 
 Podem restringir l’accés a mètodes i variables, és a dir, definir-los com a privats. Això impedeix que les dades es modifiquen directament accedint als atributs, és el que anomenem encapsulament. Definim atributs o mètodes privats utilitzant el guió baix com a prefix, és a dir, simple _ o doble __.
 
@@ -184,7 +184,7 @@ c = Computer()
 c.sell()
 
 # change the price
-c.__maxprice = 1000
+c.__maxprice = 1000 #Fixeu-vos que no provoca un error d'execució
 c.sell()
 
 # using setter function
@@ -201,7 +201,7 @@ Selling Price: 1000
 
 Com vegem, per canviar el valor, hem d’utilitzar una funció modificadora *setter*, és a dir, setMaxPrice (), que pren el preu com a paràmetre.
 
-## Polimorfisme
+## 7. Polimorfisme
 
 El polimorfisme és la capacitat d’utilitzar una interfície comuna (crides amb els mateixos noms) en diferents classes derivades.
 
@@ -246,7 +246,7 @@ Al programa anterior, hem definit dues classes Parrot i Penguin. Cadascun d'elle
 
 Per utilitzar el polimorfisme, hem creat una interfície comuna, és a dir, la funció flying_test() que pren com a paràmetre qualsevol objecte i crida al mètode fly() de l’objecte. Així, quan passem els objectes blu i peggy a la funció flying_test(), s'executa el mètode corresponent a cadascuna.
 
-### Activitat 14
+### 7.1. Activitat 14
 
 Defineix una jerarquia de figures amb les classes *Figura*, *Cercle*, *Triangle*, *Rectangle* i *Quadrat*.
 

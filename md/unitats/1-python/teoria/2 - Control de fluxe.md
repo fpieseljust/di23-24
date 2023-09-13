@@ -1,6 +1,4 @@
-# Control de fluxe
-
-## If ... else
+## 1. If ... else
 
 ~~~py
 num = int(input("Número: "))
@@ -12,7 +10,7 @@ else:
     print("Negatiu")
 ~~~
 
-## For
+## 2. For
 
 No existeix un for a l'estil de C o Java. Amés podem afegir un else al final de bucle.
 
@@ -31,15 +29,15 @@ print("La suma és", suma)
 
 Podem combinar el bucle for amb la funció **range(principi, fi, pas)**. 
 
-#### Activitat 8
+### 2.1. Activitat 8
 
 Fes una aplicació que imprimisca els números imparells entre l'1 i el 100.
 
-#### Activitat 9
+### 2.2. Activitat 9
 
 Fes una aplicació que donada la següent llista, imprimisca els seus membres: aficions = ['esports', 'cine', 'teatre']
 
-## While
+## 3. While
 
 ~~~py
 contador = 0
@@ -51,11 +49,11 @@ else:
     print("Fora del bucle")
 ~~~
 
-## Break i continue
+## 4. Break i continue
 
 S'utilitzen igual que a Java. El continue passa a la següent iteració, mentre que el break ix del bucle. En cas de bucles anidats, ix del bucle intern.
 
-## Switch - Case
+## 5. Switch - Case
 
 Fins a la versió 3.10, python no implementava el switch-case d'altres llenguatges i s'havia d'utilitzar un bloc d'if-elseif:
 
@@ -115,7 +113,7 @@ match terme:
         acció-per-defecte
 ```
 
-### Exemple
+### 5.1. Exemple
 
 ```py
 lang = input("Quin llenguatge de programació vols aprendre? ")

@@ -1,8 +1,4 @@
-# Introducció a Python
-
-## Començant amb Python
-
-### Què és Python?
+## 1. Què és Python?
 
 ![logo de python](https://www.python.org/static/img/python-logo.png)
 
@@ -15,11 +11,11 @@ Python és un llenguatge de propòsit general, al igual que Java o C. El seu ús
 - Gran quantitat i varietat de llibreries. Web frameworks, clients correu, gestors de contingut, concurrència, generació de documents, gràfics, intel·ligència artificial, ...
 - Lliure!! Mantés per la  Python Software Foundation
 
-### Execució de Python
+### 1.1. Execució de Python
 
 ![execució_python](images/execucio_python.png "Execució de Python")
 
-### Perquè Python
+### 1.2. Perquè Python
 
 El llenguatge de programació Python és una opció cada vegada més utilitzada per principiants com per desenvolupadors experimentats. Flexible i versàtil, Python té punts forts en scripts, automatització, anàlisi de dades, aprenentatge automàtic i desenvolupament de back-end. Publicat per primera vegada el 1991 amb un nom inspirat en el grup de comèdia britànic Monty Python, l’equip de desenvolupament volia fer de Python un llenguatge divertit d’utilitzar.
 
@@ -27,146 +23,106 @@ C és el llenguatge de programació més popular a l’índex TIOBE, mentre que 
 
 Aquest curs, aprendrem a utilitzar Python i el framework Qt per desenvolupar aplicacions amb interfície d'usuari.
 
-### Instal·lació de Python 3
+## 2. Instal·lació de Python 3/Miniconda
 
-Anem a instal·lar a l'Ubuntu 20.04 un entorn de programació Python 3, encara que valdrà per a qualsevol distribució basada en Debian Linux, com és el cas. En cas d'utilitzar Windows o MacOS, busqueu la forma d'instal·lar-lo.
+Per a instal·lar Python3 instal·larem **miniconda**, la versió mínima d'Anaconda. Anaconda és una distribució de Python que inclou molts paquets i biblioteques preinstal·lats. A més, presenta alguns avantatges front a la instal·lació de l'intèrpret a través del sistema:
 
-#### Requisits previs
+1. **Gestió d'entorns**: Permet crear i gestionar entorns virtuals, que són entorns de Python aïllats que poden tindre les seves pròpies versions de Python i paquets instal·lats. Això facilita la gestió de dependències i la compatibilitat entre projectes.
 
-Per poder instal·lar, haureu de tindre un usuari amb privilegis sudo en l'Ubuntu 20.04.
+2. **Gestió de paquets**: Proporciona una forma convenient d'instal·lar, actualitzar i desinstal·lar paquets de programari i biblioteques.
 
-#### Primer pas - Configurant Python 3
+3. **Facilitat d'ús**: És fàcil d'instal·lar i configurar en qualsevol sistema operatiu, incloent Windows, macOS i Linux.
 
-Ubuntu 20.04 ja inclou Python 3 preinstal·lat. Per assegurar-nos que les nostres versions estan actualitzades, actualitzem els repositoris i actualitzem el sistema amb l'ordre apt:
+4. **Personalització**: A diferència d'Anaconda, que inclou una gran quantitat de paquets preinstal·lats, Miniconda ofereix un sistema mínim que permet triar i afegir només els paquets que necessitem per al nostre projecte, la qual cosa pot ajudar a reduir l'espai en disc i la complexitat.
+   
+5. **Reproductibilitat**: és possible configurar tot un entorn de desenvolupament i exportar-lo a un altre sistema de forma molt ràpida.
 
-```bash
-$ sudo apt update
-$ sudo apt -y upgrade
-```
+Ací teniu el [CheatSheet de la última versió de conda](https://conda.io/projects/conda/en/latest/_downloads/a35958a2a7fa1e927e7dfb61ebcd69a9/conda-4.14.pdf).
 
-L'opció -y confirmarà que estem d'acord per instal·lar totes les actualitzacions, però, segons la vostra versió de Linux, és possible que hàgiu de confirmar les sol·licituds addicionals.
+### 2.1. Ús de Conda i entorns virtuals de desenvolupament
 
-Una vegada finalitzat el procés, podem comprovar la versió de Python 3 que s’instal·la al sistema escrivint:
+Un entorn virtual és un entorn aïllat de Python que es crea utilitzant l'eina de gestió de paquets Conda. Aquests entorns virtuals permeten als desenvolupadors crear espais separats pels seus projectes, la qual cosa els permet gestionar les dependències de manera eficient i garantir que cada projecte tinga el seu propi conjunt de biblioteques i paquets sense interferir amb altres projectes ni amb la configuració del sistema.
 
-```bash
-$ python3 -V
-Python 3.8.10
-```
+Una vegada instal·lat miniconda, veureu que per defecte activa un entorn virtual anomenat *base* en obrir el vostre terminal, ja que ens apareix `(base)` al nostre prompt.
 
-El terminal vos indicarà el número de versió. No es tracta de l'última versió estable de Python (3.9.7), però si de la última disponibles als repositoris d'Ubuntu.
-
-Per gestionar paquets de programari per a Python, instal·leu pip, una eina que instal·larà i gestionarà paquets de programació que és possible que vulguem utilitzar en els nostres projectes de desenvolupament.
+Per crear, activar i desactivar els entorns de desenvolupament utilitzarem les següents ordres:
 
 ```bash
-$ sudo apt install -y python3-pip
+$ conda create --name ENVNAME
+$ conda activate ENVNAME
+$ conda deactivate
 ```
 
-Ara podrem utilitzar pip3 per instal·lar paquets de Python3.
+!!! tip "Gestió d'entorns virtuals amb vscode"
+    Podeu utilitzar [Python Environment Manager de Don Jayamanne](https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-environment-manager) per gestionar de forma visual els vostres entorns.
+
+!!! danger "Ús d'entorns de desenvolupament"
+    Creeu-vos un entorn de desenvolupament per al mòdul. També haureu de crear-vos nous entorns per a cada projecte.
+
+!!! tip "Desactivem l'activació de base per defecte"
+    Si voleu que per defecte no s'active l'entorn virtual *base*, podeu executar la següent ordre al terminal (Anaconda Prompt en cas d'utilitzar Windows):
+
+    ```bash
+    $ conda config --set auto_activate_base false
+    ```
+
+!!! tip "Autocompletat amb el tabulador"
+    L'autocompletat de conda no està actiu per defecte. Si voleu utilitzar l'autocompletat podeu instal·lar [conda-bash-completion](https://github.com/tartansandal/conda-bash-completion).
+
+### 2.2. Ús de conda per a instal·lació de paquets
+
+Ara podrem utilitzar conda per instal·lar paquets de Python3.
 
 ```bash
-$ pip3 install "paquet"
+$ conda install PACKAGE
 ```
 
-A més, instl·larem algunes llibreries necessàries per a la construcció dels nostres mòduls i extensions.
-
-```bash
-$ sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
-```
-
-#### Segon pas - Configurem un entorn virtual de desenvolupament
-
-Els entorns virtuals ens permeten tenir un espai aïllat per a desenvolupament de projectes Python, cosa que garanteix que cadascun dels vostres projectes puga tindre el seu propi conjunt de dependències que no interrompin cap dels vostres altres projectes.
-
-Configurar un entorn de programació proporciona un major control sobre els projectes de Python i sobre com es gestionen les diferents versions dels paquets. Això és especialment important quan es treballa amb paquets de tercers.
-
-Podeu configurar tants entorns de programació Python com vulgueu. Cada entorn és bàsicament un directori que conté uns quants scripts per fer-lo actuar com a entorn aïllat de la resta de programes i llibreries de l'ordinador.
-
-Tot i que hi ha algunes maneres d’aconseguir un entorn de programació a Python, farem servir el mòdul venv, que forma part de la biblioteca estàndard de Python 3. Instal·lem venv escrivint:
-
-```bash
-$ sudo apt install -y python3-venv
-```
-
-Amb açò, estem preparats per crear entorns virtuals *(virtual environments)*. Trieu en quin directori volem situar els nostres entorns de programació Python o bé creeu un directori nou amb mkdir:
-
-```bash
-$ mkdir environments
-$ cd environments
-```
-Una vegada esteu al directori on voleu que es creen els entorns, podeu crear un entorn executant l'ordre següent:
-
-```bash
-$ python3 -m venv my_env
-```
- 
-Essencialment, pyvenv crea un nou directori que conté alguns elements:
-
-~~~bash
-bin include lib lib64 pyvenv.cfg share
-~~~
-
-Junts, aquests fitxers funcionen per assegurar-vos que els vostres projectes estiguen aïllats, de manera que els fitxers del sistema i els fitxers de projecte no es mesclen i entren en conflicte. Aquesta és una bona pràctica per al control de versions i per garantir que cadascun dels vostres projectes tinga accés als paquets particulars que necessita.
-
-Per utilitzar aquest entorn, l'heu d'activar, cosa que podeu aconseguir escrivint l'ordre següent que crida a l'script d'activació:
-
-```bash
-$ source my_env/bin/activate 
-```
- 
-El vostre indicador d’ordres ara tindrà el prefix amb el nom del vostre entorn, en aquest cas s’anomena my_env. Depenent de la versió de Debian Linux que utilitzeu, el vostre prefix pot aparèixer de manera diferent, però el nom del vostre entorn entre parèntesis hauria de ser el primer que veieu a la vostra línia:
- 
-Aquest prefix ens permet saber que l’entorn my_env està actiu actualment, és a dir, que quan creem programes aquí, només utilitzaran la configuració i els paquets d’aquest entorn concret.
-
-Nota: a l’entorn virtual, podeu utilitzar l’ordre python en lloc de python3 i pip en lloc de pip3 si ho preferiu. Si utilitzeu Python 3 a la vostra màquina fora d’un entorn, haureu d’utilitzar exclusivament les ordres python3 i pip3.
-
-Després de seguir aquests passos, el vostre entorn virtual ja es pot utilitzar.
-
-Per a desactivar l'entorn virtual, simplement tanquem la consola o utilitzem l'ordre **deactivate**. Deapareixerà el nom de l'entorn virtual abans del prompt.
-
-### Modes d'execució
+## 3. Modes d'execució
 
 1. Interactiva a través de l'intèrpret
 
-~~~bash
-~$ python3
-Python 3.7.3 (default, Jul 25 2020, 13:03:44) 
-[GCC 8.3.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> 
-~~~
+    ~~~bash
+    ~$ python3
+    Python 3.7.3 (default, Jul 25 2020, 13:03:44) 
+    [GCC 8.3.0] on linux
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> 
+    ~~~
 
 2. Execució d'un fitxer Python
 
-~~~bash
-~$ python3 hola_mon.py
-Hola món
-~~~
+    ~~~bash
+    ~$ python3 hola_mon.py
+    Hola món
+    ~~~
 
 3. Execució d'un script
 
-~~~bash
-hola_mon.py
----
-#!/usr/bin/env python3
-print("Hola món")
----
+    ~~~bash
+    hola_mon.py
+    ---
+    #!/usr/bin/env python3
+    print("Hola món")
+    ---
 
-~$ chmod u+x hola_mon.py
-~$ ./hola_mon.py
-Hola món
-~~~
+    ~$ chmod u+x hola_mon.py
+    ~$ ./hola_mon.py
+    Hola món
+    ~~~
 
-4. Des d'un Entorn de Desenvolupament IDE
+4. Des d'un Entorn de Desenvolupament IDE:
+
+    En el cas de l'entorn de desenvolupament es recomana utilitzar Visual Studio Code. Instal·leu també l'extensió *Python* de Microsoft, que inclou autocompletat, depuració, formatació automàtica, proves...
 
 
-### Activitat 1
+### 3.1. Activitat 1
 
 Implementa el "Hola món!" i executa-lo de les quatre formes possibles.
 
 
-## Paraules reservades i identificadors
+## 4. Paraules reservades i identificadors
 
-### Paraules reservades
+### 4.1. Paraules reservades
 
 No es poden utilitzar coma identificador de variables ni nom de funcions, ja que s'utilitzen per a definir la sintaxi i l'estructura d'un programa.
 Les paraules reservades són:
@@ -188,7 +144,7 @@ Per a obtindre la llista completa des de l'intèrpret:
 >>> print(keyword.kwlist)
 ~~~
 
-### Identificadors
+### 4.2. Identificadors
 
 Per convenció, els noms de les variables i funcions han de ser:
 
@@ -201,9 +157,9 @@ Per exemple: nom_usuari, numero_telefon, cognom1, sumar(), ...
 
 **Recorda que Python és un llenguatge *case sensitive***. Per tant Var i var no són el mateix identificador.
 
-## Instruccions i sagnat
+## 5. Instruccions i sagnat
 
-### Instruccions
+### 5.1. Instruccions
 
 L'intèrpret de Python va executant línia a línia cada instrucció. Si volem que una instrucció ocupe diverses línies ho hem d'indicar amb el caràcter \\.
 
@@ -232,7 +188,7 @@ També podem posar diverses sentències en una línia:
 a = 1; b = 2; c = 3
 ~~~
 
-### Sagnat
+### 5.2. Sagnat
 
 La majoria de llenguatges de programació utilitzen les claus {} per a definir blocs de codi. En canvi, Python utilitza el sagnat (identation).
 
@@ -248,7 +204,7 @@ for i in range(1,11):
 
 Un sagnat incorrecte llança un *IndentationError*.
 
-### Comentaris
+### 5.3. Comentaris
 
 Els comentaris són molt importants en escriure un programa. Descriuen el que passa dins d’un programa, de manera que una persona que mira el codi font no tinga dificultats per entendre'l. A més, és possible que oblideu els detalls clau d'implementació del programa que acabeu d’escriure. Per tant, **invertir temps per explicar aquests conceptes en forma de comentaris sempre és fructífer**.
 
@@ -264,7 +220,7 @@ Exemple:
 multilínia'''
 ~~~
 
-### Docstrings
+### 5.4. Docstrings
 
 Una docstring és una abreviatura de text de documentació.
 
@@ -310,9 +266,9 @@ def suma_binaria(a, b):
 print(suma_binaria.__doc__)
 ~~~
 
-## Variables, constants i tipus
+## 6. Variables, constants i tipus
 
-### Variables
+### 6.1. Variables
 
 En Python, quan declarem una variable i li assignem un valor, realment estem creant un objecte i assignant un valor per referència.
 
@@ -332,7 +288,7 @@ a, b, c = 5, 3.2, "Hola"
 x = y = z = "iguals"
 ~~~
 
-### Constants
+### 6.2. Constants
 
 A Python no existeixen les constants a l'estil de *static final* de Java, sinó que simplement es defineix una variable que no es modifica el valor. Normalment es definixen en un mòdul a banda, utilitzant majúscules i guió baix si és necessari, que s'importa a l'arxiu principal.
 
@@ -349,7 +305,7 @@ perimetre = 2 * constants.PI * radi
 print(perimetre)
 ~~~
 
-### Tipus
+### 6.3. Tipus
 
 L'assignació de tipus és dinàmica i pot canviar, per això no declarem els tipus de les variables. Per determinar el tipus d'un objecte, fem servir el mètode **type()**. Els tipus d'objecte definits a Python3 són:
 1. Numèrics: 
@@ -481,7 +437,7 @@ S'utilitza per no donar-li valor a una variable.
         KeyError: 2
     ~~~
 
-### Activitat 2
+### 6.4. Activitat 2
 Fixa't en el següent fragment de codi:
 
 ~~~py
@@ -508,9 +464,9 @@ Quina serà l'eixida? Per qué?
 ~~~
 I ara? Per qué?
 
-### Conversió entre tipus
+### 6.5. Conversió entre tipus
 
-#### Conversió implícita
+#### 6.5.1. Conversió implícita
 
 Són conversions que fa el mateix llenguatge automàticament. Per exemple:
 
@@ -527,11 +483,11 @@ print("Valor de num_nou:",num_nou)
 print("num_nou és de tipus:",type(num_nou))
 ~~~
 
-### Conversió explícita
+### 6.6. Conversió explícita
 
 Utilitzem funcions predefinides per a forçar la conversió **int(), float(), str(), ...**.
 
-### Activitat 3
+### 6.7. Activitat 3
 
 Quin és el resultat d'executar el següent fragment de codi?
 
@@ -543,13 +499,13 @@ Quin és el resultat d'executar el següent fragment de codi?
 
 Definix dues variables, una per a fer la suma entera (579) i l'altra per a concatrenar com a text (123456).
 
-## Entrada, eixida i import
+## 7. Entrada, eixida i import
 
-### Entrada
+### 7.1. Entrada
 
 Ja hem vist que per a introduir informació per teclat utilitzem la funció **input([prompt])**. 
 
-### Eixida
+### 7.2. Eixida
 
 Per a imprimir per ella utilitzarem la funció **print()**. 
 Moltes vegades s'utilitza en combinació amb la funció **format()** dels strings.
@@ -562,10 +518,10 @@ El valor d'x és 5 i el de y és 10
 >>> print('Hola {nom}, {salutacio}'.format(salutacio = 'Bon dia', nom = 'Pau'))
 ~~~
  
-#### Activitat 4
+#### 7.2.1. Activitat 4
 Implementa el programa "Hola món" utilitzant la funció format.
 
-### Import
+### 7.3. Import
 
 Quan volem fer ús del codi d'un altre mòdul (.py), l'hem d'importar al programa actual amb **import**.
 
@@ -596,9 +552,9 @@ Si volem importar un codi d'una ubicació que no està al path.
 >>> sys.path.append('/path/a/la/carpeta')
 ~~~
 
-## Espai de noms i àmbit de variables
+## 8. Espai de noms i àmbit de variables
 
-### Noms
+### 8.1. Noms
 
 En Python, tot són objectes, inclús les funcions. Un nom és la forma d'accedir als objectes, i amb la funció **id()** podem veure la seua ubicació en memòria. Per exemple:
 
@@ -610,7 +566,7 @@ id(2) = 9062656
 d(a) = 9062656
 ~~~
 
-#### Activitat 5
+#### 8.1.1. Activitat 5
 
 Quin creus que serà el resultat a l'executar el següent fragment de codi?
 
@@ -627,7 +583,7 @@ Quin creus que serà el resultat a l'executar el següent fragment de codi?
 >>> print('id(2) =', id(2))
 ~~~
 
-### Espais de noms (namespaces)
+### 8.2. Espais de noms (namespaces)
 
 Els espais de noms a Python, són una col·lecció de noms. 
 
@@ -641,7 +597,7 @@ Els mòduls poden contindre funcions i classes. Quan es crida una funció, es cr
 
 ![namespaces](images/nested-namespaces-python.jpg "Espai de noms")
 
-### Àmbit de les variables
+### 8.3. Àmbit de les variables
 
 Tot i que hi ha diversos espais de noms definits, és possible que no puguem accedir a tots ells des de totes les parts del programa. El concepte d’àmbit entra en joc.
 
@@ -656,7 +612,7 @@ Quan es fa una referència dins d'una funció, el nom es busca a l'espai de noms
 
 Si hi ha una funció dins d’una altra funció, s’anida un nou àmbit dins de l'àmbit local.
 
-#### Activitat 6
+#### 8.3.1. Activitat 6
 
 Quin serà el resultat mostrat per consola a l'executar el següent fragment de codi?
 
@@ -677,7 +633,7 @@ funcio_externa()
 print('a =', a)
 ~~~
 
-#### Activitat 7
+#### 8.3.2. Activitat 7
 
 Quin serà el resultat mostrat per consola a l'executar el següent fragment de codi?
 

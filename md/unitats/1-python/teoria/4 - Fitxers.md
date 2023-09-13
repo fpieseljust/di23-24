@@ -1,8 +1,6 @@
-# Tractament de fitxers
+## 1. Fitxers
 
-## Fitxers
-
-### Entrada eixida utilitzant fitxers
+### 1.1. Entrada eixida utilitzant fitxers
 
 Per a llegir o escriure en un fitxer, primer l’hem d’obrir. Quan acabem, s’ha de tancar perquè s’alliberen els recursos relacionats amb el fitxer.
 
@@ -12,7 +10,7 @@ Per tant, a Python, utilitzem la següent seqüència d'operacions per traballar
 2. Llegir o escriure 
 3. Tancar el fitxer
 
-### Open
+### 1.2. Open
 
 Per obrir un fitxer utilitzem la funció **open()**.
 
@@ -55,7 +53,7 @@ A més, podem especificar el mode d'apertura i la codificació.
    ```
 
 
-### Close
+### 1.3. Close
 
 Python utilitza un *garbage collector* per netejar objectes sense referències, però no hem de confiar per tancar el fitxer.
 
@@ -74,7 +72,7 @@ with open("test.txt", encoding = 'utf-8') as f:
    # operacions sobre l'arxiu
 ~~~
 
-### Escriptura
+### 1.4. Escriptura
 
 Per a escriure, necessitem haver-lo obert amb les opcions w, a o x. Compte amb l'opció w, perquè sobreescriu els arxius.
 
@@ -85,7 +83,7 @@ with open("test.txt",'w',encoding = 'utf-8') as f:
    f.write("conté tres línies\n")
 ~~~
 
-### Lectura
+### 1.5. Lectura
 
 Utilitzarem el mètode **read()** per a llegir. La funció **tell()** ens diu en quina posició tenim el cursor i amb **seek()** el podem modificar.
 
@@ -119,7 +117,7 @@ conté tres línies
 
 També podem utilitzar la funció **readline()** per a llegir una línia, o **readlines()** per a que ens torne una llista de línies llegides.
 
-#### Activitat 11
+#### 1.5.1. Activitat 11
 
 Crea una aplicació que vaja llegint operacions d'un fitxer "operacions.txt" que contindrà una operació per línia. Per exemple:
 4 + 4
@@ -129,7 +127,7 @@ Haurà de guardar els resultats en un altre arxiu "resultats.txt". Per exemple:
 
 Utilitza funcions anònimes per a implementar les operacions de suma, resta, multiplicació i divisió, que seran les úniques operacions reconegudes per la nostra aplicació.
 
-## Directoris
+## 2. Directoris
 
 Si hi ha una gran quantitat de fitxers i directoris amb els que tractar, disposem del mòdul os (operating system), que ens proporciona mètodes per al seu tractament.
 

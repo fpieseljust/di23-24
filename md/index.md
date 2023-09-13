@@ -4,4 +4,4 @@
 
 Benivinguts a la web de Desenvolupament d'Interfícies.
 
-Curs 22/23. IES Jaume II "El Just" - Tavernes de la Valldigna
+Curs 23/24. IES Jaume II "El Just" - Tavernes de la Valldigna
