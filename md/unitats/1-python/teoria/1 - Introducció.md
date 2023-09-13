@@ -25,7 +25,7 @@ Aquest curs, aprendrem a utilitzar Python i el framework Qt per desenvolupar apl
 
 ## 2. Instal·lació de Python 3/Miniconda
 
-Per a instal·lar Python3 instal·larem **miniconda**, la versió mínima d'Anaconda. Anaconda és una distribució de Python que inclou molts paquets i biblioteques preinstal·lats. A més, presenta alguns avantatges front a la instal·lació de l'intèrpret a través del sistema:
+Per a instal·lar Python3 instal·larem [miniconda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html), la versió mínima d'Anaconda. Anaconda és una distribució de Python que inclou molts paquets i biblioteques preinstal·lats. A més, presenta alguns avantatges front a la instal·lació de l'intèrpret a través del sistema:
 
 1. **Gestió d'entorns**: Permet crear i gestionar entorns virtuals, que són entorns de Python aïllats que poden tindre les seves pròpies versions de Python i paquets instal·lats. Això facilita la gestió de dependències i la compatibilitat entre projectes.
 
