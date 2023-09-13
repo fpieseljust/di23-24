@@ -21,8 +21,8 @@ nav:
           - Sons:  unitats/1-python/pràctiques/5 - So.md
           - Conclusió:  unitats/1-python/pràctiques/6 - Conclusió.md
           - Tasques:
-            - Part obligatòria (30%): unitats/1-python/pràctiques/tasques/1 - Obligatori.md
-            - Part d'ampliació - projecte (70%): unitats/1-python/pràctiques/tasques/2 - Projecte.md
+            - Part I - Base (30%): unitats/1-python/pràctiques/tasques/1 - Obligatori.md
+            - Part II - ampliació/projecte (70%): unitats/1-python/pràctiques/tasques/2 - Projecte.md
             #- Qualificació: unitats/1-python/pràctiques/tasques/3 - Qualificació.md
 
     # - Unitat 2 - Introducció a les interfícies d'usuari:
