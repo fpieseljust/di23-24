@@ -1,4 +1,4 @@
-## Pràctica 1 - Heurístiques d'usabilitat
+<!-- ## Pràctica 1 - Heurístiques d'usabilitat
 
 L'any 1994, el guru de la usabilitat Jakob Nielsen va proposar 10 heurístiques per al disseny d'interfícies d'usuari basant-se en la seua experiència personal en aquest camp. Tot i el temps transcorregut des del seu plantejament, les heurístiques de Nielsen segueixen vigents i són utilitzades per la majoria dels professionals del disseny.
 
@@ -30,9 +30,9 @@ A continuació detallem les 10 heurístiques de Nielsen:
 !!! warning "Important"
     En els projectes de disseny d'interfícies és habitual fer sessions d'avaluació de les heurístiques sobre els prototips que es plantegen. A diferència de les avaluacions de la usabilitat comentades a la teoria de l'apartat, a les sessions d'avaluació de les heurístiques no participen usuaris, sinó que són professionals de la usabilitat els que avaluen el disseny.
 
-En aquest cas pràctic hauràs de plantejar un exemple de cada heurística en aplicacions o productes que conegues (no han de ser necessàriament tecnològics). També pots plantejar un contraexemple, és a dir, un cas en què no s'estiga respectant l'heurística. 
+En aquest cas pràctic hauràs de plantejar un exemple de cada heurística en aplicacions o productes que conegues (no han de ser necessàriament tecnològics). També pots plantejar un contraexemple, és a dir, un cas en què no s'estiga respectant l'heurística.  -->
 
-## Pràctica 2 - Disseny d'un prototip
+## Pràctica 1 - Disseny d'un prototip de baixa fidelitat
 
 Com hem vist al llarg de la unitat, el disseny de la interfície d'usuari d'una aplicació comporta tenir en compte múltiples aspectes, sempre amb l'usuari com a referent. A més, és un procés iteratiu, en què el disseny inicial (molt allunyat de la solució final) evolucionarà fins a la versió final (sobre la qual es basarà la construcció de l'aplicació).
 
@@ -46,7 +46,7 @@ Les propostes de disseny que es van elaborant i que s'avaluen amb els usuaris s'
 !!! warning "Important"
     Encara que és important fer avaluacions dels prototips amb els usuaris des de les primeres versions, els tests d'usabilitat i les avaluacions de les heurístiques solen intensificar-se i formalitzar-se amb els prototips d'alta fidelitat.
 
-En aquest cas pràctic hauràs de dissenyar un prototip de baixa fidelitat per a una cadena de restaurants de menjar ràpid, utilitzant l'eina online diagrams.net.
+En aquesta pràctica hauràs de dissenyar un prototip de baixa fidelitat per a una cadena de restaurants de menjar ràpid, utilitzant l'eina online diagrams.net.
 
 La descripció de la funcionalitat que ens ha donat el nostre client és la següent:
 
@@ -55,3 +55,11 @@ La descripció de la funcionalitat que ens ha donat el nostre client és la seg�
 !!!info "Prototip de baixa fidelitat"
     Recorda que un prototip de baixa fidelitat no inclou aspectes estètics com ara colors o imatges, i intenta aplicar tot allò que hem aprés a la unitat a l'hora de plantejar la teua proposta. 
 
+## Pràctica 2 - Disseny d'un prototip d'alta fidelitat
+
+Converteix el prototip de baixa finalitat de la pràctica anterior en un prototip d'alta fidelitat. Esta vegada utilitza l'eina Figma, molt utilitzada per al disseny de prototips d'aplicacions mòbils i webs. Hauràs de dissenyar els diferents *Frames* i configurar la navegació entre ells.
+
+!!! tip "Minitutorial de Figma"
+    Figma és una aplicació molt intuitiva, però si necessites una xicoteta espenta per començar, pot visualitzar el següent minitutorial:
+
+    ![type:video](https://www.youtube.com/embed/7BufKLx9LGs?si=Wi77bGwMbDWgJrkU)

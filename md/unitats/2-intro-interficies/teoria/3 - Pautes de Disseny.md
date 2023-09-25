@@ -1,4 +1,4 @@
-# 3. Pautes de disseny
+## 3. Pautes de disseny
 
 Com hem vist als apartats anteriors, la interfície d'usuari d'una aplicació ha de ser dissenyada amb l'usuari sempre en ment, i tenir com a objectiu que l'experiència global dels usuaris amb la nostra aplicació siga la més satisfactòria possible. Per aconseguir-ho, és de vital importància conéixer les pautes i recomanacions existents per a cadascun dels components de la interfície, que ens ajudaran sobre manera a aconseguir un disseny exitós.
 
@@ -17,9 +17,9 @@ En algunes organitzacions, s'elaboren estàndards corporatius propis relatius al
 
 Els apartats següents recullen algunes pautes generals que cal tenir en compte a l'hora de fer el disseny de la nostra interfície.
 
-## 3.1 Estructura de la interfície
+### 3.1. Estructura de la interfície
 
-### A. Principis de disseny
+#### 3.1.1. Principis de disseny
 
 Pel que fa a com estructurar i organitzar els elements que formen la interfície de la nostra aplicació, s'han de tenir presents en tot moment els principis de disseny següents:
 
@@ -43,11 +43,11 @@ Pel que fa a com estructurar i organitzar els elements que formen la interfície
     !!! example "Exemple"
         Quan dissenyem un formulari perquè l'usuari introdueixi informació, és especialment important l'alineació entre els diferents elements. D'una banda, les etiquetes han d'estar correctament alineades amb els controls que acompanyen. I de l'altra, hem d'alinear uns camps amb els altres per facilitar a l'usuari la seva tasca.
 
-### B. Menús, menús contextuals i barres de ferramentes
+#### 3.1.2. Menús, menús contextuals i barres de ferramentes
 
 Gran part de les aplicacions amb interfície gràfica d'usuari compten amb menús i barres de ferramentes per permetre a l'usuari accedir a les diferents funcionalitats de l'aplicació. Veurem algunes de les pautes més importants a tenir en compte quan fem servir aquests elements:
 
-#### Menús
+##### 3.1.2.1. Menús
 Si el menú té poques opcions principals (tres o menys) és millor considerar una altra alternativa, com ara una barra amb botons. Si teniu massa opcions principals (més de 10) cal intentar reorganitzar les opcions de menú per reduir-les.
 
 Cal intentar simplificar l'estructura de menús i de submenús, ja que compliquen a l'usuari trobar l'opció desitjada. Si la jerarquia és massa profunda haurem d'intentar reorganitzar les opcions.
@@ -56,14 +56,14 @@ Les etiquetes han de ser tan simples com siga possible, recomanant-se una sola p
 
 Si l'acció associada a una opció de menú requereix obrir una finestra o diàleg, la vostra etiqueta ha d'acabar amb punts suspensius (per exemple, Desa com…).
 
-#### Menús contextuals
+##### 3.1.2.2. Menús contextuals
 Han d'aparéixer en prémer amb el botó dret del ratolí sobre una zona de la interfície, i oferiran un xicotet conjunt d'opcions (no més de 10) relacionades amb l'element sobre el qual heu premut.
 Les opcions del menú contextual també han d'estar disponibles des del menú principal de l'aplicació.
 
 Ordenar les opcions de més a menys rellevància per a l'usuari.
 Evitar l'ús de submenús als menús contextuals.
 
-#### Barres de ferramentes
+##### 3.1.2.3. Barres de ferramentes
 Incloure a la barra de ferramentes només les opcions més utilitzades pels usuaris. És recomanable permetre a l'usuari personalitzar els botons presents a les barres de ferramentes.
 
 Com que, en la majoria de les aplicacions, les barres de ferramentes es poden ocultar, les opcions han de ser accessibles d'altres maneres (per exemple, amb el menú principal de l'aplicació).
@@ -71,7 +71,7 @@ Les icones utilitzades han de ser consistents amb les que l'usuari sol trobar a 
 
 
 
-## 3.2 Controls
+### 3.2. Controls
 
 Els controls són els components bàsics amb què construïm la interfície gràfica d'una aplicació. 
 
@@ -131,11 +131,11 @@ La taula següent recull informació sobre l'ús dels principals controls, indic
 
 A les guies de disseny de cada plataforma s'ofereix informació per a altres tipus de controls més específics, com ara les barres de progrés, els controls lliscants o els selectors de data i hora.
 
-## 3.3 Aspecte visual
+### 3.3. Aspecte visual
 
 En aquest apartat es mostren algunes pautes de disseny importants relacionades amb l'aspecte visual de l'aplicació, concretament relatives al color, el text i les icones.
 
-### A. Color
+#### 3.3.1. Color
 
 L'ús de diferents colors a la interfície amb fins estètics ha de ser reduït, i s'utilitzarà principalment per comunicar alguna cosa a l'usuari (per exemple, utilitzarem el color roig per comunicar un error o situació perillosa). No obstant això, mai no ha de ser l'única via per comunicar alguna cosa.
 
@@ -148,7 +148,7 @@ El conjunt de colors que utilitzem en el nostre disseny (conegut com a esquema d
 !!! tip "Paleta de colors"
     S'aconsella utilitzar les paletes del sistema, o un generador de paletes de colors com el que s'inclou a les referències de la unitat.
 
-### B. Text
+#### 3.3.2. Text
 
 Es recomana utilitzar les fonts predeterminades de la plataforma a què va destinada l'aplicació (per exemple, les fonts *Segoe UI* a *Microsoft Windows* o *San Francisco* a *Apple macOS*).
 
@@ -156,7 +156,7 @@ La mida del text s'ha de determinar de manera que ajude l'usuari a establir la j
 
 Utilitzar les propietats del text (com la negreta, la cursiva o el subratllat) de forma consistent dins de l'aplicació, i també amb la resta d'aplicacions. Per exemple, els enllaços sempre han d'estar subratllats.
 
-### C. Icones
+#### 3.3.3. Icones
 
 Com a regla general, no s'han d'usar etiquetes i icones alhora al mateix control. Cal triar una de les dues opcions.
 Es recomana utilitzar icones fàcilment identificables per l'usuari, que seguisquen les convencions de la resta d'aplicacions (per exemple, una paperera per a l'acció d'esborrar).
@@ -166,7 +166,7 @@ Algunes icones són fàcilment reconeixibles dins d'un grup d'icones, però no f
 Convé adaptar-se a l'estil visual de les icones de cada plataforma, encara que actualment el més habitual és utilitzar icones amb un disseny simple que representen clarament una acció.
 
 
-## 3.4 Missatges a l'usuari
+### 3.4. Missatges a l'usuari
 
 La majoria de les aplicacions necessiten mostrar diferents tipus de missatges a l'usuari amb diferents propòsits. Són molt habituals els missatges de confirmació, error o advertència i les notificacions. 
 
