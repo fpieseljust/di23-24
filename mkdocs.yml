@@ -25,15 +25,15 @@ nav:
               - Part II - ampliació/projecte (70%): unitats/1-python/pràctiques/tasques/2 - Projecte.md
               - Qualificació: unitats/1-python/pràctiques/tasques/3 - Qualificació.md
 
-#   - Unitat 2 - Introducció a les interfícies d'usuari:
-#       - Teoria:
-#           - 1 - Introducció a les interfícies d'usuari: unitats/2-intro-interficies/teoria/1 - Introduccio.md
-#           - 2 - Usabilitat: unitats/2-intro-interficies/teoria/2 - Usabilitat.md
-#           - 3 - Pautes de disseny: unitats/2-intro-interficies/teoria/3 - Pautes de Disseny.md
-#       - Tasques:
-#           - Activitats: unitats/2-intro-interficies/tasques/1 - Activitats.md
-#           - Pràctiques: unitats/2-intro-interficies/tasques/2 - Pràctiques.md
-#       - Enllaços: unitats/2-intro-interficies/enllaços/enllaços.md
+  - Unitat 2 - Introducció a les interfícies d'usuari:
+      - Teoria:
+          - 1 - Introducció a les interfícies d'usuari: unitats/2-intro-interficies/teoria/1 - Introduccio.md
+          - 2 - Usabilitat: unitats/2-intro-interficies/teoria/2 - Usabilitat.md
+          - 3 - Pautes de disseny: unitats/2-intro-interficies/teoria/3 - Pautes de Disseny.md
+      - Tasques:
+          - Activitats: unitats/2-intro-interficies/tasques/1 - Activitats.md
+          - Pràctiques: unitats/2-intro-interficies/tasques/2 - Pràctiques.md
+      - Enllaços: unitats/2-intro-interficies/enllaços/enllaços.md
 
   # - Unitat 3 - Introducció a les interfícies d'usuari amb PySide:
   #   - Teoria:
