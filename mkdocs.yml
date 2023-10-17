@@ -32,7 +32,7 @@ nav:
           - 3 - Pautes de disseny: unitats/2-intro-interficies/teoria/3 - Pautes de Disseny.md
       - Tasques:
           - Activitats: unitats/2-intro-interficies/tasques/1 - Activitats.md
-          - Activitats solucionades: unitats/2-intro-interficies/tasques/activitats-solucionades.md
+        #   - Activitats solucionades: unitats/2-intro-interficies/tasques/activitats-solucionades.md
           - Pràctiques: unitats/2-intro-interficies/tasques/2 - Pràctiques.md
       - Enllaços: unitats/2-intro-interficies/enllaços/enllaços.md
 
