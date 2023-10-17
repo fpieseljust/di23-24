@@ -32,19 +32,31 @@ nav:
           - 3 - Pautes de disseny: unitats/2-intro-interficies/teoria/3 - Pautes de Disseny.md
       - Tasques:
           - Activitats: unitats/2-intro-interficies/tasques/1 - Activitats.md
+          - Activitats solucionades: unitats/2-intro-interficies/tasques/activitats-solucionades.md
           - Pràctiques: unitats/2-intro-interficies/tasques/2 - Pràctiques.md
       - Enllaços: unitats/2-intro-interficies/enllaços/enllaços.md
 
+  - Unitat 3 - Introducció a les interfícies d'usuari amb Flet:
+    - Teoria:
+      - 1 - Introducció: unitats/3-GUI-Flet/teoria/1 - Introducció.md
+      - 2 - Comencem amb Flet: unitats/3-GUI-Flet/teoria/2 - Flet-app.md
+  #     - 3 - Contenidors de components. Disseny: unitats/3-GUI-Flet/teoria/3 - Layouts.md
+  #     - 4 - Menús, barres de ferramentes i estat, i components flotants: unitats/3-GUI-Flet/teoria/4 - Menus.md
+  #     - 5 - Diàlegs i altres finestres: unitats/3-GUI-Flet/teoria/5 - Dialegs.md
+  #   - Tasques:
+  #     - Activitats: unitats/3-GUI-Flet/tasques/1 - Activitats.md
+  #     - Pràctiques: unitats/3-GUI-Flet/tasques/2 - Pràctiques.md      
+
   # - Unitat 3 - Introducció a les interfícies d'usuari amb PySide:
   #   - Teoria:
-  #     - 1 - Tecnologies: unitats/3-GUI-PySide6/teoria/1 - Introducció.md
-  #     - 2 - Controls d'ús comú: unitats/3-GUI-PySide6/teoria/2 - Controls ús comú.md
-  #     - 3 - Contenidors de components. Disseny: unitats/3-GUI-PySide6/teoria/3 - Layouts.md
-  #     - 4 - Menús, barres de ferramentes i estat, i components flotants: unitats/3-GUI-PySide6/teoria/4 - Menus.md
-  #     - 5 - Diàlegs i altres finestres: unitats/3-GUI-PySide6/teoria/5 - Dialegs.md
+  #     - 1 - Tecnologies: unitats/4-GUI-PySide6/teoria/1 - Introducció.md
+  #     - 2 - Controls d'ús comú: unitats/4-GUI-PySide6/teoria/2 - Controls ús comú.md
+  #     - 3 - Contenidors de components. Disseny: unitats/4-GUI-PySide6/teoria/3 - Layouts.md
+  #     - 4 - Menús, barres de ferramentes i estat, i components flotants: unitats/4-GUI-PySide6/teoria/4 - Menus.md
+  #     - 5 - Diàlegs i altres finestres: unitats/4-GUI-PySide6/teoria/5 - Dialegs.md
   #   - Tasques:
-  #     - Activitats: unitats/3-GUI-PySide6/tasques/1 - Activitats.md
-  #     - Pràctiques: unitats/3-GUI-PySide6/tasques/2 - Pràctiques.md
+  #     - Activitats: unitats/4-GUI-PySide6/tasques/1 - Activitats.md
+  #     - Pràctiques: unitats/4-GUI-PySide6/tasques/2 - Pràctiques.md
 
   # - Unitat 4 - Arquitectura Model-Vista de Qt:
   #   - Teoria:

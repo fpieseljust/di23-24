@@ -57,7 +57,7 @@ La descripció de la funcionalitat que ens ha donat el nostre client és la seg�
 
 ## Pràctica 2 - Disseny d'un prototip d'alta fidelitat
 
-Converteix el prototip de baixa finalitat de la pràctica anterior en un prototip d'alta fidelitat. Esta vegada utilitza l'eina Figma, molt utilitzada per al disseny de prototips d'aplicacions mòbils i webs. 
+Converteix el prototip de baixa fidelitat de la pràctica anterior en un prototip d'alta fidelitat. Esta vegada utilitza l'eina Figma, molt utilitzada per al disseny de prototips d'aplicacions mòbils i webs. 
 
 Hauràs de dissenyar els diferents *Frames* i configurar la navegació entre ells (al fer clic sobre els botons que et porte a la finestra corresponent).
 
