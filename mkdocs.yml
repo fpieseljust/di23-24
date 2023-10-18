@@ -40,11 +40,11 @@ nav:
     - Teoria:
       - 1 - Introducció: unitats/3-GUI-Flet/teoria/1 - Introducció.md
       - 2 - Comencem amb Flet: unitats/3-GUI-Flet/teoria/2 - Flet-app.md
-  #     - 3 - Contenidors de components. Disseny: unitats/3-GUI-Flet/teoria/3 - Layouts.md
+      - 3 - Contenidors de components. Layouts: unitats/3-GUI-Flet/teoria/3 - Layouts.md
   #     - 4 - Menús, barres de ferramentes i estat, i components flotants: unitats/3-GUI-Flet/teoria/4 - Menus.md
   #     - 5 - Diàlegs i altres finestres: unitats/3-GUI-Flet/teoria/5 - Dialegs.md
-  #   - Tasques:
-  #     - Activitats: unitats/3-GUI-Flet/tasques/1 - Activitats.md
+    - Tasques:
+      - Activitats: unitats/3-GUI-Flet/tasques/1 - Activitats.md
   #     - Pràctiques: unitats/3-GUI-Flet/tasques/2 - Pràctiques.md      
 
   # - Unitat 3 - Introducció a les interfícies d'usuari amb PySide:
@@ -104,6 +104,7 @@ theme:
   name: material
   features:
     - content.code.annotate
+    - content.code.copy
     - search.suggest
 markdown_extensions:
   - admonition
@@ -130,3 +131,4 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 plugins:
   - mkdocs-video
+  - search

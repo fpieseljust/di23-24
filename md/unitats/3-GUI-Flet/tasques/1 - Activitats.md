@@ -1,25 +1,54 @@
-## 2. Components d'ús comú
+## Activitat 1 - Habilitació i deshabilitació de controls
 
-### **Activitat 1** - Conexió entre senyals i ranures
+Partint del següent codi vist en la teoria:
 
-Desenvolupa una aplicació amb una finestra que continga un QLineEdit i un QLabel. Assigna una mida màxima de text de 5 caràcters al QLineEdit i una mida fixa de 50x30 píxels. El QLabel també tindrà una mida fixa de 50x30 i es desplaçarà 50 píxels a la dreta per no solapar-se amb el QLineEdit. Quan canvieu el text del QLineEdit, l'etiqueta mostrarà el text introduït.
+```python
+import flet as ft
 
-![Aplicació](images/eco.png)
+def main(page):
+    def add_clicked(e):
+        page.add(ft.Checkbox(label=new_task.value))
+        new_task.value = ""
+        new_task.focus()
+        new_task.update()
 
-!!!info "Documentació"
-    A la documentació de cada component, es pot consultar si els seus senyals i ranures passen i reben arguments respectivament i de quin tipus són.
+    new_task = ft.TextField(label="Tasca pendent", width=300)
+    page.add(ft.Row([new_task, ft.ElevatedButton("Afegir", on_click=add_clicked)]))
 
-## 3. Contenidors de components. Disseny.
+ft.app(target=main)
+```
 
-### **Activitat 2** - Layouts imbricats
+Modifica'l per a que el botó `Afegir` es desactive **sempre** que la caixa de text *new_task* estiga en blanc.
 
-Els layouts no només poden contenir widgets, sinó també altres layouts que al seu torn poden contenir widgets i layouts. Per afegir un layout com a layout fill, farem servir el mètode addLayout del pare, i li passarem el layout fill com a argument.
+!!! tip "Pistes"
+    - La caixa de text estarà buida en diferents ocasions, al principi, en afegir una tasca i en borrar un text introduït.
+    - Fes ús de `disabled` per a canviar l'estat del control.
+    - Investiga quins esdeveniments es produixen al borrar el text. 
 
-Desenvolupa una aplicació que tinga l'aspecte següent:
 
-![](images/anidat.png)
+## Activitat 2 - Layouts niuats
 
-## 4. Barres de ferramentes, barra d'estat i menús.
+Un layout és un control que a la vegada pot contindre altres controls. Aleshores, podem niuar diversos layouts per dissenyar la nostra aplicació com desitgem.
+
+Desenvolupa una aplicació on pugam canviar (modificant una variable al codi) el nombre d'elements en una columna i en una fila. El tamany de la finestra s'ha de calcular automàticament segons el nombre d'elements que definim, encara que després es podrà reassignar el seu tamany:
+
+
+<figure markdown>
+  ![](images/niuats10.png){ width="300" }
+  <figcaption>10 elements en la columna i 10 en la fila</figcaption>
+</figure>
+
+<figure markdown>
+  ![](images/niuats8-5.png){ width="300" }
+  <figcaption>8 elements en la columna i 5 en la fila</figcaption>
+</figure>
+
+!!! tip "Pista"
+    - Per a canviar el tamany fes ús de la propietat page.window_width i page.window_height.
+    - Pensa quants i de quin tipus són els layouts abans de començar a desenvolupar.
+    
+
+<!-- ## 4. Barres de ferramentes, barra d'estat i menús.
 
 ### **Activitat 3** - Sistema d'ajuda
 
@@ -47,4 +76,4 @@ A la pràctica de l'apartat anterior [(Pràctica 3)](../tasques/2%20-%20Pràctiq
 
 En aquest cas pràctic, utilitzarem dos diàlegs, un per demanar quin fitxer obrir i un altre per demanar en quin fitxer volem desar els canvis. En cas que ja hi haja un fitxer obert, en donar a desar no demanarà la ruta al fitxer, sinó que utilitzarà la ruta del fitxer obert anteriorment, sobreescrivint-lo.
 
-A més, afegirem una entrada de menú “Tancar” per tancar l'arxiu obert actualment i començar-ne un de nou.
+A més, afegirem una entrada de menú “Tancar” per tancar l'arxiu obert actualment i començar-ne un de nou. -->

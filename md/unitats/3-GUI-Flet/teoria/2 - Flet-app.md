@@ -62,7 +62,7 @@ ft.app(target=main, view="web_browser", port=8080)
 
     Obriu http://localhost:<port> al vostre navegador per veure la versió web de la vostra aplicació Flet. -->
 
-### 4. Hello world!!
+### 3.1. Hello world!!
 
 Els controls són els elements bàsics i principals per crear interfícies d'usuari a Flutter. Podeu mostrar informació, rebre informació de l'usuari i organitzar altres controls de forma agrupada. 
 
@@ -75,10 +75,10 @@ Els controls són els elements bàsics i principals per crear interfícies d'usu
         page.vertical_alignment = ft.MainAxisAlignment.CENTER
         page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
-        txt_number = ft.Text(value='Hello world with Flet!!', text_align=ft.TextAlign.LEFT)
+        text = ft.Text(value='Hello world with Flet!!', text_align=ft.TextAlign.LEFT)
 
         page.add(
-            txt_number
+            text
         )
 
     ft.app(target=main)
@@ -92,7 +92,7 @@ Si executem el codi anterior obtindrem una aplicació com la següent:
 
 Dins la finestra estarà continguda tota la interfície de l'usuari. En aquest cas, només conté un component Text centrar tant verticalment com horitzontalment, sense interacció possible. Cada aplicació gràfica tindrà almenys una finestra, però en podrà tenir més. Això ho veurem en seccions posteriors de la unitat. Normalment una aplicació acabarà en tancar la darrera de les finestres.
 
-## 5. Controls
+## 4. Controls
 
 La interfície d'usuari està feta de controls (també coneguts com *widgets*). Per fer visibles els controls per a un usuari, s'han d'afegir a un Page o dins d'altres controls que ja siguen visibles. La pàgina és el control superior, i la resta de controls pengen d'aquesta *arrel* formant una estructura d'arbre.
 
@@ -143,7 +143,7 @@ page.add(
 
 ![formulari1](images/row1.png)
 
-### 5.1. Esdeveniments
+### 4.1. Esdeveniments
 
 Cada interacció de l'usuari amb la interfície, per exemple un clic de ratolí, un doble clic, l'ús d'una tecla, etc. generarà un esdeveniment. Aquest esdeveniment serà afegit a la cua d'esdeveniments (*event queue*) per ser gestionat.
 
@@ -173,7 +173,7 @@ ft.app(target=main)
 ??? tip "Propietat *visible*"
     Cada control té la propietat *visible* que és *True* per defecte. La configuració *visible* a *False* impedeix que el control (i tots els seus fills, si hi ha) es mostren. Els controls ocults no es poden enfocar, ni seleccionar amb un teclat o ratolí i no emeten cap esdeveniment.
 
-??? tip "Propietat *disbaled*"
+??? tip "Propietat *disabled*"
     Cada control té la propietat *disabled* que és *False* per defecte, el control i tots els seus fills estan habilitats. S'utilitza principalment amb controls d'entrada de dades com els botons, TextField, Dropdown, Checkbox,... Tanmateix, *disabled* es podria establir en un control pare i el seu valor es propagarà a tots els fills de forma recursiva.
 
     ```python
@@ -187,7 +187,7 @@ ft.app(target=main)
     page.add(c)
     ```
 
-### 5.2. Referències a Controls
+### 4.2. Referències a Controls
 
 Els controls Flet són objectes i per accedir a les seves propietats hem de mantenir les referències (variables) a aquests objectes. Quan s'afegeixen molts controls i controladors d'esdeveniments, es fa difícil mantindre totes les definicions de control en un sol lloc, de manera que es dispersen pel cos del *main()*. Mirant els paràmetres de *page.add()*, és difícil imaginar (sense mirar constantment a les definicions de variables) com seria la forma final de la interfície (ahí pot ajudar molt el nom de la variable).
 
@@ -281,9 +281,9 @@ Compareu els següents fragments de codi:
     ft.app(target=main)
     ```
 
-## 6. Principals components en formularis
+## 5. Principals controls en formularis
 
-A la primera unitat vam veure un llistat de components habituals juntament amb el seu ús habitual. Farem un llistat amb els components més habituals de Flet usats en formularis, juntament amb algun dels seus esdeveniments. Practicarem amb exemples i exercicis en altres apartats de la unitat. Per obtenir una llista completa i més informació de cadascun, cal consultar la documentació de Flet.
+A la primera unitat vam veure un llistat de controls habituals juntament amb el seu ús habitual. Farem un llistat amb els controls més habituals de Flet usats en formularis, juntament amb algun dels seus esdeveniments. Practicarem amb exemples i exercicis en altres apartats de la unitat. Per obtenir una llista completa i més informació de cadascun, cal consultar la documentació de Flet.
 
 
 !!!example "Controls"
@@ -316,10 +316,10 @@ A la primera unitat vam veure un llistat de components habituals juntament amb e
             page.vertical_alignment = ft.MainAxisAlignment.CENTER
             page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
-            txt_number = ft.Text(value='Hello world with Flet!!', text_align=ft.TextAlign.LEFT)
+            text = ft.Text(value='Hello world with Flet!!', text_align=ft.TextAlign.LEFT)
 
             page.controls.append(
-                txt_number
+                text
             )
 
             page.update()
@@ -359,18 +359,18 @@ A la primera unitat vam veure un llistat de components habituals juntament amb e
         import flet as ft
 
         def main(page):
-        def button_clicked(e):
-            t.value = f"Your favorite color is:  {cg.value}"
-            page.update()
+            def button_clicked(e):
+                t.value = f"Your favorite color is:  {cg.value}"
+                page.update()
 
-        t = ft.Text()
-        b = ft.ElevatedButton(text='Submit', on_click=button_clicked)
-        cg = ft.RadioGroup(content=ft.Column([
-            ft.Radio(value="red", label="Red"),
-            ft.Radio(value="green", label="Green"),
-            ft.Radio(value="blue", label="Blue")]))
-        
-        page.add(ft.Text("Select your favorite color:"), cg, b, t)
+            t = ft.Text()
+            b = ft.ElevatedButton(text='Submit', on_click=button_clicked)
+            cg = ft.RadioGroup(content=ft.Column([
+                ft.Radio(value="red", label="Red"),
+                ft.Radio(value="green", label="Green"),
+                ft.Radio(value="blue", label="Blue")]))
+
+            page.add(ft.Text("Select your favorite color:"), cg, b, t)
 
         ft.app(target=main)
         ```
@@ -453,31 +453,6 @@ A la primera unitat vam veure un llistat de components habituals juntament amb e
         ft.app(target=main)
         ```
 
-    === "ProgressBar"
-
-        ```python
-        from time import sleep
-
-        import flet as ft
-
-        def main(page: ft.Page):
-            pb = ft.ProgressBar(width=400)
-
-            page.add(
-                ft.Text("Linear progress indicator", style="headlineSmall"),
-                ft.Column([ ft.Text("Doing something..."), pb]),
-                ft.Text("Indeterminate progress bar", style="headlineSmall"),
-                ft.ProgressBar(width=400, color="amber", bgcolor="#eeeeee"),
-            )
-
-            for i in range(0, 101):
-                pb.value = i * 0.01
-                sleep(0.1)
-                page.update()
-
-        ft.app(target=main)
-        ```
-
     === "Slider"
 
         ```python
@@ -518,7 +493,7 @@ A la primera unitat vam veure un llistat de components habituals juntament amb e
             b = ft.ElevatedButton(text="Submit", on_click=button_clicked)
             page.add(c1, c2, c3, c4, b, t)
 
-        ft.app(target=main, view=ft.AppView.WEB_BROWSER)
+        ft.app(target=main)
         ```
 
     === "FilePicker"
