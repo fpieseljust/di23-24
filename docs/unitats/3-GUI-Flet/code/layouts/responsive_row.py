@@ -56,7 +56,7 @@ def main(page: ft.Page):
                 ft.TextField(label="TextField 2", col={"md": 4}),
                 ft.TextField(label="TextField 3", col={"md": 4}),
             ],
-            run_spacing={"xs": 10},
+            run_spacing={"xs": 12},
         ),
     )
     page_resize(None)

@@ -564,7 +564,19 @@ Si als descendents en l'arbre de controls no tenen especificada la propietat *co
 
     def main(page: ft.Page):
         def page_resize(e):
-            pw.value = f"{page.width} px"
+            if page.width < 576:
+                size = "XS"
+            elif page.width < 768:
+                size = "SM"
+            elif page.width < 992:
+                size = "MD"
+            elif page.width < 1200:
+                size = "LG"
+            elif page.width < 1400:
+                size = "XL"
+            else:
+                size = "XXL"
+            pw.value = f"Tamany de pantalla: {size} -> {page.width} px"
             pw.update()
 
         page.on_resize = page_resize
@@ -606,7 +618,7 @@ Si als descendents en l'arbre de controls no tenen especificada la propietat *co
                     ft.TextField(label="TextField 2", col={"md": 4}),
                     ft.TextField(label="TextField 3", col={"md": 4}),
                 ],
-                run_spacing={"xs": 10},
+                run_spacing={"xs": 12},
             ),
         )
         page_resize(None)
