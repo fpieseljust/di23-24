@@ -255,8 +255,8 @@ Amb les seues propietats es poden modificar la forma en que es col·loquen, l'es
 
     def main(page: ft.Page):
         row = ft.Row([
-            ft.Container(bgcolor=ft.colors.YELLOW, expand=1, content=ft.Text(
-                "expand = 1", text_align=ft.TextAlign.CENTER)),
+            ft.Container(bgcolor=ft.colors.YELLOW, expand=2, content=ft.Text(
+                "expand = 2", text_align=ft.TextAlign.CENTER)),
             ft.Container(bgcolor=ft.colors.RED, expand=3, content=ft.Text(
                 "expand = 3", text_align=ft.TextAlign.CENTER)),
             ft.Container(bgcolor=ft.colors.PURPLE, expand=1, content=ft.Text(
