@@ -47,33 +47,61 @@ Desenvolupa una aplicació on pugam canviar (modificant una variable al codi) el
     - Per a canviar el tamany fes ús de la propietat page.window_width i page.window_height.
     - Pensa quants i de quin tipus són els layouts abans de començar a desenvolupar.
     
+## Activitat 3 - Navegació entre vistes
 
-<!-- ## 4. Barres de ferramentes, barra d'estat i menús.
+Partint del code viste en teoria:
 
-### **Activitat 3** - Sistema d'ajuda
+!!! example "Navegació entre dues rutes amb diferent vista"
 
-L'ajuda "What's This?" o "Qué es esto?" és part del sistema d'ajuda en línia d'una aplicació i brinda als usuaris informació sobre la funcionalitat i l'ús d'un control en particular. 
+    ```python
+    '''Exemple de navegació entre vistes de Flet'''
+    import flet as ft
 
-QWhatsThis proporciona una sola finestra amb un text explicatiu que apareix quan l'usuari fa clic sobre "What's this?" seguit d'un altre clic sobre un control. La forma per defecte perquè els usuaris facen la pregunta és prémer Shift+F1 per activar el mode *ajuda*. El text d'ajuda apareix al fer clic, amb el mode d'ajuda activat, sobre un control; desapareix quan l'usuari torna a fer clic. 
+    def main(page: ft.Page):
+        '''Funció principal'''
+        page.title = "Routes Example"
 
-Per entrar en el mode ajuda necessitem cridar al mètode estàtic (no necessites declarar un objecte de la classe) **enterWhatsThisMode()** mentre que per ixir es cridarà a **leaveWhatsThisMode()**. Podem saber si el tenim activat o no usant **inWhatsThisMode()**.
+        def route_change(route):
+            page.views.clear()
+            page.views.append(
+                ft.View(
+                    "/",
+                    [
+                        ft.AppBar(title=ft.Text("Flet app"), bgcolor=ft.colors.SURFACE_VARIANT),
+                        ft.ElevatedButton("Visit Store", on_click=lambda _: page.go("/store")),
+                    ],
+                )
+            )
+            if page.route == "/store":
+                page.views.append(
+                    ft.View(
+                        "/store",
+                        [
+                            ft.AppBar(title=ft.Text("Store"), bgcolor=ft.colors.SURFACE_VARIANT),
+                            ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
+                        ],
+                    )
+                )
+            page.update()
 
-Creeu una aplicació amb un component tipus *dock* (flotant) que continga un **QTextEdit** i un component principal. Per defecte el *dock* se situarà a la part superior de la finestra.
+        def view_pop(view):
+            page.views.pop()
+            top_view = page.views[-1]
+            page.go(top_view.route)
 
-Afegeix una acció “Imprimeix en *dock*” que imprimirà “Acció Polsada” al component flotant en fer clic sobre ella. La drecera serà Ctrl + P i a més apareixerà en una barra d'eines i en un menú. El vostre text d'ajuda serà "En executar aquesta acció s'afegirà el text "Acció polsada" al *dock*. 
+        page.on_route_change = route_change
+        page.on_view_pop = view_pop
+        page.go(page.route)
 
-En resum, es pot llançar per Menú -> Imprimir a *dock*, amb Ctrl + P o fent clic al botó corresponent de la barra d'eines.
 
-Afegeix un botó *Què és això?* a l'aplicació amb el comportament habitual, és a dir, entrar o eixir del mode ajuda.
+    ft.app(target=main, view='web_browser', port=8080)
+    ```
 
-![Whats this](images/imprimir_dock.png)
+Fes les modificacions pertinents per a que el comportament siga el que es mostra al següent vídeo (simula una tenda amb un carro, es pot tornar sempre al home amb el botó, des del carro també es pot tornar a la tenda, i amb el botó automàtic de l'AppBar, es pot seguir el camí Carro -> Tenda -> Home):
 
-## 5. Diàlegs i altres finestres.
+<center>
 
-### **Activitat 4** - Dialegs per obrir o guardar.
+![Activitat de navegació](<images/actvitat navegacio.gif>)
 
-A la pràctica de l'apartat anterior [(Pràctica 3)](../tasques/2%20-%20Pràctiques.md#practica-3-editor-de-text), havíem començat a desenvolupar un editor de text molt simple que permetia carregar i guardar “arxiu.txt” situat a la mateixa ruta des de la qual executàvem el codi.
+</center>
 
-En aquest cas pràctic, utilitzarem dos diàlegs, un per demanar quin fitxer obrir i un altre per demanar en quin fitxer volem desar els canvis. En cas que ja hi haja un fitxer obert, en donar a desar no demanarà la ruta al fitxer, sinó que utilitzarà la ruta del fitxer obert anteriorment, sobreescrivint-lo.
-
-A més, afegirem una entrada de menú “Tancar” per tancar l'arxiu obert actualment i començar-ne un de nou. -->

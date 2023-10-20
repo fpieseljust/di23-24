@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://fpieseljust.github.io/di23-24/unitats/3-GUI-Flet/tasques/1%20-%20Activitats/">
       
       
-        <link rel="prev" href="../../teoria/3%20-%20Layouts/">
+        <link rel="prev" href="../../teoria/4%20-%20Navegacio/">
       
       
         <link rel="next" href="../../../../info/guia_alumne_DI/">
@@ -1049,6 +1049,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../teoria/4%20-%20Navegacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 - Navegació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1150,6 +1170,13 @@
         <li class="md-nav__item">
   <a href="#activitat-2-layouts-niuats" class="md-nav__link">
     Activitat 2 - Layouts niuats
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#activitat-3-navegacio-entre-vistes" class="md-nav__link">
+    Activitat 3 - Navegació entre vistes
   </a>
   
 </li>
@@ -1358,6 +1385,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#activitat-3-navegacio-entre-vistes" class="md-nav__link">
+    Activitat 3 - Navegació entre vistes
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1432,35 +1466,97 @@
 <li>Pensa quants i de quin tipus són els layouts abans de començar a desenvolupar.</li>
 </ul>
 </div>
-<!-- ## 4. Barres de ferramentes, barra d'estat i menús.
-
-### **Activitat 3** - Sistema d'ajuda
-
-L'ajuda "What's This?" o "Qué es esto?" és part del sistema d'ajuda en línia d'una aplicació i brinda als usuaris informació sobre la funcionalitat i l'ús d'un control en particular. 
-
-QWhatsThis proporciona una sola finestra amb un text explicatiu que apareix quan l'usuari fa clic sobre "What's this?" seguit d'un altre clic sobre un control. La forma per defecte perquè els usuaris facen la pregunta és prémer Shift+F1 per activar el mode *ajuda*. El text d'ajuda apareix al fer clic, amb el mode d'ajuda activat, sobre un control; desapareix quan l'usuari torna a fer clic. 
-
-Per entrar en el mode ajuda necessitem cridar al mètode estàtic (no necessites declarar un objecte de la classe) **enterWhatsThisMode()** mentre que per ixir es cridarà a **leaveWhatsThisMode()**. Podem saber si el tenim activat o no usant **inWhatsThisMode()**.
-
-Creeu una aplicació amb un component tipus *dock* (flotant) que continga un **QTextEdit** i un component principal. Per defecte el *dock* se situarà a la part superior de la finestra.
-
-Afegeix una acció “Imprimeix en *dock*” que imprimirà “Acció Polsada” al component flotant en fer clic sobre ella. La drecera serà Ctrl + P i a més apareixerà en una barra d'eines i en un menú. El vostre text d'ajuda serà "En executar aquesta acció s'afegirà el text "Acció polsada" al *dock*. 
-
-En resum, es pot llançar per Menú -> Imprimir a *dock*, amb Ctrl + P o fent clic al botó corresponent de la barra d'eines.
-
-Afegeix un botó *Què és això?* a l'aplicació amb el comportament habitual, és a dir, entrar o eixir del mode ajuda.
-
-![Whats this](images/imprimir_dock.png)
-
-## 5. Diàlegs i altres finestres.
-
-### **Activitat 4** - Dialegs per obrir o guardar.
-
-A la pràctica de l'apartat anterior [(Pràctica 3)](../tasques/2%20-%20Pràctiques.md#practica-3-editor-de-text), havíem començat a desenvolupar un editor de text molt simple que permetia carregar i guardar “arxiu.txt” situat a la mateixa ruta des de la qual executàvem el codi.
-
-En aquest cas pràctic, utilitzarem dos diàlegs, un per demanar quin fitxer obrir i un altre per demanar en quin fitxer volem desar els canvis. En cas que ja hi haja un fitxer obert, en donar a desar no demanarà la ruta al fitxer, sinó que utilitzarà la ruta del fitxer obert anteriorment, sobreescrivint-lo.
-
-A més, afegirem una entrada de menú “Tancar” per tancar l'arxiu obert actualment i començar-ne un de nou. --></div>
+<h2 id="activitat-3-navegacio-entre-vistes">Activitat 3 - Navegació entre vistes</h2>
+<p>Partint del code viste en teoria:</p>
+<div class="admonition example">
+<p class="admonition-title">Navegació entre dues rutes amb diferent vista</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span>
+<span class="normal"><a href="#__codelineno-1-38">38</a></span>
+<span class="normal"><a href="#__codelineno-1-39">39</a></span>
+<span class="normal"><a href="#__codelineno-1-40">40</a></span>
+<span class="normal"><a href="#__codelineno-1-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="sd">'''Exemple de navegació entre vistes de Flet'''</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">flet</span> <span class="k">as</span> <span class="nn">ft</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">page</span><span class="p">:</span> <span class="n">ft</span><span class="o">.</span><span class="n">Page</span><span class="p">):</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="sd">'''Funció principal'''</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="n">page</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">"Routes Example"</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="k">def</span> <span class="nf">route_change</span><span class="p">(</span><span class="n">route</span><span class="p">):</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>        <span class="n">page</span><span class="o">.</span><span class="n">views</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>        <span class="n">page</span><span class="o">.</span><span class="n">views</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>            <span class="n">ft</span><span class="o">.</span><span class="n">View</span><span class="p">(</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>                <span class="s2">"/"</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>                <span class="p">[</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>                    <span class="n">ft</span><span class="o">.</span><span class="n">AppBar</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">ft</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">"Flet app"</span><span class="p">),</span> <span class="n">bgcolor</span><span class="o">=</span><span class="n">ft</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">SURFACE_VARIANT</span><span class="p">),</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>                    <span class="n">ft</span><span class="o">.</span><span class="n">ElevatedButton</span><span class="p">(</span><span class="s2">"Visit Store"</span><span class="p">,</span> <span class="n">on_click</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="n">page</span><span class="o">.</span><span class="n">go</span><span class="p">(</span><span class="s2">"/store"</span><span class="p">)),</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>                <span class="p">],</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>            <span class="p">)</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>        <span class="p">)</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>        <span class="k">if</span> <span class="n">page</span><span class="o">.</span><span class="n">route</span> <span class="o">==</span> <span class="s2">"/store"</span><span class="p">:</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>            <span class="n">page</span><span class="o">.</span><span class="n">views</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>                <span class="n">ft</span><span class="o">.</span><span class="n">View</span><span class="p">(</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>                    <span class="s2">"/store"</span><span class="p">,</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>                    <span class="p">[</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>                        <span class="n">ft</span><span class="o">.</span><span class="n">AppBar</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">ft</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">"Store"</span><span class="p">),</span> <span class="n">bgcolor</span><span class="o">=</span><span class="n">ft</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">SURFACE_VARIANT</span><span class="p">),</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>                        <span class="n">ft</span><span class="o">.</span><span class="n">ElevatedButton</span><span class="p">(</span><span class="s2">"Go Home"</span><span class="p">,</span> <span class="n">on_click</span><span class="o">=</span><span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="n">page</span><span class="o">.</span><span class="n">go</span><span class="p">(</span><span class="s2">"/"</span><span class="p">)),</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>                    <span class="p">],</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>                <span class="p">)</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>            <span class="p">)</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>        <span class="n">page</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>    <span class="k">def</span> <span class="nf">view_pop</span><span class="p">(</span><span class="n">view</span><span class="p">):</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a>        <span class="n">page</span><span class="o">.</span><span class="n">views</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a>        <span class="n">top_view</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">views</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a>        <span class="n">page</span><span class="o">.</span><span class="n">go</span><span class="p">(</span><span class="n">top_view</span><span class="o">.</span><span class="n">route</span><span class="p">)</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a>    <span class="n">page</span><span class="o">.</span><span class="n">on_route_change</span> <span class="o">=</span> <span class="n">route_change</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a>    <span class="n">page</span><span class="o">.</span><span class="n">on_view_pop</span> <span class="o">=</span> <span class="n">view_pop</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a>    <span class="n">page</span><span class="o">.</span><span class="n">go</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">route</span><span class="p">)</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a>
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="n">ft</span><span class="o">.</span><span class="n">app</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">main</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="s1">'web_browser'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Fes les modificacions pertinents per a que el comportament siga el que es mostra al següent vídeo (simula una tenda amb un carro, es pot tornar sempre al home amb el botó, des del carro també es pot tornar a la tenda, i amb el botó automàtic de l'AppBar, es pot seguir el camí Carro -&gt; Tenda -&gt; Home):</p>
+<p></p><center>
+<p><img alt="Activitat de navegació" src="../images/actvitat%20navegacio.gif"></p>
+<p></p></center></div>
 
 
 
