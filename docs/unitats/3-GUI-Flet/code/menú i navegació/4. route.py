@@ -7,7 +7,6 @@ def main(page: ft.Page):
 
     def route_change(route):
         page.views.clear()
-        # if page.route == "/": EXPLICAR
         page.views.append(
             ft.View(
                 "/",
@@ -17,25 +16,13 @@ def main(page: ft.Page):
                 ],
             )
         )
-        if page.route == "/store" or page.route == "/cart":
+        if page.route == "/store":
             page.views.append(
                 ft.View(
-                    "/store",controls=
+                    "/store",
                     [
                         ft.AppBar(title=ft.Text("Store"), bgcolor=ft.colors.SURFACE_VARIANT),
                         ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
-                        ft.ElevatedButton("Cart", on_click=lambda _: page.go("/cart")),
-                    ],
-                )
-            )
-        if page.route == "/cart":
-            page.views.append(
-                ft.View(
-                    "/cart",
-                    [
-                        ft.AppBar(title=ft.Text("Cart"), bgcolor=ft.colors.SURFACE_VARIANT),
-                        ft.ElevatedButton("Go Home", on_click=lambda _: page.go("/")),
-                        ft.ElevatedButton("Visit Store", on_click=lambda _: page.go("/store")),
                     ],
                 )
             )

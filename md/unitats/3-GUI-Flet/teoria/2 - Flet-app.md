@@ -281,6 +281,10 @@ Compareu els següents fragments de codi:
     ft.app(target=main)
     ```
 
+!!! tip ""
+    
+    En este punt pots realitzar [l'activitat 1](../../tasques/1%20-%20Activitats/#activitat-1-habilitacio-i-deshabilitacio-de-controls).
+
 ## 5. Principals controls en formularis
 
 A la primera unitat vam veure un llistat de controls habituals juntament amb el seu ús habitual. Farem un llistat amb els controls més habituals de Flet usats en formularis, juntament amb algun dels seus esdeveniments. Practicarem amb exemples i exercicis en altres apartats de la unitat. Per obtenir una llista completa i més informació de cadascun, cal consultar la documentació de Flet.
@@ -530,3 +534,6 @@ A la primera unitat vam veure un llistat de controls habituals juntament amb el 
 
         ft.app(target=main)
         ```
+!!! tip ""
+    
+    En este punt pots realitzar [l'activitat 2](../../tasques/1%20-%20Activitats/#activitat-2-formulari).

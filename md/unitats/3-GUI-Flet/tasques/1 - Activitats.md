@@ -25,8 +25,34 @@ Modifica'l per a que el botó `Afegir` es desactive **sempre** que la caixa de t
     - Fes ús de `disabled` per a canviar l'estat del control.
     - Investiga quins esdeveniments es produixen al borrar el text. 
 
+## Activitat 2 - Formulari
 
-## Activitat 2 - Layouts niuats
+Fes un formulari d'alta d'usuari semblant al que es mostra a la següent imatge. Cada control de tipus caixa de text inclourà un text d'ajuda. La contrasenya es mostrarà oculta, excepte quan es pulse el botó per a mostrar-la.
+
+Inclou també un botó d'enviar, situat al final del formulari a la dreta i inicialment deshabilitat. El botó s'habilitarà quan tots els controls tinguen informació introduïda.
+Al donar-li al botó enviar, es comprovaran certes restriccions sobre la informació intruduïda. Si es cumplixen totes les condicions, s'imprimirà per consola el missatge *Formulari enviat*, en cas contrari indicarà quin és l'error que s'ha produït, per exemple, *La contrassenya ha de tindre almenys huit caràcters*.
+
+Usuari:
+
+- comença per lletra
+- no conté espais
+- no conté caràcters especials
+
+Contrasenya:
+
+- és almenys de llongitud 8
+- té almenys una majúscula
+- té almenys una minúscula
+- té almenys un número
+- té almenys un caràcter especial
+
+<center>
+
+![Formulari](images/form.png){width=50%}
+
+</center>
+
+## Activitat 3 - Layouts niuats
 
 Un layout és un control que a la vegada pot contindre altres controls. Aleshores, podem niuar diversos layouts per dissenyar la nostra aplicació com desitgem.
 
@@ -46,8 +72,10 @@ Desenvolupa una aplicació on pugam canviar (modificant una variable al codi) el
 !!! tip "Pista"
     - Per a canviar el tamany fes ús de la propietat page.window_width i page.window_height.
     - Pensa quants i de quin tipus són els layouts abans de començar a desenvolupar.
+
+
     
-## Activitat 3 - Navegació entre vistes
+## Activitat 4 - Navegació entre vistes
 
 Partint del code viste en teoria:
 
@@ -105,3 +133,4 @@ Fes les modificacions pertinents per a que el comportament siga el que es mostra
 
 </center>
 
+## 

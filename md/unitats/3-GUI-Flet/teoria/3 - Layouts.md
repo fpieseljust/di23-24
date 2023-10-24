@@ -326,6 +326,11 @@ Un control que mostra els seus fills en una matriu vertical. El funcionament és
 
 [Més informació](https://flet.dev/docs/controls/column)
 
+
+!!! tip ""
+    
+    En este punt pots realitzar [l'activitat 3](../../tasques/1%20-%20Activitats/#activitat-3-layouts-niuats). 
+
 ## 5. Stack
 
 Un control que situa els seus fills uns sobre els altres, apilats.
