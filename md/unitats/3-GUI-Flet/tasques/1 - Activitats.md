@@ -1,4 +1,4 @@
-## Activitat 1 - Habilitació i deshabilitació de controls
+## 1. Activitat 1 - Habilitació i deshabilitació de controls
 
 Partint del següent codi vist en la teoria:
 
@@ -25,7 +25,7 @@ Modifica'l per a que el botó `Afegir` es desactive **sempre** que la caixa de t
     - Fes ús de `disabled` per a canviar l'estat del control.
     - Investiga quins esdeveniments es produixen al borrar el text. 
 
-## Activitat 2 - Formulari
+## 2. Activitat 2 - Formulari
 
 Fes un formulari d'alta d'usuari semblant al que es mostra a la següent imatge. Cada control de tipus caixa de text inclourà un text d'ajuda. La contrasenya es mostrarà oculta, excepte quan es pulse el botó per a mostrar-la.
 
@@ -52,7 +52,7 @@ Contrasenya:
 
 </center>
 
-## Activitat 3 - Layouts niuats
+## 3. Activitat 3 - Layouts niuats
 
 Un layout és un control que a la vegada pot contindre altres controls. Aleshores, podem niuar diversos layouts per dissenyar la nostra aplicació com desitgem.
 
@@ -75,7 +75,7 @@ Desenvolupa una aplicació on pugam canviar (modificant una variable al codi) el
 
 
     
-## Activitat 4 - Navegació entre vistes
+## 4. Activitat 4 - Navegació entre vistes
 
 Partint del code viste en teoria:
 
@@ -132,5 +132,3 @@ Fes les modificacions pertinents per a que el comportament siga el que es mostra
 ![Activitat de navegació](<images/actvitat navegacio.gif>)
 
 </center>
-
-## 

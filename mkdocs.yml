@@ -45,7 +45,7 @@ nav:
   #     - 5 - Diàlegs i altres finestres: unitats/3-GUI-Flet/teoria/5 - Dialegs.md
     - Tasques:
       - Activitats: unitats/3-GUI-Flet/tasques/1 - Activitats.md
-  #     - Pràctiques: unitats/3-GUI-Flet/tasques/2 - Pràctiques.md      
+      - Pràctiques: unitats/3-GUI-Flet/tasques/2 - Practiques.md      
 
   # - Unitat 3 - Introducció a les interfícies d'usuari amb PySide:
   #   - Teoria:
