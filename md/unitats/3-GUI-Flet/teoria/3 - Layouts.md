@@ -329,7 +329,7 @@ Un control que mostra els seus fills en una matriu vertical. El funcionament és
 
 !!! tip ""
     
-    En este punt pots realitzar [l'activitat 3](../../tasques/1%20-%20Activitats/#activitat-3-layouts-niuats). 
+    En este punt pots realitzar [l'activitat 3](../../tasques/1 - Activitats/#activitat-3-layouts-niuats). 
 
 ## 5. Stack
 

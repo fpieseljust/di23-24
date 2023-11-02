@@ -132,3 +132,7 @@ Fes les modificacions pertinents per a que el comportament siga el que es mostra
 ![Activitat de navegació](<images/actvitat navegacio.gif>)
 
 </center>
+
+## Activitat 5 - Dialeg d'alerta
+
+Partint del codi de l'activitat 1

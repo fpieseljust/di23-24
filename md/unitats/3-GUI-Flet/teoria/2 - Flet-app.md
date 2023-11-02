@@ -283,7 +283,7 @@ Compareu els següents fragments de codi:
 
 !!! tip ""
     
-    En este punt pots realitzar [l'activitat 1](../../tasques/1%20-%20Activitats/#activitat-1-habilitacio-i-deshabilitacio-de-controls).
+    En este punt pots realitzar [l'activitat 1](../../tasques/1 - Activitats/#activitat-1-habilitacio-i-deshabilitacio-de-controls).
 
 ## 5. Principals controls en formularis
 
@@ -536,4 +536,4 @@ A la primera unitat vam veure un llistat de controls habituals juntament amb el 
         ```
 !!! tip ""
     
-    En este punt pots realitzar [l'activitat 2](../../tasques/1%20-%20Activitats/#activitat-2-formulari).
+    En este punt pots realitzar [l'activitat 2](../../tasques/1 - Activitats/#activitat-2-formulari).
