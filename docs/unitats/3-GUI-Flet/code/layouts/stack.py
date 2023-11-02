@@ -16,7 +16,7 @@ def main(page: ft.Page):
                         color="white",
                         size=40,
                         weight="bold",
-                        opacity=0.5,
+                        opacity=0.8,
                     )
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,

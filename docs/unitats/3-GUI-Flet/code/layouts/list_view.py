@@ -11,4 +11,4 @@ def main(page: ft.Page):
         
     page.update()
 
-ft.app(target=main)
+ft.app(target=main, view='web_browser', port=8550)
