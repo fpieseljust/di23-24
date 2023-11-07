@@ -1187,8 +1187,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bottomrsheet" class="md-nav__link">
-    BottomrSheet
+  <a href="#bottomsheet" class="md-nav__link">
+    BottomSheet
   </a>
   
 </li>
@@ -1560,8 +1560,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bottomrsheet" class="md-nav__link">
-    BottomrSheet
+  <a href="#bottomsheet" class="md-nav__link">
+    BottomSheet
   </a>
   
 </li>
@@ -1760,7 +1760,7 @@
 <p><img alt="Banner" src="../images/banner.gif" width="50%"></p>
 <p></p></center>
 </div>
-<h3 id="bottomrsheet">BottomrSheet</h3>
+<h3 id="bottomsheet">BottomSheet</h3>
 <p>Un <em>BottomSheet</em> és una alternativa modal a un menú o un diàleg.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
@@ -1836,58 +1836,57 @@
 <p>Un missatge lleuger amb una acció opcional que es mostra breument a la part inferior de la pantalla.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">flet</span> <span class="k">as</span> <span class="nn">ft</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">class</span> <span class="nc">Data</span><span class="p">:</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">d</span> <span class="o">=</span> <span class="n">Data</span><span class="p">()</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">page</span><span class="p">):</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="n">page</span><span class="o">.</span><span class="n">snack_bar</span> <span class="o">=</span> <span class="n">ft</span><span class="o">.</span><span class="n">SnackBar</span><span class="p">(</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a>        <span class="n">content</span><span class="o">=</span><span class="n">ft</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="s2">"Hello, world!"</span><span class="p">),</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>        <span class="n">action</span><span class="o">=</span><span class="s2">"Alright!"</span><span class="p">,</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="p">)</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a>    <span class="k">def</span> <span class="nf">on_click</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>        <span class="n">page</span><span class="o">.</span><span class="n">snack_bar</span> <span class="o">=</span> <span class="n">ft</span><span class="o">.</span><span class="n">SnackBar</span><span class="p">(</span><span class="n">ft</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hello </span><span class="si">{</span><span class="n">d</span><span class="o">.</span><span class="n">counter</span><span class="si">}</span><span class="s2">"</span><span class="p">))</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a>        <span class="n">page</span><span class="o">.</span><span class="n">snack_bar</span><span class="o">.</span><span class="n">open</span> <span class="o">=</span> <span class="kc">True</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a>        <span class="n">d</span><span class="o">.</span><span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a>        <span class="n">page</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a>    <span class="n">page</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">ft</span><span class="o">.</span><span class="n">ElevatedButton</span><span class="p">(</span><span class="s2">"Open SnackBar"</span><span class="p">,</span> <span class="n">on_click</span><span class="o">=</span><span class="n">on_click</span><span class="p">))</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="n">ft</span><span class="o">.</span><span class="n">app</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">main</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p></p><center>
-<p><img alt="SnackBar" src="../images/snackbar.gif" width="50%"></p>
-<p></p></center>
-</div></div>
+<p>```python</p>
+</div>
+<p>import flet as ft</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>class Data:
+    def __init__(self) -&gt; None:
+        self.counter = 0
+
+d = Data()
+
+def main(page):
+
+    def on_click(e):
+        page.snack_bar = ft.SnackBar(ft.Text(f"Hello {d.counter}"))
+        page.snack_bar.open = True
+        d.counter += 1
+        page.update()
+
+    page.add(ft.ElevatedButton("Open SnackBar", on_click=on_click))
+
+ft.app(target=main)
+```
+
+&lt;center&gt;
+
+![SnackBar](images/snackbar.gif){width=50%}
+
+&lt;/center&gt;
+</code></pre></div></td></tr></table></div></div>
 
 
 

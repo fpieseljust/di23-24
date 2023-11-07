@@ -108,7 +108,7 @@ Un bàner mostra un missatge que requereix una acció de l'usuari. El missatge �
     
     </center>
 
-### BottomrSheet
+### BottomSheet
 
 Un *BottomSheet* és una alternativa modal a un menú o un diàleg.
 
@@ -162,7 +162,7 @@ Un missatge lleuger amb una acció opcional que es mostra breument a la part inf
 !!! example "Exemple"
     
     ```python
-    import flet as ft
+   import flet as ft
 
     class Data:
         def __init__(self) -> None:
@@ -171,11 +171,6 @@ Un missatge lleuger amb una acció opcional que es mostra breument a la part inf
     d = Data()
 
     def main(page):
-
-        page.snack_bar = ft.SnackBar(
-            content=ft.Text("Hello, world!"),
-            action="Alright!",
-        )
 
         def on_click(e):
             page.snack_bar = ft.SnackBar(ft.Text(f"Hello {d.counter}"))

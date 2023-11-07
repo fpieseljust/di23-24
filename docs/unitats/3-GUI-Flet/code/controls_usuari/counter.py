@@ -4,6 +4,7 @@ import flet as ft
 class Counter(ft.UserControl):
     def __init__(self):
         super().__init__()
+        @property
         self.counter = 0
         self.text = ft.Text(str(self.counter))
 
@@ -18,11 +19,14 @@ class Counter(ft.UserControl):
         self.update()
 
     def build(self):
-        return ft.Row([ft.IconButton(ft.icons.REMOVE, on_click=self.subtract_click), self.text, ft.IconButton(ft.icons.ADD, on_click=self.add_click)])
+        return ft.Row([ft.IconButton(ft.icons.REMOVE, on_click=self.subtract_click),
+         self.text, ft.IconButton(ft.icons.ADD, on_click=self.add_click)])
 
 
 def main(page):
-    page.add(Counter())
+    counter = Counter()
+    counter.counter = 170
+    page.add(counter)
 
 
 ft.app(target=main)

@@ -22,4 +22,4 @@ def main(page: ft.Page):
     send = ft.ElevatedButton("Send", on_click=send_click)
     page.add(messages, ft.Row(controls=[user, message, send]))
 
-ft.app(target=main, view='web_browser')
+ft.app(target=main, view='web_browser', port=8550)
