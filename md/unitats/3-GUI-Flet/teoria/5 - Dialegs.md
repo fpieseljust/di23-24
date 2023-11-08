@@ -162,7 +162,7 @@ Un missatge lleuger amb una acció opcional que es mostra breument a la part inf
 !!! example "Exemple"
     
     ```python
-   import flet as ft
+    import flet as ft
 
     class Data:
         def __init__(self) -> None:

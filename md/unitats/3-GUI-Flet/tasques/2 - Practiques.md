@@ -11,15 +11,15 @@ Es pretén implementar un joc l'objectiu del qual és trobar el número buscat. 
 
 	class App:
 		def __init__(self) -> None:
-			ft.app(target=self.main)
 			...
 
-		def main(self, page: ft.Page):
-			self.page = page
-			...
+	def main(page: ft.Page):
+		app = App()
+		page.title = "Flet APP"
+		page.add(app)
 
 	if __name__ == "__main__":
-    	app = App(25)
+		ft.app(target=main)
 	```
   
 
@@ -47,11 +47,11 @@ Anem a desenvolupar, a través d'una sèrie de pràctiques, una aplicació compl
 
 ### 2.1. Pràctica 2 - Editar i modificar tasques
 
-Partint del teu codi de l'activitat 1, anem a afegir la funcionalitat de destacar la tasca, editar-la i eliminar-la, tal com es mostra a continuació:
+Partint del teu codi de l'activitat 1, anem a afegir la funcionalitat de destacar la tasca (de moment no farà res), editar-la i eliminar-la, tal com es mostra a continuació:
 
 <center>
 
-![ToDo APP](images/task_2.gif)
+![ToDo APP](images/pr2_1_task.gif)
 
 </center>
 
@@ -64,4 +64,71 @@ Fes que no calga utilitzar el clic a `Afegir` per a afegir la tasca, ni fer el c
 	El control TextField llança un esdeveniment on_submit en donar-li a la tecla `Enter`.
 
 !!! tip "Focus"
-	Fes que el focus vagen adoptant-lo els controls adequats en cada situació. Per exemple, en editar el nom de la tasca, el textfield deuria prendre el focus per evitar que l'usuari haja de fer clic per a començar a escriure. Idem per a botons en dialegs.
+	Fes que el focus vagen adoptant-lo els controls adequats en cada situació. Per exemple, en editar el nom de la tasca, el textfield deuria prendre el focus per evitar que l'usuari haja de fer clic per a començar a escriure. Idem per a botons en dialegs,...
+
+!!! tip "Aplica la POO"
+	Defineix una classe Task (o Tasca) que herede de ft.ControlUser i retorne la següent interfície:
+
+	![task](images/task.png)
+
+	Defineix una classe TodoApp per a construir l'aplicació principal, que importarà la classe Task. Esta contindrà una llista de tasques. Al fer clic al control de la paperera, s'eliminarà de l'aplicació TodoApp la tasca sobre la que s'ha fet clic. Per tant necessitem en TodoApp una llista de tasques, i en la classe tasques, necessitem una referència a TodoApp per poder accedir a aquesta llista.
+
+	Traduït a programació:
+
+	```python
+	class Task(ft.UserControl):
+		def __init__(self, ..., todo_app) -> None:
+			super().__init__()
+			self.text = text
+			self.todo_app = todo_app
+
+			...
+
+	def remove_task(self, e):
+        ...
+		self.todo_app.tasks.remove(self)
+		...
+	```
+
+!!! tip "Utilitza el decorador @property"
+	L'ús del [decorador property](https://www.freecodecamp.org/espanol/news/python-decorador-property/) serà molt útil, o millor dit  quasi imprescindible, en els nostres desenvolupaments. Ens serviran per a mantindre l'estat intern de l'aplicació en consonància amb la interfície.
+
+	Vos pose un exemple:
+
+	En la classe Task tindrem una propietat *featured* que ens indica si la tasca està marcada com a destacada o no. Ídem per a completada a través del seu checkbox. 
+	
+	Aleshores, la millor forma de gestionar la interfície, per a que reflectisca el valor de les propietats, és utilitzar una propietat privada i a través del seu setter, definit utilitzant els decoradors @propietat.setter, fer que la propietat canvie al fer un clic sobre la interfície i viceversa, fer que canvie  la interfície al canviar el valor de la propietat.
+
+	Traduït a codi:
+
+	```python
+	@completed.setter
+    def completed(self, value):
+        self._completed = value
+		# canviem el valor del checkbox per a que es corresponga amb el valor de _completed
+        self.completed_checkbox.value = self._completed
+        self.update()
+
+    @featured.setter
+    def featured(self, value):
+        self._featured = value
+        # canviem la interfície
+		... 
+		self.update()
+	```
+	
+
+
+### 2.2. Pràctica 3 - Organitzem les tasques
+
+La funcionalitat principal de l'aplicació està més o menys desenvolupada. En esta pràctica anem a desenvolupar la resta de la interfície gràfica.
+
+El primer canvi serà afegir un text al final per a indicar quantes tasques ens queden pendents. Per a implementar este canvi és recomanable també utilitzar el decorador property a una nova propietat de TodoApp que continga quantes tasques tenim pendents. En canviar el valor d'esta propietat, canviarà la interfície per a indicar el nou valor.
+
+El segon canvi que farem serà afegir un botó per a borrar les tasques completades. De nou, necessitarem confirmació de l'usuari ja que estem davant un esdeveniment que destruirà informació (almenys de moment).
+
+El tercer canvi serà afegir a la interfície unes pestanyes a mode de filtre per tal de poder veure totes les tasques o només les destacades.
+
+El següent gif mostra el comportament de l'aplicació:
+
+![TodoAPP](images/todo_sense_dades_persistents.gif)
