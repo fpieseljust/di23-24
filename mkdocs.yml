@@ -5,6 +5,9 @@ site_dir: "docs"
 nav:
   - Home: index.md
 
+  - Examens:
+      - Examen 1a presencial: examens/presencial_1a.md
+
   - Unitat 1 - Programació amb Python:
       - Teoria:
           - Introducció: unitats/1-python/teoria/1 - Introducció.md

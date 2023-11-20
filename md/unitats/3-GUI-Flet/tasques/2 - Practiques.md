@@ -132,3 +132,13 @@ El tercer canvi serà afegir a la interfície unes pestanyes a mode de filtre pe
 El següent gif mostra el comportament de l'aplicació:
 
 ![TodoAPP](images/todo_sense_dades_persistents.gif)
+
+### 2.3. Pràctica 4 - Organitzem les tasques (opcional)
+
+En esta pràctica anem a modificar la nostra aplicació per a organitzar encara més les nostres tasques. En esta ocasió afegirem la possibilitat de crear una llista de tasques per temàtica. Per exemple, si la utilitza un alumne de 2n de DAM, podria organitzar-se les tasques per mòduls (DI, AD, SGE,...). D'esta forma afegim un nou filtre dinformació per temàtica. És a dir, en seleccionar per temàtica (també inclourem l'opció *totes*), i en filtrar per totes/destacades.
+
+Tingau en compte que haureu de filtrar correctament. Per exemple, si tinc una temàtica DI (Desenvolupament d'interfícies) i seleccionem la pestanya totes, ens mostrarà totes les tasques de temàtica DI. Si seleccionem destacades, ens mostrarà les de temàtica DI destacades.
+
+En esta ocasió el disseny de la interfície serà lliure. Seleccioneu correctament els controls i no oblideu fer proves al vostre desenvolupament.
+
+### 2.4. Pràctica 5 - Login mitjançant google

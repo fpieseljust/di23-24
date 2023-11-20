@@ -104,3 +104,10 @@ Flet és un framework que permet crear aplicacions GUI tant web, com d'escriptor
 Els controls de Flet es basen en els controls Flutter de Google, combinant controls més menuts, ocultant complexitats i aplicant valors predeterminats raonables per garantir que les nostres aplicacions tinguen un aspecte professional sense molts esforços.
 
 En definitiva, farem ús dels controls de Flutter des de Python.
+
+<center>
+
+![](../../../../../di22-23/docs/unitats/6-Distribucio/arxius/Bloc%20de%20Notes/img/clear.png)
+{width=50%}
+
+</center>
