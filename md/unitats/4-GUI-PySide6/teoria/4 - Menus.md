@@ -1,4 +1,4 @@
-# 4. Menús, barres d'eines, barres d'estat i components flotants.
+# 1. Menús, barres d'eines, barres d'estat i components flotants.
 
 Si ens fixem a la finestra principal de qualsevol aplicació, la seva estructura bàsica sol seguir un esquema semblant al següent:
 
@@ -11,7 +11,7 @@ Si ens fixem a la finestra principal de qualsevol aplicació, la seva estructura
 
 En aquest apartat afegirem aquestes parts a la nostra finestra principal, fent ús, com en apartats anteriors, de QMainWindow.
 
-## 4.1 QActions
+## 1.1. QActions
 
 Abans de començar a abordar els menús i les barres d'eines, convé estudiar les QActions de Qt. A les aplicacions es pot executar una mateixa funcionalitat interaccionant amb diferents interfícies d'usuari, ja sigui a través de menús, botons de la barra d'eines o dreceres de teclat. Aquí és on entren en joc les QAction de Qt. A més, se us pot assignar un text d'estat, que s'utilitzarà a la barra d'estats.
 
@@ -22,13 +22,13 @@ Un objecte QAction pot contenir una icona, un text de menú, una drecera de tecl
 
 Quan s'ha creat una QAction, l'afegim al menú i a la barra d'eines que volem utilitzar i després el connectem a la ranura que executarà la seua funcionalitat.
 
-## 4.2 Barra de menús
+## 1.2. Barra de menús
 Per afegir menús a QMainWindow, utilitzarem el mètode .addMenu() de la barra de menús menuBar(). A aquest nou menú podem afegir nous submenús amb addMenu() i separadors, per organitzar de forma més coherent les opcions, amb addSeparator().
 
 Per afegir una opció de menú que responga a una funcionalitat, utilitzarem els QAction. 
 
 !!!example "Exemple"
-    ~~~Python
+    ~~~py
     from PySide6.QtWidgets import QApplication, QMainWindow
     from PySide6.QtGui import QAction, QKeySequence
 
@@ -38,17 +38,11 @@ Per afegir una opció de menú que responga a una funcionalitat, utilitzarem els
         def __init__(self):
             super().__init__()
             self.setWindowTitle("Ventana principal con menú")
-            # Obtenemos la referencia a la barra de menú
             barra_menus = self.menuBar()
-            # Añadimos la opción "Menu" al menú principal
             menu = barra_menus.addMenu("&Menu")
-            # Definimos el QAction con el texto "Imprimir por consola"
             accion = QAction("&Imprimir por consola", self)
-            # Asignamos un atajo de teclado a la acción
             accion.setShortcut(QKeySequence("Ctrl+p"))
-            # Connectamos la accion con la ranura "imprimir_por_consola"
             accion.triggered.connect(self.imprimir_por_consola)
-            # Añadimos la acción al menú
             menu.addAction(accion)
 
         def imprimir_por_consola(self):
@@ -70,7 +64,7 @@ Fixa't que al codi hem assignat una combinació de tecles a l'acció, és a dir 
 
 ![Menú](images/menu.png)
 
-## 4.3 Barra d'eines
+## 1.3. Barra d'eines
 Ampliarem l'exemple anterior afegint l'acció a una barra d'eines. Els passos a seguir serien els següents:
 
 1. Creem una barra d'eines instant la classe QToolBar
@@ -91,7 +85,7 @@ Per defecte, els botons a les barres d'eines segueixen el mateix estil que tingu
 
 
 !!!example "Afegim l'acció d'imprimir per consola a la barra d'eines 1."
-    ~~~Python
+    ~~~py
     import os
 
     from PySide6.QtGui import QAction, QIcon, QKeySequence
@@ -108,7 +102,6 @@ Per defecte, els botons a les barres d'eines segueixen el mateix estil que tingu
             menu = barra_menus.addMenu("&Menu")
             ruta_a_icono = os.path.join(os.path.dirname(
                 __file__), "images/console.png")
-            # Añadimos a la acción, un icono
             accion = QAction(QIcon(ruta_a_icono), "Imprimir por consola", self)
             accion.setWhatsThis(
                 "Al pulsar sobre el botón se imprimirá un texto por consola")
@@ -116,11 +109,8 @@ Per defecte, els botons a les barres d'eines segueixen el mateix estil que tingu
             accion.triggered.connect(self.imprimir_por_consola)
             menu.addAction(accion)
 
-            # Creamos la barra de herramientas
             barra_herramientas = QToolBar("Barra de herramientas 1")
-            # Añadimos el QAction a la barra de herramientas
             barra_herramientas.addAction(accion)
-            # Añadimos la barra de herramientas a la aplicación
             self.addToolBar(barra_herramientas)
 
         def imprimir_por_consola(self):
@@ -144,7 +134,7 @@ El resultat és la mateixa aplicació però amb una barra d'eines, la qual podem
 
 Si us fixeu en el menú, amb la incorporació de la icona a l'acció, veureu que apareix la icona també al desplegable. Si no vols que apareguin, podem configurar l'aplicació perquè no ho faci, fent ús del mètode setAttribute() i passant-li Qt.AA_DontShowIconsInMenus del mòdul Qt com a paràmetre.
 
-## 4.4 Barra d'estat
+## 1.4. Barra d'estat
 En aquesta secció mostrarem com utilitzar la barra d'estat. El seu ús principal serà mostrar informació a l'usuari, i els mètodes més utilitzats addWidget, addPermanentWidget showMessage i clearMessage que ens serviran per afegir components i mostrar/ocultar missatges.
 
 Cada indicador d'estat pot ser d'una de les tres categories següents:
@@ -154,7 +144,7 @@ Cada indicador d'estat pot ser d'una de les tres categories següents:
 - **Permanent**: mai no s'amaga i s'utilitza cridant al mètode addPermanentWidget. S'utilitza per a indicacions importants, per exemple, algunes aplicacions col·loquen un indicador de bloqueig de majúscules a la barra d'estat.
 
 !!!example "Exemple"
-    ~~~Python
+    ~~~py
     import os
     import platform
 
@@ -184,12 +174,8 @@ Cada indicador d'estat pot ser d'una de les tres categories següents:
             barra_herramientas.addAction(accion)
             self.addToolBar(barra_herramientas)
 
-            # Obtenemos la referencia a la barra de estado
             barra_estado = self.statusBar()
-            # Agregamos un componente permanente con la plataforma
             barra_estado.addPermanentWidget(QLabel(platform.system()))
-            # Mostramos un mensage durante 3 segundos
-            # que se sobrescibirá al pasar el puntero por una acción
             barra_estado.showMessage("Listo. Esperando acción ...", 3000)
 
         def imprimir_por_consola(self):
@@ -206,12 +192,12 @@ Cada indicador d'estat pot ser d'una de les tres categories següents:
         app.exec()
     ~~~
 
-## 4.5 Components flotants
+## 1.5. Components flotants
 
 Finalment, estudiarem els components flotants, que ens aporten gran versatilitat a les aplicacions. Són components que poden canviar d'ubicació, desacoblar-se i fins i tot tancar-se.
 
 !!!example "Exemple"
-    ~~~Python
+    ~~~py
     import os
     import platform
 
@@ -248,15 +234,10 @@ Finalment, estudiarem els components flotants, que ens aporten gran versatilitat
             barra_estado.addPermanentWidget(QLabel(platform.system()))
             barra_estado.showMessage("Listo. Esperando acción ...", 3000)
 
-            # Creamos un componente flotante
             dock1 = QDockWidget()
-            # Agregamos título a este componente
             dock1.setWindowTitle("Componente base 1")
-            # Asignamos el componente que contendrà
             dock1.setWidget(QTextEdit(""))
-            # Le asignamos una anchura mínima de 50
             dock1.setMinimumWidth(50)
-            # Lo posicionamos a la derecha de la ventana principal
             self.addDockWidget(Qt.RightDockWidgetArea, dock1)
 
             self.setCentralWidget(QLabel("Componente principal"))

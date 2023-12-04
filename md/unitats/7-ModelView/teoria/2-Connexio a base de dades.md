@@ -24,7 +24,7 @@ Per crear una connexió, utilitzarem el mètode **.addDatabase()** que rep com a
 - Un driver SQL, string amb el nom del controlador compatible amb PySide
 - Un nom de connexió (opcional). En cas de no passar-lo, s'assinarà el nom per defecte *qt_sql_default_connection*.
 
-~~~python
+~~~py
 QSqlDatabase.addDatabase(
     driver, connectionName=QSqlDatabase.defaultConnection
 )
@@ -56,7 +56,7 @@ Un vegada creada una connexió, podem d'establir diversos atributs que dependran
 
 En el cas de les bases de dades SQLite, el nom de la base de dades és normalment un nom de fitxer o una ruta que inclou el nom del fitxer de la base de dades. També podem utilitzar el nom especial *:memory:* per a una base de dades allotjada en memòria, de forma que evitem accessos a disc que són molt més lents.
 
-~~~python
+~~~py
 from PySide6.QtSql import QSqlDatabase
 
 connection = QSqlDatabase.addDatabase("QSQLITE")
@@ -71,7 +71,7 @@ Potser necessitem utilitzar diverses connexions. Per exemple, és possible que v
 
 Per gestionar aquestes situacions, podem proporcionar noms específics per a les nostres connexions i fer referència a cada connexió pel seu nom.
 
-~~~python
+~~~py
 from PySide6.QtSql import QSqlDatabase
 
 connection1 = QSqlDatabase.addDatabase("QSQLITE", "connection1")
@@ -108,7 +108,7 @@ Per exemple, què passa si no tenim permisos d'escriptura per al directori en qu
 
 Una manera habitual d'utilitzar *.open()* és la següent:
 
-~~~python
+~~~py
 import sys
 import os
 

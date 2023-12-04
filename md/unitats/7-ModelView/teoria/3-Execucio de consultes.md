@@ -19,7 +19,7 @@ Per executar una consulta, utilitzem .exec() de l'objecte de consulta. Torna Tru
 
 Una consulta estàtica és aquella que no obté ningun argument de fora de la consulta.
 
-~~~python
+~~~py
 import sys
 import os
 
@@ -66,7 +66,7 @@ Hi ha dues formes de construir la consulta utilitzant els valors dels paràmetre
 
 Ací tenim un exemple de construcció de la consulta utilitzant la formatació de cadenes de text:
 
-~~~python
+~~~py
 name = "Ferran"
 job = "Professor"
 email = "ferran@example.com"
@@ -105,7 +105,7 @@ A la primera variació, placeholder representa un marcador de posició d'estil O
 
 Per començar a utilitzar consultes preparades, podeu preparar un *INSERT INTO* per omplir la vostra base de dades amb algunes dades de mostra. Ampliem l'exemple anterior:
 
-~~~python
+~~~py
 import sys
 import os
 
@@ -221,7 +221,7 @@ Per a accedir als valors dels registres o columnes, els següents mètodes tamb�
 
 Tots els mètodes tornen *True* o *False*, i ens permeten navegar a través del resultat d'una consulta sense haver de consultar de nou la base de dades. Els podem utilitzar en bucles per recórrer tots els registres.
 
-~~~python
+~~~py
 import sys
 import os
 
@@ -267,7 +267,7 @@ També podem eliminar completament les connexions de la nostra base de dades mit
 
 En definitiva, primer tanquem les consultes amb *.finish()*, després tanqueu la base de dades amb *.close()*, i finalment eliminem la connexió amb *.removeDatabase()*.
 
-~~~python
+~~~py
 import sys
 import os
 

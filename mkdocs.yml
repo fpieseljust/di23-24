@@ -55,16 +55,16 @@ nav:
       - Activitats: unitats/3-GUI-Flet/tasques/1 - Activitats.md
       - Pràctiques: unitats/3-GUI-Flet/tasques/2 - Practiques.md      
 
-  # - Unitat 3 - Introducció a les interfícies d'usuari amb PySide:
-  #   - Teoria:
-  #     - 1 - Tecnologies: unitats/4-GUI-PySide6/teoria/1 - Introducció.md
-  #     - 2 - Controls d'ús comú: unitats/4-GUI-PySide6/teoria/2 - Controls ús comú.md
-  #     - 3 - Contenidors de components. Disseny: unitats/4-GUI-PySide6/teoria/3 - Layouts.md
-  #     - 4 - Menús, barres de ferramentes i estat, i components flotants: unitats/4-GUI-PySide6/teoria/4 - Menus.md
-  #     - 5 - Diàlegs i altres finestres: unitats/4-GUI-PySide6/teoria/5 - Dialegs.md
-  #   - Tasques:
-  #     - Activitats: unitats/4-GUI-PySide6/tasques/1 - Activitats.md
-  #     - Pràctiques: unitats/4-GUI-PySide6/tasques/2 - Pràctiques.md
+  - Unitat 4 - Introducció a les interfícies d'usuari amb PySide:
+    - Teoria:
+      - 1 - Tecnologies: unitats/4-GUI-PySide6 copy/teoria/1 - Introducció.md
+      - 2 - Controls d'ús comú: unitats/4-GUI-PySide6/teoria/2 - Controls ús comú.md
+      - 3 - Contenidors de components. Disseny: unitats/4-GUI-PySide6/teoria/3 - Layouts.md
+      - 4 - Menús, barres de ferramentes i estat, i components flotants: unitats/4-GUI-PySide6/teoria/4 - Menus.md
+      - 5 - Diàlegs i altres finestres: unitats/4-GUI-PySide6/teoria/5 - Dialegs.md
+    - Tasques:
+      - 1 - Activitats: unitats/4-GUI-PySide6/tasques/1 - Activitats.md
+      - 2 - Pràctiques: unitats/4-GUI-PySide6/tasques/2 - Pràctiques.md
 
   # - Unitat 4 - Arquitectura Model-Vista de Qt:
   #   - Teoria:
@@ -76,17 +76,17 @@ nav:
   #     - Pràctiques: unitats/4-ModelView/tasques/1 - Pràctiques.md
   #   - Enllaços: unitats/4-ModelView/enllaços/enllaços.md
 
-  # - Unitat 5 - Generació d'interfícies a partir de llenguatges de marques:
-  #   - Teoria:
-  #     - 1 - Llenguatges de marques per a la generació d'interfícies.md: unitats/5-Interficies-LM/teoria/1-Llenguatges de marques per a la generació d'interfícies.md
-  #     - 2 - Ferramentes de disseny basades en llenguatges de marques: unitats/5-Interficies-LM/teoria/2-Ferramentes de disseny basades en llenguatges de marques.md
-  #     - 3 - Ús de la interfície en una aplicació: unitats/5-Interficies-LM/teoria/3-Ús de la interfície en una aplicació.md
-  #     - 4 - Funcions avançades de la ferramenta de disseny: unitats/5-Interficies-LM/teoria/4-Funcions avançades de la ferramenta de disseny.md
+  - Unitat 5 - Generació d'interfícies a partir de llenguatges de marques:
+    - Teoria:
+      - 1 - Llenguatges de marques per a la generació d'interfícies.md: unitats/5-Interficies-LM/teoria/1-Llenguatges de marques per a la generació d'interfícies.md
+      - 2 - Ferramentes de disseny basades en llenguatges de marques: unitats/5-Interficies-LM/teoria/2-Ferramentes de disseny basades en llenguatges de marques.md
+      - 3 - Ús de la interfície en una aplicació: unitats/5-Interficies-LM/teoria/3-Ús de la interfície en una aplicació.md
+      - 4 - Funcions avançades de la ferramenta de disseny: unitats/5-Interficies-LM/teoria/4-Funcions avançades de la ferramenta de disseny.md
 
-  #   - Tasques:
-  #     - Activitats: unitats/5-Interficies-LM/tasques/1 - Activitats.md
-  #     - Pràctiques: unitats/5-Interficies-LM/tasques/2 - Pràctiques.md
-  #   - Enllaços: unitats/5-Interficies-LM/enllaços/enllaços.md
+    - Tasques:
+      - 1 - Activitats: unitats/5-Interficies-LM/tasques/1 - Activitats.md
+      - 2 - Pràctiques: unitats/5-Interficies-LM/tasques/2 - Pràctiques.md
+    - Enllaços: unitats/5-Interficies-LM/enllaços/enllaços.md
 
   # - Unitat 6 - Distribució d'aplicacions:
   #   - Tasques:

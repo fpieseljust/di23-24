@@ -67,7 +67,7 @@ ft.app(target=main, view="web_browser", port=8080)
 Els controls són els elements bàsics i principals per crear interfícies d'usuari a Flutter. Podeu mostrar informació, rebre informació de l'usuari i organitzar altres controls de forma agrupada. 
 
 !!!example "Exemple"
-    ~~~Python
+    ~~~py
     import flet as ft
 
     def main(page: ft.Page):

@@ -5,7 +5,7 @@
 Hem vist durant la teoria de l'apartat que Qt Designer ofereix diverses plantilles a l'hora de crear un nou formulari. En total són cinc plantilles diferents: una per a una finestra principal, tres relacionades amb diàlegs i una per crear un nou components (widget).
 En aquesta activitat, cal crear un nou formulari amb cada una de les plantilles disponibles, i analitzar a l'Inspector d'objectes de Qt Designer els objectes que per defecte s'han introduït per a cada una de les plantilles.
 
-## Editor de texto I
+## Editor de text I
 
 Utilitzant Qt Designer, dissenyant una aplicació per a l'edició de text, prenent com a base la captura següent:
 
@@ -39,17 +39,6 @@ A més, al programa principal, caldrà establir el següent text d'ajuda a l'usu
     La propietat del control QTextEdit que permet establir el text d'ajuda s'anomena placeholderText.
 
 # A4 - Funcionalitats avançades de l'eina de disseny
-
-## Plantilla
-
-En aquesta activitat hem de crear una plantilla per a la creació de nous formularis, amb les següents característiques:
-
-- El layout principal serà un layout vertical.
-- A la part superior de la finestra tindrem una etiqueta amb alt fixe, destinada al títol del formulari. El text estarà centrat horitzontalment, en negreta i amb una mida de font d'11.
-- A la part inferior hi haurà una altra etiqueta, també amb alt fixe, destinada a mostrar la versió del formulari. El text estarà alineat a la dreta.
-
-A la part central, i ocupant tot l'espai disponible, tindrem un layout de formulari.
-
 
 ## Formulari
 

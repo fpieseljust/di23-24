@@ -1,4 +1,4 @@
-# Eines de disseny d'interfícies basades en llenguatges de marques
+# 1. Eines de disseny d'interfícies basades en llenguatges de marques
 
 A l'hora d'utilitzar un llenguatge de marques per a la generació de la interfície d'usuari d'una aplicació, normalment se'ns presenten dues opcions:
 
@@ -21,7 +21,7 @@ En aquest apartat ens centrarem en les funcionalitats d'una d'aquestes eines, Qt
 !!!important "Important"
     Encara que a partir d´ara ens dedicarem a l´eina Qt Designer, la majoria de les eines de disseny visual d´interfícies d´usuari ofereixen funcionalitats molt similars a les que veurem en aquest apartat.
 
-## Primers passos amb Qt Designer
+## 1.1. Primers passos amb Qt Designer
 
 El procés de disseny d'un formulari amb Qt Designer sol compondre's de les etapes següents:
 
@@ -56,11 +56,11 @@ Podem distingir les següents zones a la finestra principal:
 !!!important "Important"
     Podem personalitzar la disposició de les diferents zones comentades arrossegant-les a la part de la finestra on ens resulti més còmode tenir-les. També podem fer servir el menú Vista de l'aplicació per decidir quines eines tenir visibles.
 
-## Distribució dels components (layout)
+## 1.2. Distribució dels components (layout)
 
 Qt Designer ens permet definir de forma còmoda i ràpida la disposició dels nostres components, podent aplicar les diferents opcions de layout de Qt vistes a la unitat anterior. 
 
-### Layout principal
+### 1.2.1. Layout principal
 
 És important que definim un layout principal per al nostre formulari, que estableixi la manera com s'organitzen els components de la interfície en el nivell més alt.
 
@@ -73,7 +73,7 @@ Per assignar un layout a la finestra principal, seleccionarem la finestra (fent 
 
 Un dels grans avantatges d'una eina visual com Qt Designer és que podrem veure a la pròpia eina el resultat d'aplicar el layout, permetent fins i tot redimensionar la finestra per comprovar si el comportament de la interfície s'ajusta al que desitja. A més, ens resultarà molt senzill afegir nous controls al layout, ja que en arrossegar-los des de la Caixa de widgets apareixerà una línia de guia blava al formulari que ens ajudarà a posicionar el component dins del layout.
 
-### Layouts niuats (anidados)
+### 1.2.2. Layouts niuats (anidados)
 
 A més de definir un layout per a la nostra finestra principal, és molt probable que el disseny de la nostra interfície necessiti niar al seu interior altres layouts per aconseguir el posicionament adequat dels components. 
 
@@ -81,7 +81,7 @@ Per crear un nou layout a Qt Designer simplement haurem d'arrossegar-lo des de l
 
 També tenim l'opció de seleccionar diversos controls alhora (utilitzant la tecla Ctrl) i seleccionar per a ells un layout des del menú Formulari o utilitzant l'opció Distribució del menú contextual. Aquesta alternativa la podrem fer servir sempre que els controls no estiguin prèviament afegits en un layout.
 
-### Altres opcions per a la distribució de components
+### 1.2.3. Altres opcions per a la distribució de components
 
 Tot i que els diferents layouts disponibles a Qt i la possibilitat de combinar-los ens aporten gran flexibilitat, normalment no n'hi ha prou per aconseguir dissenys d'interfície complexos. Qt inclou altres funcionalitats que complementen el sistema de layout, i que també tindrem disponibles a Qt Designer. 
 
@@ -101,7 +101,7 @@ Totes aquestes propietats es poden modificar directament a Qt Designer utilitzan
 !!!important "Important"
     Recordeu que el nostre objectiu sempre ha de ser aconseguir que la interfície es comporti com necessitem, però amb la configuració de layout més senzilla que sigui possible.
 
-## Connexió de senyals a ranures
+## 1.3. Connexió de senyals a ranures
 
 Qt Designer també permet associar un senyal d'un component a alguna de les ranures d'un altre component. Per fer-ho, cal canviar al mode Edició de senyals/slots.
 
@@ -117,7 +117,7 @@ Una vegada creada la connexió, es podrà visualitzar i editar en qualsevol mome
 !!!important "Important"
     Si volem associar un senyal a una ranura definida per nosaltres, ho farem des del codi Python com vam veure a la unitat anterior. Per poder referenciar els controls des del codi, és Important que us assignem un identificador a Qt Designer (propietat objectName).
 
-## Previsualitzar el resultat
+## 1.4. Previsualitzar el resultat
 
 Durant el procés de creació del nostre formulari amb Qt Designer podem obtenir una vista prèvia del resultat, molt més propera a com es veurà realment el nostre disseny quan s'executi l'aplicació. Per fer-ho, tenim l'opció Vista prèvia del menú Formulari. També en aquest menú se'ns ofereix la possibilitat de previsualitzar el formulari amb estils diferents de l'establert per defecte.
 

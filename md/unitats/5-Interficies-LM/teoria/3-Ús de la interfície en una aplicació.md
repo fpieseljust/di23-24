@@ -1,8 +1,8 @@
-# Ús de la interfície en una aplicació
+# 1. Ús de la interfície en una aplicació
 
 Com ja hem vist, gran part de les tecnologies d'interfície d'usuari actuals disposen d'un llenguatge de marques per definir el disseny de les finestres sense fer ús d'un llenguatge de programació. I també solen disposar d'una eina visual de disseny que facilita la tasca de definició de la interfície, i que genera automàticament un document en el llenguatge de marques corresponent. Tanmateix, Una vegada disposem del document caldrà integrar-lo d'alguna manera amb la resta de la nostra aplicació.  
 
-## Format Qt UI
+## 1.1. Format Qt UI
 
 L'eina Qt Designer emmagatzema el disseny realitzat en un format conegut com a Qt UI, assignant als fitxers de disseny l'extensió *.ui. Aquest format està basat en XML i, encara que no està concebut per utilitzar-los pels desenvolupadors fora de l'eina de disseny, és possible manipular-lo directament en algun editor de text. També es podria generar o modificar des d'un programa, ja que la majoria de llenguatges de programació disposen de llibreries per a la manipulació d'XML.
 
@@ -118,14 +118,14 @@ A continuació, es mostren alguns dels elements XML més importants que trobem e
 Als enllaços de la unitat s'inclou la referència a la pàgina de la documentació de Qt on es defineix l'esquema XML complet dels documents Qt UI.
 
 
-## Incloure la interfície en una aplicació
+## 1.2. Incloure la interfície en una aplicació
 
 A l'hora d'utilitzar el nostre fitxer de disseny de la interfície des d'una aplicació, se'ns presenten dues opcions diferents:
 
 - Utilitzar una eina de generació de codi que, a partir del fitxer de descripció de la interfície, generi el codi corresponent al llenguatge de programació adequat. Aquest codi s'haurà d'integrar durant la compilació amb la resta de l'aplicació, ia més haurà de ser regenerat cada cop que realitzem canvis en el disseny.
 - Carregar directament des del codi de la nostra aplicació el fitxer de descripció de la interfície, generant-se en temps d'execució el codi corresponent. Aquesta alternativa permet modificar el disseny al fitxer UI sense necessitat de recompilar l'aplicació, encara que per altra banda ralentitzarà l'execució en haver de generar el codi. 
 
-### Generar codi Python a partir del fitxer UI
+### 1.2.1. Generar codi Python a partir del fitxer UI
 
 Per generar el codi Python corresponent a un fitxer de disseny de Qt Designer s'utilitza l'eina User Interface Compiler (uic), inclosa a la instal·lació de Qt. L'ordre següent generarà el fitxer de codi Python finestra.py a partir del fitxer de disseny d'interfície finestra.ui.
 
@@ -141,7 +141,7 @@ pyside6-uic finestrs.ui -o finestra.py
 
 Podeu veure a continuació el codi generat a partir de [formulari.ui](../arxius/formulari.ui).
 
-~~~python3
+~~~py3
 # -*- coding: utf-8 -*-
 
 ################################################################################
@@ -217,7 +217,7 @@ Per poder utilitzar aquesta classe al nostre programa principal, el primer que h
 
 A continuació, haurem de crear una classe nova que hereta tant de la classe generada, com de la classe de l'objecte principal del nostre disseny (en l'exemple, QMainWindow). Al constructor d'aquesta nova classe (a la qual hem anomenat MainWindow) es cridarà al mètode setupUi perquè es generen tots els objectes de la interfície.
 
-~~~python3
+~~~py3
 import sys
 from PySide6 import QtWidgets
 
@@ -241,13 +241,13 @@ Una vegada creada aquesta classe, al nostre programa principal simplement haurem
 
 ![formulari](images/exemple-formulari.png){: style="display: block;margin-left: auto;margin-right: auto;width: 50%;"}
 
-### Carregar el fitxer UI des de Python 
+### 1.2.2. Carregar el fitxer UI des de Python 
 
 Com hem comentat anteriorment, tenim una altra alternativa per utilitzar el disseny realitzat a Qt Designer, que consisteix a carregar directament el fitxer UI des de l'aplicació Python. Per fer-ho, utilitzarem la classe QUiLoader inclosa al mòdul QtUiTools. 
 
 Aquesta classe ofereix el mètode load, que rebrà com a paràmetre el fitxer UI i generarà la finestra. 
 
-~~~python3
+~~~py3
 import sys, os
 from PySide6 import QtWidgets
 from PySide6.QtUiTools import QUiLoader
@@ -260,7 +260,7 @@ window.show()
 app.exec()
 ~~~
 
-## Manipulació dels objectes generats  
+## 1.3. Manipulació dels objectes generats  
 
 Una vegada hem generat la nostra finestra (amb qualsevol dels dos mètodes descrits) podem accedir a qualsevol dels objectes generats per, per exemple, modificar-ne alguna de les propietats o associar una ranura a un dels seus senyals. Per a això, simplement utilitzarem el nom que hàgem donat a Qt Designer (mitjançant la propietat layoutName als layouts, i objectName a la resta de components) i la mateixa sintaxi que vam aprendre a la unitat anterior.
 
@@ -268,7 +268,7 @@ Una vegada hem generat la nostra finestra (amb qualsevol dels dos mètodes descr
     Si volem modificar el text dels botons i el títol de la finestra, simplement hem d'accedir a estos ells amb el seu nou i canviar les seues propietats per codi:
     Podem agrupar tots els canvis en un mètode com es veu al següent exemple:
 
-    ~~~python3
+    ~~~py3
     import sys, os
     from PySide6 import QtWidgets
     from PySide6.QtUiTools import QUiLoader

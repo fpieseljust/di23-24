@@ -1,9 +1,9 @@
-# 5. Diàlegs i altres finestres.
+# 1. Diàlegs i altres finestres.
 Fins ara hem utilitzat el component QMainWindow per treballar amb les nostres aplicacions. En aquest apartat estudiarem com mostrar o demanar informació a l'usuari a través de diversos tipus de finestres.
 
-## 5.1 Diàlegs
+## 1.1. Diàlegs
 
-### 5.1.1 QDialog
+### 1.1.1. QDialog
 
 Tal com el seu nom indica, els diàlegs són finestres emergents temporals que ens permeten comunicar-nos amb l'usuari de l'aplicació i que apareixen a causa de la producció d'un esdeveniment. Són finestres modals, és a dir, bloquegen la interacció amb la resta de l'aplicació fins que se n'acabe l'execució, siga tancant-los o introduint la informació que es demana. 
 
@@ -12,7 +12,7 @@ Per aquest motiu, necessiten el seu propi bucle d'esdeveniments. Es pot evitar e
 A Qt els diàlegs s'implementen com a classes de QDialog o les seves derivades. 
 
 !!!example "Exemple"
-    ~~~Python
+    ~~~py
         from PySide6.QtWidgets import QApplication, QDialog, QMainWindow, QPushButton
 
 
@@ -28,10 +28,8 @@ A Qt els diàlegs s'implementen com a classes de QDialog o les seves derivades.
 
         def mostrar_dialogo(self):
             print("Clic recibido, se mostrará el dialogo.")
-            # Creamos un objeto de la clase dialogo
             ventana_dialogo = QDialog(self)
             ventana_dialogo.setWindowTitle("Ventana de dialogo")
-            # Lanzamos su bucle de eventos
             ventana_dialogo.exec()
 
 
@@ -44,7 +42,7 @@ A Qt els diàlegs s'implementen com a classes de QDialog o les seves derivades.
     ~~~
  
 
-### 5.1.2 Diàlegs personalitzats
+### 1.1.2. Diàlegs personalitzats
 
 Un cop sabem crear un diàleg, anem a personalitzar-lo. Podem fer servir els QPushButton estudiats anteriorment, però a Qt hi ha una sèrie de botons predefinits dissenyats segons les guies d'estil de les diferents plataformes. Es recomana consultar aquestes guies perquè les nostres aplicacions siguen el més naturals a l'usuari.
 
@@ -80,7 +78,7 @@ Consulteu [https://doc.qt.io/qt-6/qdialogbuttonbox.html](https://doc.qt.io/qt-6/
 Consulteu [https://doc.qt.io/qt-6/qdialog.html](https://doc.qt.io/qt-6/qdialog.html) per a més informació sobre les ranures de QDialog.
 
 !!!example "Exemple"
-    ~~~Python
+    ~~~py
     from PySide6.QtWidgets import (
         QMainWindow, QApplication, QDialog, QDialogButtonBox, QVBoxLayout, QLabel,
         QPushButton
@@ -93,16 +91,12 @@ Consulteu [https://doc.qt.io/qt-6/qdialog.html](https://doc.qt.io/qt-6/qdialog.h
 
             self.setWindowTitle("Dialogo personalizado")
 
-            # Definimos los botones Ok i Cancel en nuestra variable
             botones = QDialogButtonBox.Ok | QDialogButtonBox.Cancel
 
-            # Pasamos la variable de botones al constructor de QDialogButtonBox
             self.caja_botones = QDialogButtonBox(botones)
-            # Conectamos las señales de los botones con las ranuras de QDialog
             self.caja_botones.accepted.connect(self.accept)
             self.caja_botones.rejected.connect(self.reject)
 
-            # Añadimos un QLabel y el QDialogButtonBox en un layout vertical
             self.layout_dialogo = QVBoxLayout()
             self.layout_dialogo.addWidget(
                 QLabel("Estás seguro de querer realizar esta acción?"))
@@ -124,9 +118,8 @@ Consulteu [https://doc.qt.io/qt-6/qdialog.html](https://doc.qt.io/qt-6/qdialog.h
             print("Clic recibido, se mostrará el dialogo.")
             ventana_dialogo = DialogoPersonalizado(self)
             ventana_dialogo.setWindowTitle("Ventana de dialogo personalizado")
-            # Nos guardamos el resultado de la ejecución del dialogo:
-            # 1 si se ejecuta la ranura accept
-            # 0 si se ejecuta reject
+            # 1 si s'executa accept
+            # 0 si s'executa reject
             resultado = ventana_dialogo.exec()
             if resultado:
                 print("Aceptada")
@@ -143,8 +136,10 @@ Consulteu [https://doc.qt.io/qt-6/qdialog.html](https://doc.qt.io/qt-6/qdialog.h
     ~~~ 
 
 !!!warning "Traducció de diàlegs"
+
     Si executem el codi, observem que els botons mostren el text en anglès. Podem utilitzar el següent mètode per traduir els controls predefinits:
-    ~~~Python
+
+    ~~~py
     def carregar_traductor(self, app):
         translator = QTranslator(app)
         translations = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
@@ -161,7 +156,7 @@ Consulteu [https://doc.qt.io/qt-6/qdialog.html](https://doc.qt.io/qt-6/qdialog.h
 
 ![Dialeg Personalitzat](images/dialeg_tradu%C3%AFt.png)
 
-## 5.2 QMessageBox
+## 1.2. QMessageBox
 A l'apartat anterior, hem personalitzat un QDialog, però hi ha quadres de diàleg ja predissenyats a Qt. Es troben disponibles al mòdul QMessageBox i hi ha quatre tipus segons el nivell de severitat de la informació (question, information, warning i critical). Realment, lúnica diferència entre ells és la icona que mostren. A la taula següent es mostren els nivells:
 
 | Icona                    | Tipus de QMessageBox | Ús                                       |
@@ -195,7 +190,7 @@ Igual que en els QDialog, hi ha botons predefinits que podem utilitzar a les nos
 - QMessageBox.NoButton
 
 !!!example "Missatge crític típic d'algunes aplicacions"
-    ~~~Python
+    ~~~py
     from PySide6.QtCore import QLibraryInfo, QTranslator
     from PySide6.QtWidgets import (
         QApplication, QMessageBox, QMainWindow, QPushButton
@@ -213,8 +208,6 @@ Igual que en els QDialog, hi ha botons predefinits que podem utilitzar a les nos
             self.setCentralWidget(boton)
 
         def mostrar_dialogo(self):
-            # Creamos un QMessageBox crítico. Recibe como argumentos
-            # El titulo, el mensaje, los botones y  el botón por defecto
             boton_pulsado = QMessageBox.critical(
                 self,
                 "Ejemplo de cuadro de mensaje crítico",
@@ -224,7 +217,6 @@ Igual que en els QDialog, hi ha botons predefinits que podem utilitzar a les nos
                 defaultButton=QMessageBox.Discard
             )
 
-            # Comparamos el botón pulsado con cada tipo que les hemos pasado
             if boton_pulsado == QMessageBox.Discard:
                 print("Descartado!")
             elif boton_pulsado == QMessageBox.NoToAll:
@@ -255,7 +247,7 @@ El resultat és el següent:
 ![Diàleg crític](images/dialeg_critic.png)
 
 
-## 5.3 Altres diàlegs
+## 1.3. Altres diàlegs
 Hi ha altres tipus de diàlegs que podeu trobar al mòdul QtWidgets. Aquests són més específics:
 
 - **QColorDialog**: per especificar colors
@@ -267,8 +259,9 @@ Hi ha altres tipus de diàlegs que podeu trobar al mòdul QtWidgets. Aquests só
 Vegem uns simples exemples que poden resultar útils (ometem la part general de l'aplicació per mostrar només la part que ens interessa):
 
 !!!example "Exemple d'altres diàlegs"
+
     === "Obrir arxiu"
-        ~~~Python
+        ~~~py
         def mostrar_dialeg(self):
             finestra_dialeg = QFileDialog.getOpenFileName(
                 self, caption="Obrir fitxer...", dir=".",
@@ -278,8 +271,9 @@ Vegem uns simples exemples que poden resultar útils (ometem la part general de 
         ~~~
 
     === "Guardar arxiu"
+
         NOTA: Si el fitxer ja existeix ens demana confirmació de sobreescriptura
-        ~~~Python
+        ~~~py
         def mostrar_dialeg(self):
             finestra_dialeg = QFileDialog.getSaveFileName(
                 self, caption="Desa fitxer ...", dir=".",
@@ -291,7 +285,8 @@ Vegem uns simples exemples que poden resultar útils (ometem la part general de 
         ![](images/dialeg_guardar.png)
 
     === "Obtenir un color"
-        ~~~Python
+
+        ~~~py
         def mostrar_dialeg(self):
             color = QColorDialog.getColor()
             if color.isValid():
@@ -302,7 +297,8 @@ Vegem uns simples exemples que poden resultar útils (ometem la part general de 
         ![](images/color.png)
 
     === "Obtenir una font"
-        ~~~Python
+
+        ~~~py
         def mostrar_dialeg(self):
             seleccionada, font = QFontDialog.getFont(self)
             if seleccionada:
@@ -316,7 +312,7 @@ Vegem uns simples exemples que poden resultar útils (ometem la part general de 
         
         A l'exemple obtenim el mes de naixement d'una llista de mesos i l'imprimim per consola:
 
-        ~~~Python
+        ~~~py
         def mostrar_dialeg(self):
             mes, seleccionat = QInputDialog.getItem(
                 self, "Mes de naixement",  "Messos",
@@ -334,7 +330,7 @@ Vegem uns simples exemples que poden resultar útils (ometem la part general de 
 
         ![](images/progress.png)
 
-        ~~~Python
+        ~~~py
         import time
         from PySide6.QtCore import QThread, Signal
         from PySide6.QtWidgets import (
@@ -413,20 +409,19 @@ Vegem uns simples exemples que poden resultar útils (ometem la part general de 
             app.exec()
         ~~~
 
-## 5.4 Altres finestres
+## 1.4. Altres finestres
 Fins ara hem vist diferents diàlegs modals que executen al seu propi bucle d'esdeveniments i bloquegen la resta de l'aplicació. Però de vegades ens pot interessar obrir una altra finestra sense bloquejar la finestra principal.
 
 !!!warning "Finestres"
     A Qt, qualsevol widget sense parent és una finestra. Això, a efectes pràctics, vol dir que per mostrar una finestra nova, només hem de crear un Widget i cridar al seu mètode show(). Fixa't que fins i tot podríem crear una aplicació amb diversos QMainWindows.
 
 !!!example "Dues finestres en una mateixa aplicació"
-    ~~~Python
+    ~~~py
     from PySide6.QtWidgets import (
         QApplication, QMainWindow, QPushButton, QLabel, QVBoxLayout, QWidget
         )
 
-    # Clase que hereda de QLabel. Si no tiene parent,
-    # se mostrará en una ventana flotante
+
     class OtraVentana(QLabel):
         def __init__(self):
             super().__init__()
@@ -437,23 +432,18 @@ Fins ara hem vist diferents diàlegs modals que executen al seu propi bucle d'es
 
         def __init__(self):
             super().__init__()
-            # Necesitamos que la nueva ventana sea una propiedad de la clase,
-            # de lo contrario se destruirá al salir del método donde se crea.
-            self.otra_ventana = None  # Referencia nula
+            self.otra_ventana = None  # Referència nula
             self.setWindowTitle("Aplicación con dos ventanas")
             self.boton = QPushButton("Mostrar/ocultar otra ventana")
             self.boton.clicked.connect(self.mostrar_otra_ventana)
             self.setCentralWidget(self.boton)
 
         def mostrar_otra_ventana(self):
-            # Si no está creada,la creamos una sola vez.
-            # La desplazamos a la posición de la ventana principal y la mostramos.
             if self.otra_ventana is None:
                 self.otra_ventana = OtraVentana()
                 self.otra_ventana.move(self.pos())
                 self.otra_ventana.show()
             else:
-                # Si está oculta la mostramos y si está visible la ocultamos.
                 if self.otra_ventana.isHidden():
                     self.otra_ventana.move(self.pos())
                     self.otra_ventana.show()

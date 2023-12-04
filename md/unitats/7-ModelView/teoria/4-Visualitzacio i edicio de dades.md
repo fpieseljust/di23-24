@@ -48,7 +48,7 @@ Les operacions més importants que podem realitzar sobre ells són:
 
 ![QTableWidget](images/qtablewidget.png)
 
-~~~python
+~~~py
 import sys
 import os
 

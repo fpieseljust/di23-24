@@ -1,10 +1,10 @@
-# Funcionalitats avançades de l'eina de disseny
+# 1. Funcionalitats avançades de l'eina de disseny
 
 La finalitat principal de les eines de disseny associades als llenguatges de marques és permetre a l'usuari definir els components de la interfície i la manera com s'organitzen aquests. Així i tot, solen incloure un altre tipus de funcionalitats que ajuden el desenvolupador a especificar tots els aspectes relacionats amb el disseny.
 
 A Qt Designer hem vist com a més de poder arrossegar i configurar els components podem, per exemple, definir l'associació de senyals a ranures. En aquest apartat veurem altres funcionalitats que incorpora aquesta eina per completar el disseny d'un formulari.
 
-## Definició de companys (buddy widgets)
+## 1.1. Definició de companys (buddy widgets)
 
 Quan dissenyem formularis d'entrada de dades, és habitual utilitzar en el disseny una etiqueta (QLabel) per identificar cada camp del formulari, i un control d'entrada de dades (com QLineEdit, QTextEdit o QComboBox) per que l'usuari pugui proporcionar el valor. De fet, Qt ofereix el layout de formulari (QFormLayout) per ajudar-nos a organitzar etiquetes i controls d'entrada.
 
@@ -14,7 +14,7 @@ Podem associar companys a les etiquetes a Qt Designer canviant al mode Editar co
 
 ![associació de companys](images/companys.png){: style="display: block;margin-left: auto;margin-right: auto;width: 50%;"}
 
-## Ordre de tabulació
+## 1.2. Ordre de tabulació
 
 Molts usuaris d'aplicacions basades en formularis estan habituats a desplaçar-se pels diferents camps del formulari fent servir la tecla de tabulació del teclat. Qt Designer ofereix la possibilitat de personalitzar visualment l'ordre en què es desplaçarà el focus d'un camp a un altre amb el tabulador utilitzant el mode Edita ordre de pestanyes.
 
@@ -38,7 +38,7 @@ Aquest mode d'edició també compta amb un menú contextual amb les opcions seg�
 !!!important "IMPORTANT"
     Tant la possibilitat de configurar l'ordre de tabulació com l'associació de companys són funcionalitats que ajuden a millorar la productivitat dels usuaris finals de la nostra aplicació, i són especialment rellevants en aplicacions destinades a l'àmbit empresarial. A més, aquestes opcions estan alineades amb l'heurística d'usabilitat número 7 de Nielsen, Flexibilitat i eficiència d'ús.
 
-## Plantilles
+## 1.3. Plantilles
 
 Qt Designer ofereix la possibilitat de crear les nostres pròpies plantilles de formulari, que ens permetran crear un nou formulari a partir d'una estructura bàsica definida per nosaltres. 
 

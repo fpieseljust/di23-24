@@ -1,16 +1,6 @@
-## 2. Components d'ús comú
-
-### Pràctica 1 - ComboBox
-
-Un dels Widgets que hem esmentat a la teoria és el QComboBox. Aquest component ens permet seleccionar un element d'una llista desplegable. En aquesta pràctica es pretén que emplenes un ComboBox amb els mesos de l'any, en seleccionar un dels elements, s'imprimirà per la consola el número que ocupa al ComboBox i el text que conté l'opció. 
-
-Exemple:
-
-![ComboBox](images/ComboBox.png)
-
 ## 3. Contenidors de components. Disseny.
 
-### Pràctica 2 - Login
+### Pràctica 1 - Login
 
 Crearem una aplicació que simule una finestra de login amb l'aspecte següent:
 
@@ -29,7 +19,7 @@ Si l'usuari o la contrasenya és qualsevol altre, l'aspecte seria el següent:
 
 ## 4. Barres de ferramentes, barra d'estat i menús.
 
-### Pràctica 3 - Editor de text
+### Pràctica 2.1 - Editor de text
 
 En aquesta pràctica anem a desenvolupar un editor de text molt simple, que tindrà el següent aspecte:
 
@@ -55,13 +45,21 @@ L'arxiu on guardeu o que podeu carregar sempre serà el mateix, “arxiu.txt”,
 
 ## 5. Diàlegs i altres finestres.
 
-### Pràctica 4 - No perdre els canvis.
+### Pràctica 2.2 - Editor de text: No perdre els canvis.
 
 Anem a continuar afegint funcionalitat al nostre editor de text de la [pràctica 3](#practica-3-editor-de-text). 
 
 En sortir de l'aplicació, tancar el fitxer o obrir un altre fitxer, hem de comprovar si hem guardat els canvis. En cas de no haver-los guardat, hauríem de demanar a l'usuari si vol guardar-los, de manera que els canvis no es perden.
 
-### Pràctica 5 - Diàleg en login
+### Pràctica 2.3 - Editor de text: Dialegs per obrir i tancar arxius.
+
+A la pràctica de l'apartat anterior [(Pràctica 3)](../tasques/2%20-%20Pràctiques.md#practica-3-editor-de-text), havíem començat a desenvolupar un editor de text molt simple que permetia carregar i guardar “arxiu.txt” situat a la mateixa ruta des de la qual executàvem el codi.
+
+En aquesta activitat, utilitzarem dos diàlegs, un per demanar quin fitxer obrir i un altre per demanar en quin fitxer volem desar els canvis. En cas que ja hi haja un fitxer obert, en donar a desar no demanarà la ruta al fitxer, sinó que utilitzarà la ruta del fitxer obert anteriorment, sobreescrivint-lo.
+
+A més, afegirem una entrada de menú “Tancar” per tancar l'arxiu obert actualment i començar-ne un de nou.
+
+### Pràctica 3 - Diàleg en login
 
 A la [pràctica 2](#practica-2-login) de l'apartat 3 havíem creat una finestra per demanar l'usuari i la contrasenya en una finestra de *login*. Canviarem la implementació, fent que siga un diàleg, de manera que si l'usuari i la contrasenya són “admin”, “admin”, entrarem a l'aplicació, que mostrarem de forma maximitzada. Però si no, mostrarem un quadre de diàleg nou indicant que “l'usuari o la contrasenya són incorrectes”.
 

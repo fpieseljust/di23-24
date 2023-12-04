@@ -1,8 +1,8 @@
-# Llenguatges de marques per a la generació d'interfícies d'usuari
+# 1. Llenguatges de marques per a la generació d'interfícies d'usuari
 
 La majoria de les tecnologies d'interfície d'usuari actuals ofereixen la possibilitat d'utilitzar un llenguatge de marques per a la generació de la interfície d'una aplicació, com a alternativa a la creació d'interfícies per mitjà de codi. Quasi tots aquests llenguatges es basen en XML, utilitzant la sintaxi d'elements i atributs per definir l'estructura i els components de la interfície.  
 
-## Avantatges dels llenguatges de marques per a la generació d'interfícies
+## 1.1. Avantatges dels llenguatges de marques per a la generació d'interfícies
 
 La utilització d'aquest tipus de llenguatges ofereix els avantatges següents sobre la creació utilitzant un llenguatge de programació:
 
@@ -11,7 +11,7 @@ La utilització d'aquest tipus de llenguatges ofereix els avantatges següents s
 - La seva estructura jeràrquica en forma d'arbre és semblant a l'estructura visual establerta entre els components de la interfície.
 - Permeten reutilitzar el mateix disseny d'interfície a diferents plataformes o amb diferents llenguatges de programació.
 
-## Llenguatges de marques més utilitzats per a la generació d'interfícies
+## 1.2. Llenguatges de marques més utilitzats per a la generació d'interfícies
 
 La taula següent recull alguns dels llenguatges de marques més populars per a la creació d'interfícies gràfiques d'usuari:
 
