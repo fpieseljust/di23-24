@@ -52,8 +52,8 @@ nav:
       
 
     - Tasques:
-      - Activitats: unitats/3-GUI-Flet/tasques/1 - Activitats.md
-      - Pràctiques: unitats/3-GUI-Flet/tasques/2 - Practiques.md      
+      - 1 - Activitats: unitats/3-GUI-Flet/tasques/1 - Activitats.md
+      - 2 - Pràctiques: unitats/3-GUI-Flet/tasques/2 - Practiques.md      
 
   - Unitat 4 - Introducció a les interfícies d'usuari amb PySide:
     - Teoria:

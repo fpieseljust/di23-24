@@ -49,19 +49,19 @@ La primera disposició que estudiarem serà la disposició en vertical. Hi anir�
         def __init__(self):
             super().__init__()
 
-            self.setWindowTitle("Layout horizontal")
+            self.setWindowTitle("Layout vertical")
 
             # Creem un layout vertical
-            layout_horizontal = QVBoxLayout()
+            layout_vertical = QVBoxLayout()
 
             componente_principal = QWidget()
-            componente_principal.setLayout(layout_horizontal)
+            componente_principal.setLayout(layout_vertical)
             self.setCentralWidget(componente_principal)
 
-            layout_horizontal.addWidget(QPushButton('Uno'))
-            layout_horizontal.addWidget(QPushButton('Dos'))
-            layout_horizontal.addWidget(QPushButton('Tres'))
-            layout_horizontal.addWidget(QPushButton('Cuatro'))
+            layout_vertical.addWidget(QPushButton('Uno'))
+            layout_vertical.addWidget(QPushButton('Dos'))
+            layout_vertical.addWidget(QPushButton('Tres'))
+            layout_vertical.addWidget(QPushButton('Cuatro'))
 
 
     app = QApplication([])
@@ -87,7 +87,7 @@ En aquest apartat ens centrem en la disposició horitzontal dels components, fen
 !!!example "Exemple"
     ~~~py
     from PySide6.QtWidgets import (
-        QApplication, QMainWindow, QWidget, QVBoxLayout, QPushButton
+        QApplication, QMainWindow, QWidget, QHBoxLayout, QPushButton
     )
 
 
@@ -96,18 +96,19 @@ En aquest apartat ens centrem en la disposició horitzontal dels components, fen
         def __init__(self):
             super().__init__()
 
-            self.setWindowTitle("Layout vertical")
+            self.setWindowTitle("Layout horitzontal")
 
-            layout_vertical = QVBoxLayout()
-
-            layout_vertical.addWidget(QPushButton('Uno'))
-            layout_vertical.addWidget(QPushButton('Dos'))
-            layout_vertical.addWidget(QPushButton('Tres'))
-            layout_vertical.addWidget(QPushButton('Cuatro'))
+            # Creem un layout vertical
+            layout_horitzontal = QHBoxLayout()
 
             componente_principal = QWidget()
-            componente_principal.setLayout(layout_vertical)
+            componente_principal.setLayout(layout_horitzontal)
             self.setCentralWidget(componente_principal)
+
+            layout_horitzontal.addWidget(QPushButton('Uno'))
+            layout_horitzontal.addWidget(QPushButton('Dos'))
+            layout_horitzontal.addWidget(QPushButton('Tres'))
+            layout_horitzontal.addWidget(QPushButton('Cuatro'))
 
 
     app = QApplication([])

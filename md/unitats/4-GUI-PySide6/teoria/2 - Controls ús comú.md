@@ -114,6 +114,7 @@ Ara, l'aspecte de l'aplicació serà el mateix, però en fer clic sobre el botó
     Alguns controls tenen ranures predefinides que podem fer servir directament.
     
     Per exemple, el control QLabel té els següents slots predefinits:
+    
     - clear
     - setMovie(movie)
     - setNum(num)
