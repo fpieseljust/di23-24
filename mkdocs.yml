@@ -49,8 +49,6 @@ nav:
       - 6 - Emmagatzematge d'informació a través de l'API de Flet: unitats/3-GUI-Flet/teoria/6 - Emmagatzematge.md
       - 7 - Aplicacions multiusuari: unitats/3-GUI-Flet/teoria/7 - Aplicacions multiusuari.md
       - 8 - Controls definits per l'usuari: unitats/3-GUI-Flet/teoria/8 - Controls definits per l'usuari.md
-      
-
     - Tasques:
       - 1 - Activitats: unitats/3-GUI-Flet/tasques/1 - Activitats.md
       - 2 - Pràctiques: unitats/3-GUI-Flet/tasques/2 - Practiques.md      
@@ -82,11 +80,17 @@ nav:
       - 2 - Ferramentes de disseny basades en llenguatges de marques: unitats/5-Interficies-LM/teoria/2-Ferramentes de disseny basades en llenguatges de marques.md
       - 3 - Ús de la interfície en una aplicació: unitats/5-Interficies-LM/teoria/3-Ús de la interfície en una aplicació.md
       - 4 - Funcions avançades de la ferramenta de disseny: unitats/5-Interficies-LM/teoria/4-Funcions avançades de la ferramenta de disseny.md
-
     - Tasques:
       - 1 - Activitats: unitats/5-Interficies-LM/tasques/1 - Activitats.md
       - 2 - Pràctiques: unitats/5-Interficies-LM/tasques/2 - Pràctiques.md
     - Enllaços: unitats/5-Interficies-LM/enllaços/enllaços.md
+  - Unitat 6 - El·laboració d'informes:
+    - Teoria:
+      - 1 - Introducció als informes: unitats/6-Informes/teoria/1-Introduccio als informes.md
+      - 2 - Disseny d'informes: unitats/6-Informes/teoria/2-Disseny d'informes.md
+      - 3 - Elaboració de gràfics: unitats/6-Informes/teoria/3-Grafics.md
+      - 4 - Desenvolupament d'aplicacions amb informes: unitats/6-Informes/teoria/4-Aplicacions amb informes.md
+  
 
   # - Unitat 6 - Distribució d'aplicacions:
   #   - Tasques:

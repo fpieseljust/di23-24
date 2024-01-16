@@ -13,23 +13,23 @@ A Qt els diàlegs s'implementen com a classes de QDialog o les seves derivades.
 
 !!!example "Exemple"
     ~~~py
-        from PySide6.QtWidgets import QApplication, QDialog, QMainWindow, QPushButton
+    from PySide6.QtWidgets import QApplication, QDialog, QMainWindow, QPushButton
 
 
     class VentanaPrincipal(QMainWindow):
         def __init__(self):
             super().__init__()
 
-            self.setWindowTitle("Aplicación con diálogos")
+            self.setWindowTitle("Aplicació amb dialegs")
 
-            boton = QPushButton("Haz clic para que el dialogo aparezca")
+            boton = QPushButton("Fes clic per a que aparega el dialeg")
             boton.clicked.connect(self.mostrar_dialogo)
             self.setCentralWidget(boton)
 
         def mostrar_dialogo(self):
-            print("Clic recibido, se mostrará el dialogo.")
+            print("Clic rebut, es mostrarà el dialeg.")
             ventana_dialogo = QDialog(self)
-            ventana_dialogo.setWindowTitle("Ventana de dialogo")
+            ventana_dialogo.setWindowTitle("Finestra de dialeg")
             ventana_dialogo.exec()
 
 

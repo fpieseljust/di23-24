@@ -63,9 +63,10 @@ Els continguts del mòdul s'organitzen de la seguent forma:
 - **UD 2. Introducció a les interfícies gràfiques.**
 - **UD 3. Generació d’interfícies amb Flet**
 - **UD 4. Generació d’interfícies amb PySide6**
-- **UD 5. Elaboració d’informes.**
-- **UD 6. Documentació d'aplicaciones.**
-- **UD 7. Proves, distribució e implantació d'aplicacions.**
+- **UD 5. Generació d’interfícies mitjançant llenguatges de marques.**
+- **UD 6. Elaboració d’informes.**
+- **UD 7. Documentació d'aplicaciones.**
+- **UD 8. Proves, distribució e implantació d'aplicacions.**
 
 ## 4. Temporalització de continguts
 
@@ -73,7 +74,7 @@ La temporalització de continguts prevista serà la següemt:
 
 | Trimestre 1 | Trimestre 2          |
 | ----------- | -------------------- |
-| Unitats 1-3 | Unitats 4-7          |
+| Unitats 1-3 | Unitats 5-8          |
 
 ## 5. Aspectes metodològics
 
