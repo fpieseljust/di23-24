@@ -2,7 +2,7 @@
 
 En aquest apartat aprendrem a elaborar informes a la nostra aplicació amb `DataPane`, una llibreria Python que permet crear informes amb diferents elements (com taules i gràfics) que es generen en format HTML. Aquesta llibreria es distribueix baix la llicència de programari lliure Apache 2.0.
 
-`DataPane` permet emmagatzemar els informes generats com un fitxer HTML local, o també pujar-los a la *plataformadatapane.com*,on s'afegeixen algunes funcionalitats addicionals. Per poder pujar els informes, cal tenir un compte que podem crear de manera gratuïta a la web.
+`DataPane` permet emmagatzemar els informes generats com un fitxer HTML local, o també pujar-los a la plataforma *datapane.com*,on s'afegeixen algunes funcionalitats addicionals. Per poder pujar els informes, cal tenir un compte que podem crear de manera gratuïta a la web.
 
 Podem instal·lar la llibreria`DataPane` amb l'ordre següent:
 
@@ -187,3 +187,52 @@ report.save(path=report_path, open=True)
 ```
 
 Pots descarregar la [imatge utilitzada](../exemples/img/report.png), el [resultat de l'informe](../exemples/informe4.html) i el [codi Python complet de l'exemple](../exemples/informe4.py).
+
+
+### Organitzar els components d'un informe
+
+Com hem pogut comprovar als informes que hem fet fins ara amb `DataPane`, els diferents components que afegim a un informe (com les taules de dades, el contingut HTML o les imatges) s'apilen verticalment un sota l'altre, com en un layout vertical. Encara que a alguns casos poden ser suficients, la llibreria incorpora diferents opcions per organitzar els components de l'informe.
+
+#### Grups de components
+
+Datapane permet definir grups de components en un informe, organitzant els components del grup en forma de taula. En crear el grup, podem indicar el nombre de files i columnes que volem.
+
+```python
+dp.Report(
+        dp.Group(
+           component1,component2,component3,component4,
+           columns=2, rows=2))
+```
+
+En aquest exemple es crea un informe que conté un grup amb quatre components, organitzats en dues files i dues columnes. Per a organitzacions més complexes, és possible incloure-hi grups dins d'altres grups.
+
+#### Pàgines
+
+Una altra de les opcions que incorpora`DataPane` per a l'organització dels components són les pàgines. Les pàgines permeten que un informe estiga format per diversos informes (cadascú en una pàgina), de manera que l'usuari es puga moure entre les pàgines des de la part superior de l'informe. La idea és similar a la dels diferents fulls en un full de càlcul.
+
+```python
+dp.Report(
+  dp.Page(
+    title="Pàgina 1",
+    blocks=[componente2, componente3]
+  ),
+  dp.Page(
+    title="Pàgina 2",
+    blocks=[componente3, componente4]
+  )
+)
+```
+
+A l'exemple, es crea un informe amb dues pàgines. A cadascuna se li assigna un títol amb la propietat `title` (serà el que l'usuari veurà a la part superior de l'informe per moure's entre les pàgines), i els components que la formen amb el paràmetre `blocks`.
+
+És important destacar que no és possible organitzar unes pàgines dins d'altres, i que si utilitzem pàgines han d'estar directament contingudes dins del component `Report`.
+
+#### Selectors
+
+Els selectors s'utilitzen per incloure en un informe diferents components relacionats entre si, de manera que l'usuari decideix quin vol visualitzar. Per exemple, es pot utilitzar per incloure en un informe una taula de dades i un gràfic, i que l'usuari puga alternar entre tots dos components en lloc de veure'ls alhora.
+
+```python
+dp.Report(dp.Select(blocks=[componente1, componente2, componente3]))
+```
+
+A l'exemple es crea un informe amb un selector que permetrà a l'usuari triar entre tres components. La manera com l'usuari triarà el component que voleu visualitzar dependrà del nombre de components que tingui el selector. Per a menys de 5 opcions es fan servir pestanyes, i si s'hi inclouen 5 o més s'utilitza un desplegable. L'etiqueta associada a cada opció s'estableix amb la propietat *label* que tenen tots els components de `DataPane`.

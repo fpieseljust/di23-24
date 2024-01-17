@@ -4,7 +4,6 @@ import flet as ft
 class Counter(ft.UserControl):
     def __init__(self):
         super().__init__()
-        @property
         self.counter = 0
         self.text = ft.Text(str(self.counter))
 
@@ -25,7 +24,7 @@ class Counter(ft.UserControl):
 
 def main(page):
     counter = Counter()
-    counter.counter = 170
+    counter.counter = 0
     page.add(counter)
 
 

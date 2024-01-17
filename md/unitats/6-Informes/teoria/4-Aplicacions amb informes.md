@@ -32,7 +32,6 @@ El codi que s'inclou a continuació mostra com utilitzar aquest component, parti
 ```python
 view = QWebEngineView()
 view.load(QUrl.fromLocalFile(ruta_absoluta))
-self.layout_vertical.addWidget(view)
 ```
 
 El primer que fem és crear el component. A continuació, s'invoca el mètode `load()`, que iniciarà la càrrega del document especificat en forma d'objecte QUrl (de la mateixa manera que a l'exemple anterior). És important destacar que la càrrega es realitzarà de forma asíncrona, oferint el component senyals i ranures per controlar el procés de càrrega. Als enllaços de la unitat hi ha la referència a la documentació d'aquest component.

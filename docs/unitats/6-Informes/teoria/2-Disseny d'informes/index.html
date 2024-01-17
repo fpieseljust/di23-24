@@ -2096,6 +2096,40 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#organitzar-els-components-dun-informe" class="md-nav__link">
+    Organitzar els components d'un informe
+  </a>
+  
+    <nav class="md-nav" aria-label="Organitzar els components d'un informe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grups-de-components" class="md-nav__link">
+    Grups de components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagines" class="md-nav__link">
+    Pàgines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectors" class="md-nav__link">
+    Selectors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2153,6 +2187,108 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tasques
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tasques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/practica1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasques/practica2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../enlla%C3%A7os/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enllaços
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2407,6 +2543,40 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#organitzar-els-components-dun-informe" class="md-nav__link">
+    Organitzar els components d'un informe
+  </a>
+  
+    <nav class="md-nav" aria-label="Organitzar els components d'un informe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grups-de-components" class="md-nav__link">
+    Grups de components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagines" class="md-nav__link">
+    Pàgines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectors" class="md-nav__link">
+    Selectors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2431,7 +2601,7 @@
 
 <div><h2 id="disseny-dinformes">Disseny d'informes</h2>
 <p>En aquest apartat aprendrem a elaborar informes a la nostra aplicació amb <code>DataPane</code>, una llibreria Python que permet crear informes amb diferents elements (com taules i gràfics) que es generen en format HTML. Aquesta llibreria es distribueix baix la llicència de programari lliure Apache 2.0.</p>
-<p><code>DataPane</code> permet emmagatzemar els informes generats com un fitxer HTML local, o també pujar-los a la <em>plataformadatapane.com</em>,on s'afegeixen algunes funcionalitats addicionals. Per poder pujar els informes, cal tenir un compte que podem crear de manera gratuïta a la web.</p>
+<p><code>DataPane</code> permet emmagatzemar els informes generats com un fitxer HTML local, o també pujar-los a la plataforma <em>datapane.com</em>,on s'afegeixen algunes funcionalitats addicionals. Per poder pujar els informes, cal tenir un compte que podem crear de manera gratuïta a la web.</p>
 <p>Podem instal·lar la llibreria<code>DataPane</code> amb l'ordre següent:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">conda</span> <span class="n">install</span> <span class="n">datapane</span>
 </code></pre></div></td></tr></table></div>
@@ -2605,7 +2775,49 @@
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="n">report_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_path</span><span class="p">,</span> <span class="s2">"informe4.html"</span><span class="p">)</span>
 <a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="n">report</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">report_path</span><span class="p">,</span> <span class="nb">open</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Pots descarregar la <a href="../../exemples/img/report.png">imatge utilitzada</a>, el <a href="../../exemples/informe4.html">resultat de l'informe</a> i el <a href="../../exemples/informe4.py">codi Python complet de l'exemple</a>.</p></div>
+<p>Pots descarregar la <a href="../../exemples/img/report.png">imatge utilitzada</a>, el <a href="../../exemples/informe4.html">resultat de l'informe</a> i el <a href="../../exemples/informe4.py">codi Python complet de l'exemple</a>.</p>
+<h3 id="organitzar-els-components-dun-informe">Organitzar els components d'un informe</h3>
+<p>Com hem pogut comprovar als informes que hem fet fins ara amb <code>DataPane</code>, els diferents components que afegim a un informe (com les taules de dades, el contingut HTML o les imatges) s'apilen verticalment un sota l'altre, com en un layout vertical. Encara que a alguns casos poden ser suficients, la llibreria incorpora diferents opcions per organitzar els components de l'informe.</p>
+<h4 id="grups-de-components">Grups de components</h4>
+<p>Datapane permet definir grups de components en un informe, organitzant els components del grup en forma de taula. En crear el grup, podem indicar el nombre de files i columnes que volem.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">dp</span><span class="o">.</span><span class="n">Report</span><span class="p">(</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>        <span class="n">dp</span><span class="o">.</span><span class="n">Group</span><span class="p">(</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>           <span class="n">component1</span><span class="p">,</span><span class="n">component2</span><span class="p">,</span><span class="n">component3</span><span class="p">,</span><span class="n">component4</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>           <span class="n">columns</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<p>En aquest exemple es crea un informe que conté un grup amb quatre components, organitzats en dues files i dues columnes. Per a organitzacions més complexes, és possible incloure-hi grups dins d'altres grups.</p>
+<h4 id="pagines">Pàgines</h4>
+<p>Una altra de les opcions que incorpora<code>DataPane</code> per a l'organització dels components són les pàgines. Les pàgines permeten que un informe estiga format per diversos informes (cadascú en una pàgina), de manera que l'usuari es puga moure entre les pàgines des de la part superior de l'informe. La idea és similar a la dels diferents fulls en un full de càlcul.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">dp</span><span class="o">.</span><span class="n">Report</span><span class="p">(</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>  <span class="n">dp</span><span class="o">.</span><span class="n">Page</span><span class="p">(</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="n">title</span><span class="o">=</span><span class="s2">"Pàgina 1"</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>    <span class="n">blocks</span><span class="o">=</span><span class="p">[</span><span class="n">componente2</span><span class="p">,</span> <span class="n">componente3</span><span class="p">]</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>  <span class="p">),</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>  <span class="n">dp</span><span class="o">.</span><span class="n">Page</span><span class="p">(</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>    <span class="n">title</span><span class="o">=</span><span class="s2">"Pàgina 2"</span><span class="p">,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>    <span class="n">blocks</span><span class="o">=</span><span class="p">[</span><span class="n">componente3</span><span class="p">,</span> <span class="n">componente4</span><span class="p">]</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>  <span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>A l'exemple, es crea un informe amb dues pàgines. A cadascuna se li assigna un títol amb la propietat <code>title</code> (serà el que l'usuari veurà a la part superior de l'informe per moure's entre les pàgines), i els components que la formen amb el paràmetre <code>blocks</code>.</p>
+<p>És important destacar que no és possible organitzar unes pàgines dins d'altres, i que si utilitzem pàgines han d'estar directament contingudes dins del component <code>Report</code>.</p>
+<h4 id="selectors">Selectors</h4>
+<p>Els selectors s'utilitzen per incloure en un informe diferents components relacionats entre si, de manera que l'usuari decideix quin vol visualitzar. Per exemple, es pot utilitzar per incloure en un informe una taula de dades i un gràfic, i que l'usuari puga alternar entre tots dos components en lloc de veure'ls alhora.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">dp</span><span class="o">.</span><span class="n">Report</span><span class="p">(</span><span class="n">dp</span><span class="o">.</span><span class="n">Select</span><span class="p">(</span><span class="n">blocks</span><span class="o">=</span><span class="p">[</span><span class="n">componente1</span><span class="p">,</span> <span class="n">componente2</span><span class="p">,</span> <span class="n">componente3</span><span class="p">]))</span>
+</code></pre></div></td></tr></table></div>
+<p>A l'exemple es crea un informe amb un selector que permetrà a l'usuari triar entre tres components. La manera com l'usuari triarà el component que voleu visualitzar dependrà del nombre de components que tingui el selector. Per a menys de 5 opcions es fan servir pestanyes, i si s'hi inclouen 5 o més s'utilitza un desplegable. L'etiqueta associada a cada opció s'estableix amb la propietat <em>label</em> que tenen tots els components de <code>DataPane</code>.</p></div>
 
 
 

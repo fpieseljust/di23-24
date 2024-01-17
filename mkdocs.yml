@@ -90,7 +90,13 @@ nav:
       - 2 - Disseny d'informes: unitats/6-Informes/teoria/2-Disseny d'informes.md
       - 3 - Elaboració de gràfics: unitats/6-Informes/teoria/3-Grafics.md
       - 4 - Desenvolupament d'aplicacions amb informes: unitats/6-Informes/teoria/4-Aplicacions amb informes.md
-  
+    - Tasques:
+      - Pràctica 1: unitats/6-Informes/tasques/practica1.md
+      - Pràctica 2: unitats/6-Informes/tasques/practica2.md
+    - Enllaços: unitats/6-Informes/enllaços.md
+
+  #     - Pràctiques: unitats/6-Components-Designer/tasques/2 - Pràctiques.md
+  #   - Enllaços: unitats/6-Components-Designer/enllaços/enllaços.md
 
   # - Unitat 6 - Distribució d'aplicacions:
   #   - Tasques:
