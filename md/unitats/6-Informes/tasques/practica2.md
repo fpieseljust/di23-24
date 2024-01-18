@@ -45,6 +45,6 @@ En esta pràctica hauràs de dissenyar **tres informes**, cadascun a partir d'un
 
 1. La taula d'artistes (*artists*) de la base de dades Chinook, una base de dades de prova que conté les dades duna botiga de discos. Pots descarregar-la en aquest enllaç: [https://www.sqlitetutorial.net/sqlite-sample-database](https://www.sqlitetutorial.net/sqlite-sample-database)
 2. El fitxer JSON [coldplay_albums.json](data/coldplay_albums.json), que conté un llistat dels àlbums publicats pel grup de música Coldplay.
-3. La llista de senzills més venuts al món, obtinguda directament de la següent pàgina de Wikipedia: [https://es.wikipedia.org/wiki/Anexo:Sencillos_m%C3%A1s_venidos_en_el_mundo](https://es.wikipedia.org/wiki/Anexo:Sencillos_m%C3%A1s_venidos_en_el_mundo)
+3. La llista de població per països, obtinguda directament de la següent pàgina de Wikipedia: [https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population)
 
 Els informes es mostraran en una aplicació Qt utilitzant una interfície de pestanyes (QTabWidget) dissenyada amb QtDesigner. A cada pestanya, s'haurà de mostrar l'informe directament a l'aplicació i incloure un botó per obrir-lo al navegador predeterminat del sistema.

@@ -2,7 +2,7 @@ import os
 
 from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QPushButton
 from PySide6.QtGui import QDesktopServices
-from PySide6.QtCore import QUrl, QDir
+from PySide6.QtCore import QUrl
 from PySide6.QtWebEngineWidgets import QWebEngineView
 
 class VentanaInformes(QWidget):
