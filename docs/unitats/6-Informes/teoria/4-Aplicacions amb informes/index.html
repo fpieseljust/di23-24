@@ -2073,20 +2073,33 @@
     Integració d'informes a una aplicació Qt
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Integració d'informes a una aplicació Qt">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#obrir-linforme-al-navegador-predeterminat" class="md-nav__link">
     Obrir l'informe al navegador predeterminat
   </a>
   
-    <nav class="md-nav" aria-label="Obrir l'informe al navegador predeterminat">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#utilitzar-el-componentqwebengineview" class="md-nav__link">
     Utilitzar el componentQWebEngineView
   </a>
+  
+    <nav class="md-nav" aria-label="Utilitzar el componentQWebEngineView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origens-creuats" class="md-nav__link">
+    Origens creuats
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2412,20 +2425,33 @@
     Integració d'informes a una aplicació Qt
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Integració d'informes a una aplicació Qt">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#obrir-linforme-al-navegador-predeterminat" class="md-nav__link">
     Obrir l'informe al navegador predeterminat
   </a>
   
-    <nav class="md-nav" aria-label="Obrir l'informe al navegador predeterminat">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#utilitzar-el-componentqwebengineview" class="md-nav__link">
     Utilitzar el componentQWebEngineView
   </a>
+  
+    <nav class="md-nav" aria-label="Utilitzar el componentQWebEngineView">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origens-creuats" class="md-nav__link">
+    Origens creuats
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2471,7 +2497,7 @@
 <li>Obrir l'informe al navegador predeterminat del sistema</li>
 <li>Utilitzar el component <code>QWebEngineView</code> per incrustar l'informe a la finestra de l'aplicació</li>
 </ol>
-<h3 id="obrir-linforme-al-navegador-predeterminat">Obrir l'informe al navegador predeterminat</h3>
+<h4 id="obrir-linforme-al-navegador-predeterminat">Obrir l'informe al navegador predeterminat</h4>
 <p>Podem fer que un informe s'obri al navegador predeterminat del sistema com a resposta a una acció de l'usuari (per exemple, la pulsació d'un botó o una opció d'un menú). Per fer-ho, s'utilitza la classe QDesktopServices inclosa al mòdul QtGui. Aquesta classe disposa del mètode estàtic <code>openUrl</code>, que obrirà al navegador predeterminat la URL rebuda com a paràmetre (utilitzant el tipus <code>QUrl</code>).</p>
 <p>El codi següent permet obrir un dels informes desenvolupats a l'apartat anterior al navegador predeterminat.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -2484,11 +2510,11 @@
 <h4 id="utilitzar-el-componentqwebengineview">Utilitzar el componentQWebEngineView</h4>
 <p>Si en lloc d'obrir l'informe al navegador predeterminat volem incrustar-lo a la finestra de la nostra aplicació, haurem d'utilitzar el component de QtQWebEngineView. Aquest component s'utilitza per mostrar qualsevol contingut web, tant local com remot, i es basa en el motor de navegació <em>Chromium</em>.</p>
 <p>El codi que s'inclou a continuació mostra com utilitzar aquest component, partint de la ruta absoluta obtinguda al codi anterior.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<p></p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">view</span> <span class="o">=</span> <span class="n">QWebEngineView</span><span class="p">()</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">view</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">QUrl</span><span class="o">.</span><span class="n">fromLocalFile</span><span class="p">(</span><span class="n">ruta_absoluta</span><span class="p">))</span>
 </code></pre></div></td></tr></table></div>
-<p>El primer que fem és crear el component. A continuació, s'invoca el mètode <code>load()</code>, que iniciarà la càrrega del document especificat en forma d'objecte QUrl (de la mateixa manera que a l'exemple anterior). És important destacar que la càrrega es realitzarà de forma asíncrona, oferint el component senyals i ranures per controlar el procés de càrrega. Als enllaços de la unitat hi ha la referència a la documentació d'aquest component.</p>
+El primer que fem és crear el component. A continuació, s'invoca el mètode <code>load()</code>, que iniciarà la càrrega del document especificat en forma d'objecte QUrl (de la mateixa manera que a l'exemple anterior). És important destacar que la càrrega es realitzarà de forma asíncrona, oferint el component senyals i ranures per controlar el procés de càrrega. Als enllaços de la unitat hi ha la referència a la documentació d'aquest component.
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <p>Als recursos de la unitat hi ha el <a href="../../exemples/app_informes1.py">fitxer de codi Python</a>, una aplicació Qt que combina les dues maneres d'integrar un informe. A la part superior de la finestra s'inclou un botó que en ser premut obri l'informe al navegador predeterminat. La resta de la finestra l'ocupa un QWebEngineView que mostra el mateix informe directament a l'aplicació.</p>
@@ -2498,6 +2524,24 @@
   </p>
 <figcaption>Aplicació amb informes integrats</figcaption>
 </figure>
+<h5 id="origens-creuats">Origens creuats</h5>
+<div class="admonition warning">
+<p class="admonition-title">Recursos d'orige creuat (Cross-origin resources!)</p>
+<p>Els llocs web defineixen l’origen de seguretat per accedir de manera segura als recursos dels altres per a l’scripting del client o les bases de dades. Un origen consisteix en un nom d’amfitrió, un esquema i un número de port. Per exemple, els llocs http://www.example.com/my/page.html i http://www.example.com/my/overview.html tenen permís per compartir la mateixa base de dades o accedir als documents dels altres quan s’utilitzen en conjunts de marcs HTML i JavaScript. Al mateix temps, http://www.malicious.com/evil.html es veu impedida d’accedir als recursos de http://www.example.com/, perquè són d’un origen de seguretat diferent. Per defecte, els esquemes locals com file:// i qrc:// es consideren del mateix origen de seguretat i poden accedir als recursos dels altres. Els recursos locals estan per defecte restringits per accedir al contingut remot, la qual cosa significa que file:// no podrà accedir a http://domain.com/foo.html.</p>
+<p>Açò es tradueix en que <strong>les nostres pàgines web locals no es carregaran al WebView a no ser que habilitem els origens remots</strong> a les nostres pàgines locals. Ho farem de la següent forma:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">PySide6.QtWebEngineCore</span> <span class="kn">import</span> <span class="n">QWebEngineSettings</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="o">...</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">view</span> <span class="o">=</span> <span class="n">QWebEngineView</span><span class="p">()</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">view</span><span class="o">.</span><span class="n">settings</span><span class="p">()</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">QWebEngineSettings</span><span class="o">.</span><span class="n">LocalContentCanAccessRemoteUrls</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">view</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">QUrl</span><span class="o">.</span><span class="n">fromLocalFile</span><span class="p">(</span><span class="n">html_path</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+</div>
 <h4 id="desplegament-dinformes-a-un-servidor">Desplegament d'informes a un servidor</h4>
 <p>Com ja hem comentat, el fet que els informes dissenyats amb<code>DataPane</code> siguin fitxers HTML permet el seu desplegament en un servidor web. Aquesta opció facilita que un mateix informe puga ser consultat de diferents maneres (des de diferents aplicacions o des d'una intranet, per exemple).</p>
 <div class="admonition warning">

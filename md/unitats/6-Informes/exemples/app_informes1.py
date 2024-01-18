@@ -4,6 +4,8 @@ from PySide6.QtWidgets import QApplication, QVBoxLayout, QWidget, QPushButton
 from PySide6.QtGui import QDesktopServices
 from PySide6.QtCore import QUrl
 from PySide6.QtWebEngineWidgets import QWebEngineView
+from PySide6.QtWebEngineCore import QWebEngineSettings
+
 
 class VentanaInformes(QWidget):
 
@@ -20,6 +22,7 @@ class VentanaInformes(QWidget):
         self.layout_vertical.addWidget(boton_abrir)
 
         view = QWebEngineView()
+        view.settings().setAttribute(QWebEngineSettings.LocalContentCanAccessRemoteUrls, True)
         view.load(QUrl.fromLocalFile(ruta_absoluta))
         self.layout_vertical.addWidget(view)
 		

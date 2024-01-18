@@ -48,3 +48,8 @@ En esta pràctica hauràs de dissenyar **tres informes**, cadascun a partir d'un
 3. La llista de població per països, obtinguda directament de la següent pàgina de Wikipedia: [https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population)
 
 Els informes es mostraran en una aplicació Qt utilitzant una interfície de pestanyes (QTabWidget) dissenyada amb QtDesigner. A cada pestanya, s'haurà de mostrar l'informe directament a l'aplicació i incloure un botó per obrir-lo al navegador predeterminat del sistema.
+
+!!! warning "Recorda habilitar els recursos d'orige creuat"
+    En cas contrari no podràs visualitzar els teus informes generats amb datapane.
+
+    [https://fpieseljust.github.io/di23-24/unitats/6-Informes/teoria/4-Aplicacions%20amb%20informes/#origens-creuats](https://fpieseljust.github.io/di23-24/unitats/6-Informes/teoria/4-Aplicacions%20amb%20informes/#origens-creuats)
