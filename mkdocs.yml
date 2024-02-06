@@ -102,7 +102,9 @@ nav:
       - 2 - Tipus de proves: unitats/7-Testing-distribucio-documentacio.md/teoria/2-tipus-proves.md
       - 3 - Desenvolupament basat en proves: unitats/7-Testing-distribucio-documentacio.md/teoria/3-TDD.md
       - 4 - Integració i entrega/desplegament continu: unitats/7-Testing-distribucio-documentacio.md/teoria/4-cd-ci.md
-    # - Tasques:
+      - 5 - Empaquetat i distribució d'aplicacions: unitats/7-Testing-distribucio-documentacio.md/teoria/5-empaquetat-distribucio.md
+    - Tasques:
+      - Activitat resolta 1: unitats/7-Testing-distribucio-documentacio.md/tasques/1 - pytest.md
     #   - Pràctica 1: unitats/6-Informes/tasques/practica1.md
     #   - Pràctica 2: unitats/6-Informes/tasques/practica2.md
     # - Enllaços: unitats/6-Informes/enllaços.md
