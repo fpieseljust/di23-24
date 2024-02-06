@@ -18,7 +18,7 @@ grafico_datapane_lineas = dp.Plot(grafico_matplotlib_lineas, responsive=False)
 ventas_vendedor = df.groupby(['Nombre']).sum()
 grafico_matplotlib_barras = ventas_vendedor.plot.bar(y='Importe (€)')
 #Este método permite que no se corten las etiquetas de los nombres de los vendedores
-plt.tight_layout()
+# plt.tight_layout()
 grafico_datapane_barras = dp.Plot(grafico_matplotlib_barras, responsive=False)
 
 

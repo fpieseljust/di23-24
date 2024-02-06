@@ -84,6 +84,7 @@ nav:
       - 1 - Activitats: unitats/5-Interficies-LM/tasques/1 - Activitats.md
       - 2 - Pràctiques: unitats/5-Interficies-LM/tasques/2 - Pràctiques.md
     - Enllaços: unitats/5-Interficies-LM/enllaços/enllaços.md
+
   - Unitat 6 - Elaboració d'informes:
     - Teoria:
       - 1 - Introducció als informes: unitats/6-Informes/teoria/1-Introduccio als informes.md
@@ -94,6 +95,17 @@ nav:
       - Pràctica 1: unitats/6-Informes/tasques/practica1.md
       - Pràctica 2: unitats/6-Informes/tasques/practica2.md
     - Enllaços: unitats/6-Informes/enllaços.md
+
+  - Unitat 7 - Proves, distribució i documentació d'aplicacions:
+    - Teoria:
+      - 1 - Metodologies de desenvolupament de software: unitats/7-Testing-distribucio-documentacio.md/teoria/1-metodologies.md
+      - 2 - Tipus de proves: unitats/7-Testing-distribucio-documentacio.md/teoria/2-tipus-proves.md
+      - 3 - Desenvolupament basat en proves: unitats/7-Testing-distribucio-documentacio.md/teoria/3-TDD.md
+      - 4 - Integració i entrega/desplegament continu: unitats/7-Testing-distribucio-documentacio.md/teoria/4-cd-ci.md
+    # - Tasques:
+    #   - Pràctica 1: unitats/6-Informes/tasques/practica1.md
+    #   - Pràctica 2: unitats/6-Informes/tasques/practica2.md
+    # - Enllaços: unitats/6-Informes/enllaços.md
 
   #     - Pràctiques: unitats/6-Components-Designer/tasques/2 - Pràctiques.md
   #   - Enllaços: unitats/6-Components-Designer/enllaços/enllaços.md
