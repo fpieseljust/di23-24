@@ -8,28 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://fpieseljust.github.io/di23-24/unitats/7-Testing-distribucio-documentacio.md/tasques/1%20-%20pytest/">
+        <link rel="canonical" href="https://fpieseljust.github.io/di23-24/unitats/7-Testing-distribucio-documentacio.md/code/funcions/ci_es_primo/">
       
       
-        <link rel="prev" href="../../teoria/5-empaquetat-distribucio/">
       
       
-        <link rel="next" href="../../../../info/guia_alumne_DI/">
-      
-      
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
-        <title>Activitat resolta 1 - Desenvolupament d'interfícies 23-24 - 2n DAM - IES Jaume II "El Just"</title>
+        <title>ci_es_primo - Desenvolupament d'interfícies 23-24 - 2n DAM - IES Jaume II "El Just"</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -48,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -77,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#activitat-resolta-1-proves-unitaries-amb-pytest" class="md-skip">
+        <a href="#ci_es_primo" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +89,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Desenvolupament d&#39;interfícies 23-24 - 2n DAM - IES Jaume II &#34;El Just&#34;" class="md-header__button md-logo" aria-label="Desenvolupament d'interfícies 23-24 - 2n DAM - IES Jaume II "El Just"" data-md-component="logo">
+    <a href="../../../../.." title="Desenvolupament d&#39;interfícies 23-24 - 2n DAM - IES Jaume II &#34;El Just&#34;" class="md-header__button md-logo" aria-label="Desenvolupament d'interfícies 23-24 - 2n DAM - IES Jaume II "El Just"" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -113,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Activitat resolta 1
+              ci_es_primo
             
           </span>
         </div>
@@ -223,7 +219,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Desenvolupament d&#39;interfícies 23-24 - 2n DAM - IES Jaume II &#34;El Just&#34;" class="md-nav__button md-logo" aria-label="Desenvolupament d'interfícies 23-24 - 2n DAM - IES Jaume II "El Just"" data-md-component="logo">
+    <a href="../../../../.." title="Desenvolupament d&#39;interfícies 23-24 - 2n DAM - IES Jaume II &#34;El Just&#34;" class="md-nav__button md-logo" aria-label="Desenvolupament d'interfícies 23-24 - 2n DAM - IES Jaume II "El Just"" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -240,7 +236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -293,11 +289,31 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../examens/presencial_1a/" class="md-nav__link">
+      <a href="../../../../../examens/presencial_1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Examen 1a presencial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../examens/semipresencial/2a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semipresencial 2a
   </span>
   
 
@@ -388,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
+      <a href="../../../../1-python/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -408,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/teoria/2%20-%20Control%20de%20fluxe/" class="md-nav__link">
+      <a href="../../../../1-python/teoria/2%20-%20Control%20de%20fluxe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -428,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/teoria/3%20-%20Funcions/" class="md-nav__link">
+      <a href="../../../../1-python/teoria/3%20-%20Funcions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/teoria/4%20-%20Fitxers/" class="md-nav__link">
+      <a href="../../../../1-python/teoria/4%20-%20Fitxers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -468,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/teoria/5%20-%20Excepcions/" class="md-nav__link">
+      <a href="../../../../1-python/teoria/5%20-%20Excepcions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/teoria/6%20-%20POO/" class="md-nav__link">
+      <a href="../../../../1-python/teoria/6%20-%20POO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/pr%C3%A0ctiques/1%20-%20PyGame/" class="md-nav__link">
+      <a href="../../../../1-python/pr%C3%A0ctiques/1%20-%20PyGame/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -570,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/pr%C3%A0ctiques/2%20-%20Disseny/" class="md-nav__link">
+      <a href="../../../../1-python/pr%C3%A0ctiques/2%20-%20Disseny/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/pr%C3%A0ctiques/3%20-%20Sprites/" class="md-nav__link">
+      <a href="../../../../1-python/pr%C3%A0ctiques/3%20-%20Sprites/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -610,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/pr%C3%A0ctiques/4%20-%20Imatges/" class="md-nav__link">
+      <a href="../../../../1-python/pr%C3%A0ctiques/4%20-%20Imatges/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/pr%C3%A0ctiques/5%20-%20So/" class="md-nav__link">
+      <a href="../../../../1-python/pr%C3%A0ctiques/5%20-%20So/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -650,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/pr%C3%A0ctiques/6%20-%20Conclusi%C3%B3/" class="md-nav__link">
+      <a href="../../../../1-python/pr%C3%A0ctiques/6%20-%20Conclusi%C3%B3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/pr%C3%A0ctiques/tasques/1%20-%20Obligatori/" class="md-nav__link">
+      <a href="../../../../1-python/pr%C3%A0ctiques/tasques/1%20-%20Obligatori/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -724,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/pr%C3%A0ctiques/tasques/2%20-%20Projecte/" class="md-nav__link">
+      <a href="../../../../1-python/pr%C3%A0ctiques/tasques/2%20-%20Projecte/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -744,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-python/pr%C3%A0ctiques/tasques/3%20-%20Qualificaci%C3%B3/" class="md-nav__link">
+      <a href="../../../../1-python/pr%C3%A0ctiques/tasques/3%20-%20Qualificaci%C3%B3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -855,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-intro-interficies/teoria/1%20-%20Introduccio/" class="md-nav__link">
+      <a href="../../../../2-intro-interficies/teoria/1%20-%20Introduccio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-intro-interficies/teoria/2%20-%20Usabilitat/" class="md-nav__link">
+      <a href="../../../../2-intro-interficies/teoria/2%20-%20Usabilitat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -895,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-intro-interficies/teoria/3%20-%20Pautes%20de%20Disseny/" class="md-nav__link">
+      <a href="../../../../2-intro-interficies/teoria/3%20-%20Pautes%20de%20Disseny/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -957,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-intro-interficies/tasques/1%20-%20Activitats/" class="md-nav__link">
+      <a href="../../../../2-intro-interficies/tasques/1%20-%20Activitats/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -977,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-intro-interficies/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+      <a href="../../../../2-intro-interficies/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1005,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-intro-interficies/enlla%C3%A7os/enlla%C3%A7os/" class="md-nav__link">
+      <a href="../../../../2-intro-interficies/enlla%C3%A7os/enlla%C3%A7os/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1100,7 +1116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1120,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/teoria/2%20-%20Flet-app/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/teoria/2%20-%20Flet-app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1140,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/teoria/3%20-%20Layouts/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/teoria/3%20-%20Layouts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/teoria/4%20-%20Navegacio/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/teoria/4%20-%20Navegacio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/teoria/5%20-%20Dialegs/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/teoria/5%20-%20Dialegs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/teoria/6%20-%20Emmagatzematge/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/teoria/6%20-%20Emmagatzematge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1220,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/teoria/7%20-%20Aplicacions%20multiusuari/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/teoria/7%20-%20Aplicacions%20multiusuari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1240,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/teoria/8%20-%20Controls%20definits%20per%20l%27usuari/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/teoria/8%20-%20Controls%20definits%20per%20l%27usuari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,7 +1318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/tasques/1%20-%20Activitats/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/tasques/1%20-%20Activitats/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1322,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-GUI-Flet/tasques/2%20-%20Practiques/" class="md-nav__link">
+      <a href="../../../../3-GUI-Flet/tasques/2%20-%20Practiques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1425,7 +1441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-GUI-PySide6/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
+      <a href="../../../../4-GUI-PySide6/teoria/1%20-%20Introducci%C3%B3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-GUI-PySide6/teoria/2%20-%20Controls%20%C3%BAs%20com%C3%BA/" class="md-nav__link">
+      <a href="../../../../4-GUI-PySide6/teoria/2%20-%20Controls%20%C3%BAs%20com%C3%BA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1465,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-GUI-PySide6/teoria/3%20-%20Layouts/" class="md-nav__link">
+      <a href="../../../../4-GUI-PySide6/teoria/3%20-%20Layouts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1485,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-GUI-PySide6/teoria/4%20-%20Menus/" class="md-nav__link">
+      <a href="../../../../4-GUI-PySide6/teoria/4%20-%20Menus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1505,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-GUI-PySide6/teoria/5%20-%20Dialegs/" class="md-nav__link">
+      <a href="../../../../4-GUI-PySide6/teoria/5%20-%20Dialegs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1567,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-GUI-PySide6/tasques/1%20-%20Activitats/" class="md-nav__link">
+      <a href="../../../../4-GUI-PySide6/tasques/1%20-%20Activitats/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1587,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-GUI-PySide6/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+      <a href="../../../../4-GUI-PySide6/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1690,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5-Interficies-LM/teoria/1-Llenguatges%20de%20marques%20per%20a%20la%20generaci%C3%B3%20d%27interf%C3%ADcies/" class="md-nav__link">
+      <a href="../../../../5-Interficies-LM/teoria/1-Llenguatges%20de%20marques%20per%20a%20la%20generaci%C3%B3%20d%27interf%C3%ADcies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1710,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5-Interficies-LM/teoria/2-Ferramentes%20de%20disseny%20basades%20en%20llenguatges%20de%20marques/" class="md-nav__link">
+      <a href="../../../../5-Interficies-LM/teoria/2-Ferramentes%20de%20disseny%20basades%20en%20llenguatges%20de%20marques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1730,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5-Interficies-LM/teoria/3-%C3%9As%20de%20la%20interf%C3%ADcie%20en%20una%20aplicaci%C3%B3/" class="md-nav__link">
+      <a href="../../../../5-Interficies-LM/teoria/3-%C3%9As%20de%20la%20interf%C3%ADcie%20en%20una%20aplicaci%C3%B3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1750,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5-Interficies-LM/teoria/4-Funcions%20avan%C3%A7ades%20de%20la%20ferramenta%20de%20disseny/" class="md-nav__link">
+      <a href="../../../../5-Interficies-LM/teoria/4-Funcions%20avan%C3%A7ades%20de%20la%20ferramenta%20de%20disseny/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1812,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5-Interficies-LM/tasques/1%20-%20Activitats/" class="md-nav__link">
+      <a href="../../../../5-Interficies-LM/tasques/1%20-%20Activitats/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1832,7 +1848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5-Interficies-LM/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
+      <a href="../../../../5-Interficies-LM/tasques/2%20-%20Pr%C3%A0ctiques/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1860,7 +1876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5-Interficies-LM/enlla%C3%A7os/enlla%C3%A7os/" class="md-nav__link">
+      <a href="../../../../5-Interficies-LM/enlla%C3%A7os/enlla%C3%A7os/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1955,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-Informes/teoria/1-Introduccio%20als%20informes/" class="md-nav__link">
+      <a href="../../../../6-Informes/teoria/1-Introduccio%20als%20informes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1975,7 +1991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-Informes/teoria/2-Disseny%20d%27informes/" class="md-nav__link">
+      <a href="../../../../6-Informes/teoria/2-Disseny%20d%27informes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1995,7 +2011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-Informes/teoria/3-Grafics/" class="md-nav__link">
+      <a href="../../../../6-Informes/teoria/3-Grafics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2015,7 +2031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-Informes/teoria/4-Aplicacions%20amb%20informes/" class="md-nav__link">
+      <a href="../../../../6-Informes/teoria/4-Aplicacions%20amb%20informes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2077,7 +2093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-Informes/tasques/practica1/" class="md-nav__link">
+      <a href="../../../../6-Informes/tasques/practica1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2097,7 +2113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-Informes/tasques/practica2/" class="md-nav__link">
+      <a href="../../../../6-Informes/tasques/practica2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2125,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-Informes/enlla%C3%A7os/" class="md-nav__link">
+      <a href="../../../../6-Informes/enlla%C3%A7os/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2150,19 +2166,17 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
@@ -2175,7 +2189,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Unitat 7 - Proves, distribució i documentació d'aplicacions
@@ -2222,7 +2236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teoria/1-metodologies/" class="md-nav__link">
+      <a href="../../../teoria/1-metodologies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2242,7 +2256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teoria/2-tipus-proves/" class="md-nav__link">
+      <a href="../../../teoria/2-tipus-proves/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2262,7 +2276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teoria/3-TDD/" class="md-nav__link">
+      <a href="../../../teoria/3-TDD/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2282,7 +2296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teoria/4-cd-ci/" class="md-nav__link">
+      <a href="../../../teoria/4-cd-ci/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2302,7 +2316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teoria/5-empaquetat-distribucio/" class="md-nav__link">
+      <a href="../../../teoria/5-empaquetat-distribucio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2328,19 +2342,17 @@
                 
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
         
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
             
@@ -2353,7 +2365,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_2">
             <span class="md-nav__icon md-icon"></span>
             Tasques
@@ -2364,76 +2376,200 @@
                 
   
   
+  
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_1" >
+        
+          <label class="md-nav__link" for="__nav_9_2_1" id="__nav_9_2_1_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
-    Activitat resolta 1
+    Activitats resoltes
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Activitats resoltes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasques/activitats/1-pytest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Activitat resolta 1
+    Activitat resolta 1 - Proves unitàries amb pytest
   </span>
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasques/activitats/2-tdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitat resolta 2 - TDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasques/activitats/3-ci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitat resolta 3 - CI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-        <li class="md-nav__item">
-  <a href="#solucio" class="md-nav__link">
-    Solució:
-  </a>
-  
-    <nav class="md-nav" aria-label="Solució:">
-      <ul class="md-nav__list">
         
-          <li class="md-nav__item">
-  <a href="#integracio-del-testing-a-vscode" class="md-nav__link">
-    Integració del testing a vscode
-  </a>
-  
-</li>
         
-      </ul>
-    </nav>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_2" >
+        
+          <label class="md-nav__link" for="__nav_9_2_2" id="__nav_9_2_2_label" tabindex="0">
+            
   
-</li>
-      
-    </ul>
+  <span class="md-ellipsis">
+    Pràctiques
+  </span>
   
-</nav>
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Pràctiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasques/practiques/1-tdd-fatorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 1 - TDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasques/practiques/1-tdd-fatorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 2 - CI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tasques/practiques/1-tdd-fatorial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pràctica 3 - pytest-qt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -2495,7 +2631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../info/guia_alumne_DI/" class="md-nav__link">
+      <a href="../../../../../info/guia_alumne_DI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2549,7 +2685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../info/qualificacio/rubrica/" class="md-nav__link">
+      <a href="../../../../../info/qualificacio/rubrica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2584,7 +2720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../about/" class="md-nav__link">
+      <a href="../../../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2617,34 +2753,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#solucio" class="md-nav__link">
-    Solució:
-  </a>
-  
-    <nav class="md-nav" aria-label="Solució:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#integracio-del-testing-a-vscode" class="md-nav__link">
-    Integració del testing a vscode
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2658,141 +2766,8 @@
                   
 
 
-<div><h1 id="activitat-resolta-1-proves-unitaries-amb-pytest">Activitat resolta 1 - Proves unitàries amb <code>pytest</code></h1>
-<p>Al procés de producció de programari s'introdueixen involuntàriament alguns errors que han de ser corregits abans de posar la solució en producció. És per això que hi ha el programari testing o les proves d'aplicacions. Aquest procés es desenvolupa en paral·lel a totes les etapes del desenvolupament i ens serveix com a verificació i validació que el programari compleix amb la seva comesa i ho fa de manera adequada.</p>
-<p>Hem vist a la teoria que un dels tipus de proves sobre aplicacions imprescindibles són les proves unitàries. Una de les eines més utilitzades per dur a terme aquestes proves unitàries a python és <code>pytest</code>.</p>
-<p>Utilitzarem pytest per realitzar unes proves unitàries sobre la funció de suma de dos números.</p>
-<h2 id="solucio">Solució:</h2>
-<p>El primer que hem de fer és instal·lar pytest al nostre sistema:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest
-</code></pre></div></td></tr></table></div>
-<p>Per comprovar que realment està instal·lat, pots executar des de consola:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>pytest<span class="w"> </span>--version
-</code></pre></div></td></tr></table></div>
-<p>El funcionament de pytest és similar a qualsevol llibreria de proves. Utilitzem <code>assert</code> perquè la llibreria comprove si es compleix una determinada condició.
-En cas de complir-se, s'ha comprovat que passa el test; en cas contrari, alguna cosa ha fallat:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span>
-<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">assert</span> <span class="n">Val1</span> <span class="o">==</span> <span class="n">Val2</span>     <span class="c1">#¿Val1 igual Val2?</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">assert</span> <span class="n">Val1</span> <span class="o">!=</span> <span class="n">Val2</span>     <span class="c1">#¿Val1 diferent Val2?</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">assert</span> <span class="n">Val1</span> <span class="o">&lt;</span> <span class="n">Val2</span>      <span class="c1">#¿Val1 és més petit que Val2?</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">assert</span> <span class="n">Val1</span> <span class="o">&lt;=</span> <span class="n">Val2</span>     <span class="c1">#Val1 menor o igual que Val2?</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">assert</span> <span class="n">Val1</span> <span class="o">&gt;</span> <span class="n">Val2</span>      <span class="c1">#¿Val1 més gran que Val2?</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="k">assert</span> <span class="n">Val1</span> <span class="o">&gt;=</span> <span class="n">Val2</span>     <span class="c1">#Val1 més gran o igual que Val2?</span>
-</code></pre></div></td></tr></table></div>
-<p>Definim una funció suma dins d'un operacions.py.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">suma_enteros</span><span class="p">(</span><span class="n">sumando1</span><span class="p">,</span> <span class="n">sumando2</span><span class="p">):</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sumando1</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sumando2</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">'Proporciona solo enteros'</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>        <span class="n">resultado</span> <span class="o">=</span> <span class="n">sumando1</span> <span class="o">+</span> <span class="n">sumando2</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="k">return</span> <span class="n">resultado</span>
-</code></pre></div></td></tr></table></div>
-<p>Ara definim un fitxer de test sobre la suma. És impossible cobrir tots els casos ja que hi ha infinits números, però podem fer agrupacions de proves, per exemple:</p>
-<ul>
-<li>sumar el zero amb ell mateix, ja que és l'element neutre de l'operació suma</li>
-<li>sumar dos positius</li>
-<li>resumeix els negatius</li>
-<li>sumar un positiu i un negatiu</li>
-</ul>
-<p>Ara definirem un fitxer de test per a les diferents agrupacions i per comprovar que es llança l'excepció si no passem sencers a la funció.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span>
-<span class="normal"><a href="#__codelineno-4-17">17</a></span>
-<span class="normal"><a href="#__codelineno-4-18">18</a></span>
-<span class="normal"><a href="#__codelineno-4-19">19</a></span>
-<span class="normal"><a href="#__codelineno-4-20">20</a></span>
-<span class="normal"><a href="#__codelineno-4-21">21</a></span>
-<span class="normal"><a href="#__codelineno-4-22">22</a></span>
-<span class="normal"><a href="#__codelineno-4-23">23</a></span>
-<span class="normal"><a href="#__codelineno-4-24">24</a></span>
-<span class="normal"><a href="#__codelineno-4-25">25</a></span>
-<span class="normal"><a href="#__codelineno-4-26">26</a></span>
-<span class="normal"><a href="#__codelineno-4-27">27</a></span>
-<span class="normal"><a href="#__codelineno-4-28">28</a></span>
-<span class="normal"><a href="#__codelineno-4-29">29</a></span>
-<span class="normal"><a href="#__codelineno-4-30">30</a></span>
-<span class="normal"><a href="#__codelineno-4-31">31</a></span>
-<span class="normal"><a href="#__codelineno-4-32">32</a></span>
-<span class="normal"><a href="#__codelineno-4-33">33</a></span>
-<span class="normal"><a href="#__codelineno-4-34">34</a></span>
-<span class="normal"><a href="#__codelineno-4-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">pytest</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kn">import</span> <span class="nn">operaciones</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">def</span> <span class="nf">test_suma_cero</span><span class="p">():</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>  <span class="k">assert</span> <span class="n">operaciones</span><span class="o">.</span><span class="n">suma_enteros</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="k">def</span> <span class="nf">test_suma_positivos</span><span class="p">():</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>  <span class="k">assert</span> <span class="n">operaciones</span><span class="o">.</span><span class="n">suma_enteros</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">10</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="k">def</span> <span class="nf">test_suma_positivos_negativos</span><span class="p">():</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a>  <span class="k">assert</span> <span class="n">operaciones</span><span class="o">.</span><span class="n">suma_enteros</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="k">def</span> <span class="nf">test_suma_nagativo</span><span class="p">():</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a>  <span class="k">assert</span> <span class="n">operaciones</span><span class="o">.</span><span class="n">suma_enteros</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">10</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a>
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a>
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="k">def</span> <span class="nf">test_suma_excepcion_sumando1</span><span class="p">():</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a>   <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25"></a>       <span class="n">operaciones</span><span class="o">.</span><span class="n">suma_enteros</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a>
-<a id="__codelineno-4-27" name="__codelineno-4-27"></a>
-<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="k">def</span> <span class="nf">test_suma_excepcion_sumando2</span><span class="p">():</span>
-<a id="__codelineno-4-29" name="__codelineno-4-29"></a>   <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30"></a>       <span class="n">operaciones</span><span class="o">.</span><span class="n">suma_enteros</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span><span class="s1">'a'</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31"></a>
-<a id="__codelineno-4-32" name="__codelineno-4-32"></a>
-<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="k">def</span> <span class="nf">test_suma_excepcion_sumandos</span><span class="p">():</span>
-<a id="__codelineno-4-34" name="__codelineno-4-34"></a>   <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
-<a id="__codelineno-4-35" name="__codelineno-4-35"></a>       <span class="n">operaciones</span><span class="o">.</span><span class="n">suma_enteros</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span><span class="s1">'a'</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="integracio-del-testing-a-vscode">Integració del testing a vscode</h3>
-<p>Es pot utilitzar el VSCode per llançar els tests de forma integrada, resultant molt més còmode llançar-los. Per fer-ho prem la combinació de tecles Ctrl + Shift + P (o a través del menú View -&gt; Command Palette), i busca “Tests”. Seleccioneu l'opció “Python: Configure Tests”.</p>
-<figure>
-<p><img alt="Alt text" src="../img/testing1.png" width="500">
-  </p>
-<figcaption>Python configure test</figcaption>
-</figure>
-<p>Ens demanarà triar quina eina volem fer servir. Seleccionem pytest (recorda que ha d'estar instal·lada amb pip).</p>
-<figure>
-<p><img alt="Alt text" src="../img/testing1.png" width="500">
-  </p>
-<figcaption>Seleccionar framework</figcaption>
-</figure>
-<p>Finalment seleccionem la carpeta on tenim definits els tests test_*.py. Ens apareixerà al panell esquerre del VSCode una proveta de laboratori des d'on podem llançar i depurar els tests.</p>
-<figure>
-<p><img alt="Alt text" src="../img/testing3.png" width="500">
-  </p>
-<figcaption>Image caption</figcaption>
-</figure></div>
+<div><h1 id="ci_es_primo">ci_es_primo</h1>
+<p>C¡Integració continua sobre el projecte de funcions</p></div>
 
 
 
@@ -2830,10 +2805,10 @@ En cas de complir-se, s'ha comprovat que passa el test; en cas contrari, alguna 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.code.copy", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.code.copy", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

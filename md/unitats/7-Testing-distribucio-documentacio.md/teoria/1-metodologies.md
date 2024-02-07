@@ -7,6 +7,7 @@ Les metodologies àgils van néixer pels volts de l'any 2000 per donar resposta 
 Com el seu nom indica, són les metodologies utilitzades durant molt de temps. El seu propòsit principal és establir unes directrius rígides perquè el desenvolupament del projecte sigui previsible. A causa d'això, són processos seqüencials on les estimacions tindran molta importància.
 
 Una de les metodologies més utilitzades en aquest tipus és el desenvolupament en cascada. Consta normalment de cinc fases:
+
 1. **Anàlisi de requisits:** requisits que ha de complir. Han de ser molt ben definits, ja que no s'esperen que canviïn al llarg del procés de desenvolupament. És per això que d'aquesta part se n'encarreguen els desenvolupadors més experimentats.
 2. **Disseny de la solució:** com serà la nostra solució per complir els requisits marcats.
 3. **Implementació:** codificació del disseny utilitzant un llenguatge o unes tecnologies concretes.
@@ -40,6 +41,7 @@ Les metodologies àgils són les que es caracteritzen per adaptar-se als canvis 
 
 
 Dins la filosofia de metodologies àgils, les tres més utilitzades són:
+
 ### Scrum:
 És una metodologia que permet realitzar projectes més orientats a les necessitats de l’empresa i dels clients, de manera més eficient i en un menor termini de temps. Scrum es basa en una iteració contínua, on es realitzen petites activitats per a construir un producte o projecte de forma incremental. Els components d’un equip realitzen activitats de forma iterativa i incremental per desenvolupar el projecte.
 
