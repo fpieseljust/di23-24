@@ -1,7 +1,7 @@
 # Integració continua amb Github Pages
 Hem après en apartats anteriors que les noves metodologies s'orienten a obtenir un producte amb més qualitat amb un temps de lliurament el menor possible. Per aconseguir aquest objectiu, les empreses han implantat la cultura DevOps (development + operations). Entre les seves operacions hi ha la integració i el lliurament/desplegament continus, que són dues de les peces clau que els permetran aconseguir l'objectiu presentat anteriorment.
 
-## Enunciat
+## Objectiu
 En aquesta pràctica muntarem un sistema d'integració contínua amb Github Actions. En concret pujarem el nostre codi desenvolupat en l'activitat anterior, el que consistia a desenvolupar la funció `es_primo`, per poder fer integració contínua sobre el codi.
 
 ### Primer pas - creació del repositori

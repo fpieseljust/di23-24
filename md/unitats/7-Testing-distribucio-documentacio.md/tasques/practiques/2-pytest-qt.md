@@ -66,7 +66,7 @@ Fixa't en el següent exemple:
         assert widget.greet_label.text() == "Hello!"
     ```
 
-Pots obtindre [els fonts del següent enllaç](../../code/pytest-qt/hello.py).
+Pots obtindre [els fonts del següent enllaç](../../code/hello_world_exe/hello_world.py).
 
 Per a més informació visita la web de [documentació de pytest-qt](https://pytest-qt.readthedocs.io/en/latest/intro.html).
 

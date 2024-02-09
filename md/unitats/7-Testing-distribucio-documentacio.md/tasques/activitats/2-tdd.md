@@ -1,7 +1,7 @@
 # Activitat resolta 2 - TDD
 Ja hem insistit en la importància que tenen les proves de programari en el desenvolupament de les aplicacions per assegurar un alt grau de qualitat als nostres projectes. En aquesta unitat ens centrarem en una tècnica de programació centrada en aquesta fase de proves que a més s'ajusta a la filosofia de desenvolupament àgil. És l'anomenat desenvolupament guiat per proves odesenvolupament impulsat per proves(TDD).
 
-## Enunciat
+## Objectiu
 Ara que ja sabem escriure proves unitàries amb pytest i automatitzar-ne l'execució, tot sense sortir del nostre entorn de desenvolupament, aplicarem la tècnica de TDD per realitzar la implementació d'una funció per esbrinar si un nombre és primer.
 
 ## Solució

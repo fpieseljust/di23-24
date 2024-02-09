@@ -1,10 +1,8 @@
 # Activitat resolta 1 - Proves unitàries amb `pytest` 
 Al procés de producció de programari s'introdueixen involuntàriament alguns errors que han de ser corregits abans de posar la solució en producció. És per això que hi ha el programari testing o les proves d'aplicacions. Aquest procés es desenvolupa en paral·lel a totes les etapes del desenvolupament i ens serveix com a verificació i validació que el programari compleix amb la seva comesa i ho fa de manera adequada.
 
-
-Hem vist a la teoria que un dels tipus de proves sobre aplicacions imprescindibles són les proves unitàries. Una de les eines més utilitzades per dur a terme aquestes proves unitàries a python és `pytest`.
-
-Utilitzarem pytest per realitzar unes proves unitàries sobre la funció de suma de dos números.
+## Objectiu
+Hem vist a la teoria que un dels tipus de proves sobre aplicacions imprescindibles són les proves unitàries. Una de les eines més utilitzades per dur a terme aquestes proves unitàries a python és `pytest`. Utilitzarem pytest per realitzar unes proves unitàries sobre la funció de suma de dos números.
 
 ## Solució:
 El primer que hem de fer és instal·lar pytest al nostre sistema:

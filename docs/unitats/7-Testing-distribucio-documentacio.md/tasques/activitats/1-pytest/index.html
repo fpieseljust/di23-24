@@ -2468,6 +2468,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#objectiu" class="md-nav__link">
+    Objectiu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#solucio" class="md-nav__link">
     Solució:
   </a>
@@ -2506,7 +2513,7 @@
         
   
   <span class="md-ellipsis">
-    Activitat resolta 2 - TDD
+    Activitat resolta 2 - Desenvolupament guiat per proves
   </span>
   
 
@@ -2526,7 +2533,27 @@
         
   
   <span class="md-ellipsis">
-    Activitat resolta 3 - CI
+    Activitat resolta 3 - Integració continua
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-pyinstaller-exe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activitat resolta 4 - Executable windows
   </span>
   
 
@@ -2584,11 +2611,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../practiques/1-tdd-fatorial/" class="md-nav__link">
+      <a href="../../practiques/2-pytest-qt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Pràctica 1 - TDD
+    Pràctica 2 - pytest-qt
   </span>
   
 
@@ -2604,11 +2631,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../practiques/1-tdd-fatorial/" class="md-nav__link">
+      <a href="../../practiques/3-tdd-fatorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Pràctica 2 - CI
+    Pràctica 3 - Desenvolupament guiat per proves
   </span>
   
 
@@ -2624,11 +2651,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../practiques/1-tdd-fatorial/" class="md-nav__link">
+      <a href="../../practiques/4-ci-factorial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Pràctica 3 - pytest-qt
+    Pràctica 4 - Integració continua
   </span>
   
 
@@ -2830,6 +2857,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#objectiu" class="md-nav__link">
+    Objectiu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#solucio" class="md-nav__link">
     Solució:
   </a>
@@ -2866,8 +2900,8 @@
 
 <div><h1 id="activitat-resolta-1-proves-unitaries-amb-pytest">Activitat resolta 1 - Proves unitàries amb <code>pytest</code></h1>
 <p>Al procés de producció de programari s'introdueixen involuntàriament alguns errors que han de ser corregits abans de posar la solució en producció. És per això que hi ha el programari testing o les proves d'aplicacions. Aquest procés es desenvolupa en paral·lel a totes les etapes del desenvolupament i ens serveix com a verificació i validació que el programari compleix amb la seva comesa i ho fa de manera adequada.</p>
-<p>Hem vist a la teoria que un dels tipus de proves sobre aplicacions imprescindibles són les proves unitàries. Una de les eines més utilitzades per dur a terme aquestes proves unitàries a python és <code>pytest</code>.</p>
-<p>Utilitzarem pytest per realitzar unes proves unitàries sobre la funció de suma de dos números.</p>
+<h2 id="objectiu">Objectiu</h2>
+<p>Hem vist a la teoria que un dels tipus de proves sobre aplicacions imprescindibles són les proves unitàries. Una de les eines més utilitzades per dur a terme aquestes proves unitàries a python és <code>pytest</code>. Utilitzarem pytest per realitzar unes proves unitàries sobre la funció de suma de dos números.</p>
 <h2 id="solucio">Solució:</h2>
 <p>El primer que hem de fer és instal·lar pytest al nostre sistema:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>pytest
