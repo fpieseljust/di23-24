@@ -123,7 +123,8 @@ class CreateUserDialog(QDialog):
 
 def main():    
     app = QApplication(sys.argv)
-    login = CreateUserDialog('users.db')
+    database_path = os.path.join(os.path.dirname(__file__), 'users.db')
+    login = CreateUserDialog(database_path)
     login.create_database()
     login.show()
     sys.exit(app.exec())

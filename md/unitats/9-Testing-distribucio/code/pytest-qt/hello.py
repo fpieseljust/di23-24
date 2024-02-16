@@ -31,7 +31,7 @@ class HelloWidget(QWidget):
 
     def greet(self):
         """Say hello"""
-        self.greet_label.setText("Hello!")
+        self.greet_label.setText("Hola!")
 
 
 if __name__ == "__main__":

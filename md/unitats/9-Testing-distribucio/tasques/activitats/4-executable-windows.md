@@ -78,7 +78,7 @@ python hello_world.py
 ```
 
 <figure markdown>
-  ![Alt text](img/hello_world_app.png){ width="600" }
+  ![Alt text](img/hello_world_app.png){ width="300" }
   <figcaption>App Hello world!</figcaption>
 </figure>
 
