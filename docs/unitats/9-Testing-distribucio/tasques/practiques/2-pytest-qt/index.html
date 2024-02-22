@@ -327,6 +327,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../examens/ordinaria/ordinaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ordinària
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -3042,7 +3062,8 @@
 <span class="normal"><a href="#__codelineno-2-53">53</a></span>
 <span class="normal"><a href="#__codelineno-2-54">54</a></span>
 <span class="normal"><a href="#__codelineno-2-55">55</a></span>
-<span class="normal"><a href="#__codelineno-2-56">56</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">sys</span>
+<span class="normal"><a href="#__codelineno-2-56">56</a></span>
+<span class="normal"><a href="#__codelineno-2-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">sys</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">import</span> <span class="nn">bcrypt</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">from</span> <span class="nn">PySide6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QDialog</span><span class="p">,</span> <span class="n">QFormLayout</span><span class="p">,</span> <span class="n">QLineEdit</span><span class="p">,</span> <span class="n">QPushButton</span><span class="p">,</span> <span class="n">QLabel</span><span class="p">,</span> <span class="n">QMainWindow</span>
@@ -3091,13 +3112,14 @@
 <a id="__codelineno-2-47" name="__codelineno-2-47"></a>
 <a id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>    
 <a id="__codelineno-2-49" name="__codelineno-2-49"></a>    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
-<a id="__codelineno-2-50" name="__codelineno-2-50"></a>    <span class="n">login</span> <span class="o">=</span> <span class="n">CreateUserDialog</span><span class="p">(</span><span class="s1">'users.db'</span><span class="p">)</span>
-<a id="__codelineno-2-51" name="__codelineno-2-51"></a>    <span class="n">login</span><span class="o">.</span><span class="n">create_database</span><span class="p">()</span>
-<a id="__codelineno-2-52" name="__codelineno-2-52"></a>    <span class="n">login</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<a id="__codelineno-2-53" name="__codelineno-2-53"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
-<a id="__codelineno-2-54" name="__codelineno-2-54"></a>
-<a id="__codelineno-2-55" name="__codelineno-2-55"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
-<a id="__codelineno-2-56" name="__codelineno-2-56"></a>    <span class="n">main</span><span class="p">()</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50"></a>    <span class="n">database_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s1">'users.db'</span><span class="p">)</span>
+<a id="__codelineno-2-51" name="__codelineno-2-51"></a>    <span class="n">login</span> <span class="o">=</span> <span class="n">CreateUserDialog</span><span class="p">(</span><span class="n">database_path</span><span class="p">)</span>
+<a id="__codelineno-2-52" name="__codelineno-2-52"></a>    <span class="n">login</span><span class="o">.</span><span class="n">create_database</span><span class="p">()</span>
+<a id="__codelineno-2-53" name="__codelineno-2-53"></a>    <span class="n">login</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-2-54" name="__codelineno-2-54"></a>    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
+<a id="__codelineno-2-55" name="__codelineno-2-55"></a>
+<a id="__codelineno-2-56" name="__codelineno-2-56"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="__codelineno-2-57" name="__codelineno-2-57"></a>    <span class="n">main</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div></div>
 
 

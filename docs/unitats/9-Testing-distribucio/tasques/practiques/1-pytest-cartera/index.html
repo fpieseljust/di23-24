@@ -327,6 +327,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../examens/ordinaria/ordinaria/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ordinària
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2950,28 +2970,22 @@
 <span class="normal"><a href="#__codelineno-0-13">13</a></span>
 <span class="normal"><a href="#__codelineno-0-14">14</a></span>
 <span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">SaldoInsuficiente</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span> <span class="nc">SaldoInsuficiente</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">pass</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">class</span> <span class="nc">Cartera</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">saldo_inicial</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">saldo_inicial</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">saldo</span> <span class="o">=</span> <span class="n">saldo_inicial</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">saldo</span> <span class="o">=</span> <span class="mi">0</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>    <span class="k">def</span> <span class="nf">gastar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cantidad</span><span class="p">):</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">saldo</span> <span class="o">&lt;</span> <span class="n">cantidad</span><span class="p">:</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>            <span class="k">raise</span> <span class="n">SaldoInsuficiente</span><span class="p">(</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>                <span class="s1">'No tienes dinero suficiente. Saldo actual: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cantidad</span><span class="p">))</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">saldo</span> <span class="o">-=</span> <span class="n">cantidad</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="k">def</span> <span class="nf">ingresar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cantidad</span><span class="p">):</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">saldo</span> <span class="o">+=</span> <span class="n">cantidad</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">saldo</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="k">def</span> <span class="nf">gastar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cantidad</span><span class="p">):</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">saldo</span> <span class="o">&lt;</span> <span class="n">cantidad</span><span class="p">:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>            <span class="k">raise</span> <span class="n">SaldoInsuficiente</span><span class="p">(</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>                <span class="s1">'No tienes dinero suficiente. Saldo actual: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cantidad</span><span class="p">))</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">saldo</span> <span class="o">-=</span> <span class="n">cantidad</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="k">def</span> <span class="nf">ingresar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cantidad</span><span class="p">):</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">saldo</span> <span class="o">+=</span> <span class="n">cantidad</span>
 </code></pre></div></td></tr></table></div>
 <p>Els test han de cobrir almenys els aspectes següents:</p>
 <ul>

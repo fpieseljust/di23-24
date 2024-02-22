@@ -8,6 +8,7 @@ nav:
   - Examens:
       - Examen 1a presencial: examens/presencial_1a.md
       - Semipresencial 2a: examens/semipresencial/2a.md
+      - Ordinària: examens/ordinaria/ordinaria.md
 
   - Unitat 1 - Programació amb Python:
       - Teoria:
